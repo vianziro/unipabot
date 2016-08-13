@@ -523,11 +523,11 @@ elseif(strpos($text, "/acqmateriale") === 0 || $text == "\xF0\x9F\x93\x90 ACQUIS
 		$response = "\xE2\x9A\xA0 Prossimamente disponibili i negozi per l'acquisto del materiale richiesto ";
 	}
 
-elseif(strpos($text, "/sndmsg") === 0 )
-	{
-		$url = "https://api.telegram.org/bot" . BOT_TOKEN ."/sendMessage?chat_id=".$chatId."&text=".urlencode($message);
-		file_get_contents($url);	
-	}	
+//elseif(strpos($text, "/sndmsg") === 0 )
+	//{
+		//$url = "https://api.telegram.org/bot" . BOT_TOKEN ."/sendMessage?chat_id=".$chatId."&text=".urlencode($message);
+		//file_get_contents($url);	
+	//}	
 
 else
 {
