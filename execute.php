@@ -102,7 +102,7 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 PUNTI RISTO
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli la panineria \n\n", 
 		 'reply_markup' => array(
-			 "keyboard" => array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x8D\x94 PANINERIA JHONNY"),array("/PANINERIADELVIALE","\xF0\x9F\x8D\x94 PANINERIA MASSARO")),
+			 "keyboard" => array(array("\xE2\xAC\x85 BACK","/JHONNY"),array("/PANINERIADELVIALE","\xF0\x9F\x8D\x94 PANINERIA MASSARO")),
 			 'resize_keyboard' => true
 			)
 		);
@@ -119,18 +119,16 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 PUNTI RISTO
 		curl_close($handle);
 	
 		var_dump($dati);
-
-}
-
-switch($message) {
+		
+	switch($message) {
 	
-	case "\xF0\x9F\x8D\x94 PANINERIA JHONNY":
+	case "/jhonny":
 		$response = "\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nhttps://goo.gl/a17ehV\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 		break;
-	case "\xF0\x9F\x8D\x94 panineria jhonny":
+	case "/JHONNY":
 		$response = "\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nhttps://goo.gl/a17ehV\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 		break;
-	case "\xF0\x9F\x8D\x94 Panineria Jhonny":
+	case "/Jhonny":
 		$response = "\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nhttps://goo.gl/a17ehV\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 		break;		
 	case "/panineriadelviale":
@@ -145,6 +143,8 @@ switch($message) {
 	default:
 		 
 	}
+
+}
 
 // MENU STUDENTI
 elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU STUDENTI" || $text == "\xF0\x9F\x91\xA5 menu studenti" )
