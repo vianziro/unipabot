@@ -97,13 +97,14 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 PUNTI RISTO
 {
 	switch($message) {
 	
-	case "/jhonny" || $text == "\xF0\x9F\x8D\x94 Panineria da Jhonny" || $text == "\xF0\x9F\x8D\x94 panineria da jhonny":
+	case "/jhonny":
 		$response = "\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nhttps://goo.gl/a17ehV\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 		break;
 	case "/pandelviale":
 		$response = "\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nhttps://goo.gl/a17ehV\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 		break;
-	default:{
+	default:
+	{
 	
 		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
 		$method='sendMessage';
@@ -112,7 +113,7 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 PUNTI RISTO
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8D\x94 PUNTI RISTORO \xF0\x9F\x8D\x9D\n\n\xE2\x9A\xA0 Scegli la panineria \n\n\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8D\x94 Panineria del Viale \n\n", 
 		 'reply_markup' => array(
-			 "keyboard" => array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x8D\x94 Panineria da Jhonny"),array("\xF0\x9F\x93\x9A MATERIE A SCELTA","\xF0\x9F\x8D\x94 Panineria del Viale")),
+			 "keyboard" => array(array("\xE2\xAC\x85 BACK","/jhonny"),array("/pandelviale","\massaro")),
 			 'resize_keyboard' => true
 			)
 		);
@@ -130,7 +131,7 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 PUNTI RISTO
 	
 		var_dump($dati);
 	
-		}	
+	}	
 		 
 	}
 
