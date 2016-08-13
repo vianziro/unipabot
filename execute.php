@@ -95,16 +95,16 @@ elseif(strpos($text, "/about") === 0 || $text == "\xE2\x84\xB9 ABOUT" || $text =
 //PUNTI RISTORO
 elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 PUNTI RISTORO" || $text == "\xF0\x9F\x8D\x94 punti ristoro")
 {
-		
+	
 		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
 		$method='sendMessage';
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x8D\x94 PUNTI RISTORO \xF0\x9F\x8D\x9D\n\n\xE2\x9A\xA0 Scegli la panineria \n\n\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8D\x94 Panineria del Viale \n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli la Panineria tra quelle sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard" => array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x8D\x94 Panineria Jhonny"),array("\xF0\x9F\x8D\x94 Panineria del Viale","\xF0\x9F\x8D\x94 Panineria Massaro")),
-			 'resize_keyboard' => true
+			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x8D\x94 Panineria Jhonny"),array("\xF0\x9F\x8D\x94 Panineria del Viale","\xF0\x9F\x8D\x94 Panineria Massaro"))
+			,'resize_keyboard' => true
 			)
 		);
 	
@@ -120,8 +120,8 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 PUNTI RISTO
 		curl_close($handle);
 	
 		var_dump($dati);
-		 
-	}
+	
+		$response = "\xF0\x9F\x8D\x94 PUNTI RISTORO \xF0\x9F\x8D\x9D\n\n\xE2\x9A\xA0 Scegli il comando opportuno \n\n/jhonny \xF0\x9F\x8D\x94 Panineria da Jhonny \n\n/pandelviale \xF0\x9F\x8D\x94 Panineria del Viale \n\n"; 
 
 }
 
