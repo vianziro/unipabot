@@ -163,7 +163,7 @@ elseif(strpos($text, "/orariolezioni") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli Facoltà \xE2\x9A\xA0\n\n/orariolezing Corsi Ingegneria \n\n/orariolezarch Corsi Architettura \n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","/orariolezing"),array("/orariolezarch","/orariolezeco"))
+			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","\xF0\x9F\x95\x92 ORARIO ING"),array("\xF0\x9F\x95\x92 ORARIO ARCH","\xF0\x9F\x95\x92 ORARIO ECO"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -185,7 +185,7 @@ elseif(strpos($text, "/orariolezioni") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 }
 
 // MENU ORARIO LEZIONI INGEGNERIA
-elseif(strpos($text, "/orariolezing") === 0 )
+elseif(strpos($text, "/orariolezing") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING" || $text == "\xF0\x9F\x95\x92 orario ing")
 {
 	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
 	$method='sendMessage';
@@ -194,7 +194,7 @@ elseif(strpos($text, "/orariolezing") === 0 )
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\n/inginf Orari Ing.Informatica \n\n/inggest Orari Ing.Gestionale \n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x95\x92 ORARIO LEZIONI","/inginf"),array("/inggest","/ingmecc"))
+			 "keyboard"=> array(array("\xF0\x9F\x95\x92 ORARIO LEZIONI","\xF0\x9F\x95\x92 ORARIO ING INF"),array("/inggest","/ingmecc"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -216,7 +216,7 @@ elseif(strpos($text, "/orariolezing") === 0 )
 }
 
 // ORARIO LEZIONI INGEGNERIA INFORMATICA
-elseif(strpos($text, "/inginf") === 0 )
+elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING INF" || $text == "\xF0\x9F\x95\x92 orario ing inf")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
