@@ -526,7 +526,7 @@ elseif(strpos($text, "/acqmateriale") === 0 || $text == "\xF0\x9F\x93\x90 ACQUIS
 
 else
 {
-	$response = "Comando non valido!\n\nDigita /help per l'elenco comandi";
+	$response = "\xE2\x9A\xA0 Comando non valido!\n\nDigita /help per l'elenco comandi";
 }
 	
 $parameters = array('chat_id' => $chatId, "text" => $response);
