@@ -188,7 +188,7 @@ elseif(strpos($text, "/orariolezioni") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x95\x92 SEZIONE ORARIO LEZIONI \xF0\x9F\x95\x92\n\nScegli \n\n", 
+		 'text' => "\xF0\x9F\x95\x92 SEZIONE ORARIO LEZIONI \xF0\x9F\x95\x92\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("\xF0\x9F\x95\x92 ORARIO CORSI ARCH","\xF0\x9F\x95\x92 ORARIO CORSI ECO"))
 			,'resize_keyboard' => true
