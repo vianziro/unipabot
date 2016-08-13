@@ -522,16 +522,19 @@ elseif(strpos($text, "/acqmateriale") === 0 || $text == "\xF0\x9F\x93\x90 ACQUIS
 	{
 		$response = "\xE2\x9A\xA0 Prossimamente disponibili i negozi per l'acquisto del materiale richiesto ";
 	}
-	
+
+elseif(strpos($text, "/sndmsg") === 0 )
+	{
+		$url = "https://api.telegram.org/bot" . BOT_TOKEN ."/sendMessage?chat_id=".$chatId."&text=".urlencode($message);
+		file_get_contents($url);	
+	}	
 
 else
 {
 	$response = "\xE2\x9A\xA0 Comando non valido!\n\nDigita /help per l'elenco comandi";
 }
 	
-$url = $GLOBALS[website]."/sendMessage?chat_id=".$chatId."&text=".urlencode($message);
-file_get_contents($url);	
-	
+
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
