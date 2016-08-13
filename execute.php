@@ -97,15 +97,42 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 PUNTI RISTO
 {
 	switch($message) {
 	
-	case "/jhonny":
+	case "/jhonny" || $text == "\xF0\x9F\x8D\x94 Panineria da Jhonny" || $text == "\xF0\x9F\x8D\x94 panineria da jhonny":
 		$response = "\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nhttps://goo.gl/a17ehV\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 		break;
 	case "/pandelviale":
 		$response = "\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nhttps://goo.gl/a17ehV\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 		break;
-	default: 
-		$response = "\xF0\x9F\x8D\x94 PUNTI RISTORO \xF0\x9F\x8D\x9D\n\n\xE2\x9A\xA0 Scegli il comando opportuno \n\n/jhonny \xF0\x9F\x8D\x94 Panineria da Jhonny \n\n/pandelviale \xF0\x9F\x8D\x94 Panineria del Viale \n\n"; 
-		}
+	default:{
+	
+		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+		$method='sendMessage';
+	
+		$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "\xF0\x9F\x8D\x94 PUNTI RISTORO \xF0\x9F\x8D\x9D\n\n\xE2\x9A\xA0 Scegli la panineria \n\n\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8D\x94 Panineria del Viale \n\n", 
+		 'reply_markup' => array(
+			 "keyboard" => array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x8D\x94 Panineria da Jhonny"),array("\xF0\x9F\x93\x9A MATERIE A SCELTA","\xF0\x9F\x8D\x94 Panineria del Viale")),
+			 'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+	
+		}	
+		 
+	}
 
 }
 
