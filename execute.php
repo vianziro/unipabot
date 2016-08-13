@@ -97,7 +97,7 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 PUNTI RISTO
 {
 	switch($message) {
 	
-	case "/jhonny":
+	case "/jhonny" || "\xF0\x9F\x8D\x94 PANINERIA JHONNY" || "\xF0\x9F\x8D\x94 panineria jhonny":
 		$response = "\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nhttps://goo.gl/a17ehV\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 		break;
 	case "/pandelviale":
@@ -113,7 +113,7 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 PUNTI RISTO
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8D\x94 PUNTI RISTORO \xF0\x9F\x8D\x9D\n\n\xE2\x9A\xA0 Scegli la panineria \n\n\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8D\x94 Panineria del Viale \n\n", 
 		 'reply_markup' => array(
-			 "keyboard" => array(array("\xE2\xAC\x85 BACK","/jhonny"),array("/pandelviale","\massaro")),
+			 "keyboard" => array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x8D\x94 PANINERIA JHONNY"),array("/pandelviale","/massaro")),
 			 'resize_keyboard' => true
 			)
 		);
