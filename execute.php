@@ -121,7 +121,7 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 PUNTI RISTO
 	
 		var_dump($dati);
 	
-		$response = "\xF0\x9F\x8D\x94 PUNTI RISTORO \xF0\x9F\x8D\x9D\n\n\xE2\x9A\xA0 Scegli il comando opportuno \n\n/jhonny \xF0\x9F\x8D\x94 Panineria da Jhonny \n\n/pandelviale \xF0\x9F\x8D\x94 Panineria del Viale \n\n"; 
+		//$response = "\xF0\x9F\x8D\x94 PUNTI RISTORO \xF0\x9F\x8D\x9D\n\n\xE2\x9A\xA0 Scegli il comando opportuno \n\n/jhonny \xF0\x9F\x8D\x94 Panineria da Jhonny \n\n/pandelviale \xF0\x9F\x8D\x94 Panineria del Viale \n\n"; 
 
 }
 
@@ -578,8 +578,57 @@ elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $te
 //ACQUISTO MATERIALE
 elseif(strpos($text, "/copisterie") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIE" || $text == "\xF0\x9F\x93\x84 copisterie")
 	{
-		$response = "\xE2\x9A\xA0 Prossimamente disponibili le copisterie di Unipa ";
+		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+		$method='sendMessage';
+	
+		$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "\xF0\x9F\x93\x84 COPISTERIE\n\nScegli tra le copisterie sotto\n\n", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA ED.9"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO"))
+			,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+		
+		//$response = "\xE2\x9A\xA0 Prossimamente disponibili le copisterie di Unipa ";
 	}
+	
+//LA NUOVA COPISTERIA ING.
+elseif(strpos($text, "/coping") === 0 || $text == "\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING." || $text == "\xF0\x9F\x93\x84 la nuova copisteria ing.")
+	{
+		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
+	}
+	
+//LA NUOVA COPISTERIA BIO
+elseif(strpos($text, "/copbio") === 0 || $text == "\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO" || $text == "\xF0\x9F\x93\x84 la nuova copisteria bio")
+	{
+		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
+	}	
+	
+//COPISTERIA LETTERE
+elseif(strpos($text, "/coplet") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA LETTERE" || $text == "\xF0\x9F\x93\x84 copisteria lettere")
+	{
+		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
+	}		
+	
+//COPISTERIA ED.9
+elseif(strpos($text, "/coped9") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA ED.9" || $text == "\xF0\x9F\x93\x84 copisteria ed.9")
+	{
+		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
+	}			
 
 //elseif(strpos($text, "/sndmsg") === 0 )
 	//{
