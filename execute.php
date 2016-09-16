@@ -703,7 +703,7 @@ elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $te
 	}
 	
 //ACQUISTO MATERIALE
-elseif(strpos($text, "/copisterie") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIE" || $text == "\xF0\x9F\x93\x84 copisterie")
+elseif(strpos($text, "/copisterie") === 0 || $text == "\xF0\x9F\x93\x84 COPIST" || $text == "\xF0\x9F\x93\x84 copist")
 	{
 		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
 		$method='sendMessage';
