@@ -632,12 +632,6 @@ elseif(strpos($text, "/coped9") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA E
 		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
 	}	
 
-//COPISTERIA ED.9
-elseif(strpos($text, "/coped10") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA ED.9" || $text == "\xF0\x9F\x93\x84 copisteria ed.9")
-	{
-		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
-	}		
-
 //elseif(strpos($text, "/sndmsg") === 0 )
 	//{
 		//$url = "https://api.telegram.org/bot" . BOT_TOKEN ."/sendMessage?chat_id=".$chatId."&text=".urlencode($message);
