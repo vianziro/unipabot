@@ -445,29 +445,29 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 
 //AULE
 
-	elseif(strpos($text, "F130") === 0 || $text == "f 130")
+	elseif($text == "F130")
 	{
 		$response = "L'aula si trova al 1° Piano dell'Ed.8";
 	}
 	
-	elseif(strpos($text, "F140") === 0)
+	elseif($text == "F140")
 	{
-		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
+		$response = "L'aula si trova al 1° Piano dell'Ed.8";
 	}
 	
-	elseif(strpos($text, "F150") === 0)
+	elseif($text == "F150")
 	{
-		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
+		$response = "L'aula si trova al 1° Piano dell'Ed.8";
 	}
 	
-	elseif(strpos($text, "F160") === 0)
+	elseif($text == "F160")
 	{
-		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
+		$response = "L'aula si trova al 1° Piano dell'Ed.8";
 	}
 	
-	elseif(strpos($text, "F180") === 0)
+	elseif($text == "F170")
 	{
-		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
+		$response = "L'aula si trova al 1° Piano dell'Ed.8";
 	}
 
 
