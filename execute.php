@@ -53,7 +53,7 @@ if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == 
 	
 	//$response = "\xF0\x9F\x91\x8B Ciao $firstname (@$username), benvenuto in Unipa Bot!";
 }
-elseif(strpos($text, "/help") === 0 || $text == "\xE2\x81\x89 HELP" || $text == "\xE2\x81\x89 help")
+else if(strpos($text, "/help") === 0 || $text == "\xE2\x81\x89 HELP" || $text == "\xE2\x81\x89 help")
 {
 	$response = "\xF0\x9F\x93\x94 ELENCOCOMANDI\n\n/start \xF0\x9F\x9A\x80 START BOT \n\n/professori \xF0\x9F\x91\xA4 Professori \n\n/mappa \xF0\x9F\x8C\x90 Mappa Unipa \n\n/orariolezioni \xF0\x9F\x95\x92 Orario Lezioni \n\n/oraribiblioteca \xF0\x9F\x8F\xA6 Orari Biblioteca \n\n/ristoro \xF0\x9F\x8D\x9D Punti Ristoro \n\n/about \xE2\x9A\xA0 Info sul Bot \n\n/help \xE2\x84\xB9 Elenco comandi \n\n";
 }
@@ -628,7 +628,13 @@ elseif(strpos($text, "/coplet") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA L
 elseif(strpos($text, "/coped9") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA ED.9" || $text == "\xF0\x9F\x93\x84 copisteria ed.9")
 	{
 		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
-	}			
+	}	
+
+//COPISTERIA ED.9
+elseif(strpos($text, "/coped10") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA ED.9" || $text == "\xF0\x9F\x93\x84 copisteria ed.9")
+	{
+		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
+	}		
 
 //elseif(strpos($text, "/sndmsg") === 0 )
 	//{
