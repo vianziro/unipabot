@@ -69,7 +69,7 @@ else if($text == "\xE2\xAC\x85 BACK" || $text == "\xE2\xAC\x85 back")
 		 'chat_id' => $chatId
 		, 'text' => "\xE2\x9A\xA0 MENU PRINCIPALE \xE2\x9A\xA0"
 		, 'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRETERIA","\xF0\x9F\x8F\xAB BIBLIO \xF0\x9F\x93\x9A","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPISTERIE","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 PUNTI RISTORO","\xE2\x98\x95 MACCH. CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","\xE2\x9A\xA0 HELP","\xE2\x84\xB9 ABOUT"))
+			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRETERIA","\xF0\x9F\x8F\xAB BIBLIO \xF0\x9F\x93\x9A","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPISTERIE","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 PUNTI RISTORO","\xE2\x98\x95 MACCH. CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","\xE2\x9A\xA0 HELP","\xE2\x84\xB9 ABOUT"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -408,6 +408,38 @@ elseif(strpos($text, "/doc") === 0 || $text == "\xF0\x9F\x8C\x8E doc" || $text =
 	
 }
 
+//CERCA AULA 
+elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text == "🔍 cerca aula")
+{
+	
+	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$method='sendMessage';
+	
+	$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "\xF0\x9F\x91\xA4 Menu Aule \xF0\x9F\x91\xA5\n\nInvia il nome dell'aula cercata\n\n\xE2\x9A\xA0 ES. F170", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x91\xA4 AULE IN ELENCO"))
+			,'resize_keyboard' => true
+		)
+	);
+	
+	$handle=curl_init();
+	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	curl_setopt($handle,CURLOPT_POST,1);
+	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+	curl_setopt($handle,CURLOPT_ENCODING,1);
+	$dati=json_decode( curl_exec($handle) ,true);
+	curl_close($handle);
+	
+	var_dump($dati);
+	
+	//$response = "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\n/profingegneria \xF0\x9F\x91\xA4 Prof Ingegneria \n\n/profarchitettura \xF0\x9F\x91\xA4 Prof Architett. \n\n/profeconomia \xF0\x9F\x91\xA4 Prof Economia \n\n";
+	
+}
 
 
 //INFO PROF
