@@ -441,6 +441,15 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 	
 }
 
+//SOTTOSEZIONE Aule
+
+//AULE
+
+	elseif(strpos($text, "F170") === 0 || $text == "F 170" || $text == "f170")
+	{
+		$response = "Al momento in elenco:\n\n/profburlon \xF0\x9F\x91\xA4 Prof Burlon \n\n/proflacascia \xF0\x9F\x91\xA4 Prof La Cascia \n\nSe il prof che cerchi non è in elenco contatta @gabrieledellaria";
+	}
+
 
 //INFO PROF
 elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PROF" || $text == "\xF0\x9F\x91\xA4 info prof")
