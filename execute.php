@@ -389,7 +389,6 @@ elseif(strpos($text, "/mappa") === 0 || $text == "\xF0\x9F\x8C\x8E MAPPA" || $te
 // DOC AULE ING
 elseif(strpos($text, "/doc") === 0 || $text == "\xF0\x9F\x8C\x8E doc" || $text == "\xF0\x9F\x8C\x8E doc")
 {
-	$response = "DOCUMENTI UTILI\n\n";
 	
 	$message = isset($update['message']) ? $update['message'] : "";
 	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -407,7 +406,6 @@ elseif(strpos($text, "/doc") === 0 || $text == "\xF0\x9F\x8C\x8E doc" || $text =
 	// read curl response
 	$output = curl_exec($ch);
 	
-	
 }
 
 
@@ -421,9 +419,9 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\nScegli la categoria", 
+		 'text' => "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\n\xE2\x9A\xA0 Invia il Cognome del Prof cercato\n\nES. Prof NomeProf", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x91\xA4 Prof Ingegneria"),array("\xF0\x9F\x91\xA4 Prof Architett.","\xF0\x9F\x91\xA4 Prof Economia"))
+			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x91\xA4 PROF IN ELENCO"),array("\xE2\x81\x89 Segnala Prof"))
 			,'resize_keyboard' => true
 		)
 	);
