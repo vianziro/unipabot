@@ -419,9 +419,9 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\n\xE2\x9A\xA0 Invia il Cognome del Prof cercato\n\nES. Prof NomeProf", 
+		 'text' => "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\nInvia il Cognome del Prof cercato\n\n\xE2\x9A\xA0 ES. Prof NomeProf", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x91\xA4 PROF IN ELENCO"),array("\xE2\x81\x89 Segnala Prof"))
+			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x91\xA4 PROF IN ELENCO"),array("\xE2\x9A\xA0 Segnala Prof"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -448,50 +448,15 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 	{
 		$response = "Al momento in elenco:\n\n/profburlon \xF0\x9F\x91\xA4 Prof Burlon \n\n/proflacascia \xF0\x9F\x91\xA4 Prof La Cascia \n\nSe il prof che cerchi non è in elenco contatta @gabrieledellaria";
 	}
+	
+//SEGNALA IL TUO PROF
+	elseif(strpos($text, "/segnalaprof") === 0 || $text == "\xE2\x9A\xA0 SEGNALA PROF" || $text == "\xE2\x9A\xA0 Segnala Prof" )
+	{
+		$response = "Se il prof che cerchi non è in elenco contatta @gabrieledellaria riportando Nome,Cognome e Facoltà del Prof da inserire";
+	}	
 
 // Sottosezione Professori //
 
-//PROF Ingegneria
-elseif(strpos($text, "/profingegneria") === 0 || $text == "\xF0\x9F\x91\xA4 PROF INGEGNERIA" || $text == "\xF0\x9F\x91\xA4 Prof Ingegneria" || $text == "\xF0\x9F\x91\xA4 prof ingegneria")
-	{
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
-	$method='sendMessage';
-	
-	$postField = array(
-		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x91\xA5 Professori ING. \n\n\xE2\x9A\xA0 Invia il Cognome del Prof cercato\n\n", 
-		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x91\xA4 INFO PROF","\xF0\x9F\x91\xA4 PROF IN ELENCO"))
-			,'resize_keyboard' => true
-		)
-	);
-	
-	$handle=curl_init();
-	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
-	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
-	curl_setopt($handle,CURLOPT_POST,1);
-	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
-	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
-	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
-	curl_setopt($handle,CURLOPT_ENCODING,1);
-	$dati=json_decode( curl_exec($handle) ,true);
-	curl_close($handle);
-	
-	var_dump($dati);
-		
-		//$response = "\xF0\x9F\x91\xA5 Professori ING. \n\n\xE2\x9A\xA0 Scegli il comando opportuno o invia il Cognome del Prof\n\n/profburlon \xF0\x9F\x91\xA4 Prof Burlon \n\n/proflacascia \xF0\x9F\x91\xA4 Prof La Cascia \n\n";
-	}
-	
-elseif(strpos($text, "/profarchitettura") === 0 || $text == "\xF0\x9F\x91\xA4 Prof Architett." || $text == "\xF0\x9F\x91\xA4 prof architett." || $text == "\xF0\x9F\x91\xA4 PROF ARCHITETT.")
-	{
-		$response = "\xF0\x9F\x91\xA4 Prossimamente disponibili anche i Professori di Architettura ";
-	}
-elseif(strpos($text, "/profeconomia") === 0 || $text == "\xF0\x9F\x91\xA4 Prof Economia" || $text == "\xF0\x9F\x91\xA4 prof economia" || $text == "\xF0\x9F\x91\xA4 PROF ECONOMIA")
-	{
-		$response = "\xF0\x9F\x91\xA4 Prossimamente disponibili anche i Professori di Economia ";
-	}	
-	
-//Professori Ingegneria	
 
 elseif(strpos($text, "/profburlon") === 0 || $text == "Burlon" || $text == "burlon" || $text == "Prof Burlon" || $text == "prof burlon")
 	{
