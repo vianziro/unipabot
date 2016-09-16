@@ -24,7 +24,7 @@ $text = isset($message['text']) ? $message['text'] : "";
 
 <form action="<?php echo $website."/sendphoto" ?>" method="post" enctype="multipart/form-data">
 
-	<input type="text" name="chat_id" value=$chatId />
+	<input type="text" name="chat_id" value="001" />
 	<input type="file" name="photo" />
 	<input type="submit" value="send" />
 
