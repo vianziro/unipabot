@@ -1,4 +1,4 @@
-<?php //include 'aule.php';
+<?php 
 
 define("BOT_TOKEN", "254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o");
 $content = file_get_contents("php://input");
