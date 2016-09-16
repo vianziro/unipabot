@@ -31,5 +31,3 @@ else if(strpos($text, "/aule") === 0 || $text == "\xF0\x9F\x8C\x8E AULE" || $tex
  //sendChatAction
 	
 }
-
-?>
