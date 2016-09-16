@@ -419,7 +419,7 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 		 'chat_id' => $chatId, 
 		 'text' => "🏪 Menu Aule 🏪\n\nInvia il nome dell'aula cercata\n\n\xE2\x9A\xA0 ES. F170", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x91\xA4 AULE IN ELENCO"))
+			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","🏪 AULE IN ELENCO"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -439,6 +439,12 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 	
 	//$response = "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\n/profingegneria \xF0\x9F\x91\xA4 Prof Ingegneria \n\n/profarchitettura \xF0\x9F\x91\xA4 Prof Architett. \n\n/profeconomia \xF0\x9F\x91\xA4 Prof Economia \n\n";
 	
+}
+
+// AULE IN ELENCO
+else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" || $text == "🏪 AULE IN ELENCO")
+{
+	$response = "Le aule in elenco sono:\n\nF130\n\nF140\n\nF150\n\nF160\n\nF170\n\nPer segnalare altre aule scrivi a @gabrieledellaria";
 }
 
 //SOTTOSEZIONE Aule
