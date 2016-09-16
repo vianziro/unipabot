@@ -447,27 +447,42 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 
 	elseif(strpos($text, "F130") === 0 || $text == "f130" || $text == "F130")
 	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
+		// change image name and path
+		$postFields = array('chat_id' => $chatId, 
+						'photo' => new CURLFile(realpath("./img/mappaunipa.jpg")), 
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.8"/*$text*/);
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+	}
+	
+	elseif(strpos($text, "F140") === 0 || $text == "f140" || $text == "F140")
+	{
 		$response = "L'aula si trova al 1° Piano dell'Ed.8";
 	}
 	
-	elseif(strpos($text, "F140") === 0)
+	elseif(strpos($text, "F150") === 0 || $text == "f150" || $text == "F150")
 	{
-		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
+		$response = "L'aula si trova al 1° Piano dell'Ed.8";
 	}
 	
-	elseif(strpos($text, "F150") === 0)
+	elseif(strpos($text, "F160") === 0 || $text == "f160" || $text == "F160")
 	{
-		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
+		$response = "L'aula si trova al 1° Piano dell'Ed.8";
 	}
 	
-	elseif(strpos($text, "F160") === 0)
+	elseif(strpos($text, "F170") === 0 || $text == "f170" || $text == "F170")
 	{
-		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
-	}
-	
-	elseif(strpos($text, "F180") === 0)
-	{
-		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
+		$response = "L'aula si trova al 1° Piano dell'Ed.8";
 	}
 
 
