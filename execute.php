@@ -445,7 +445,7 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 
 //AULE
 
-	elseif(strpos($text, "F130") === 0)
+	elseif(strpos($text, "F130") === 0 || $text == "f 130" || $text == "F 130")
 	{
 		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
 	}
