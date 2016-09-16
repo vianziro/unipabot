@@ -1,7 +1,7 @@
 <?php
 
 // AULE
-elseif(strpos($text, "/aule") === 0 || $text == "\xF0\x9F\x8C\x8E AULE" || $text == "\xF0\x9F\x8C\x8E aule")
+if(strpos($text, "/aule") === 0 || $text == "\xF0\x9F\x8C\x8E AULE" || $text == "\xF0\x9F\x8C\x8E aule")
 {
 	
 	$message = isset($update['message']) ? $update['message'] : "";
