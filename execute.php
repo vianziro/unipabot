@@ -386,6 +386,30 @@ elseif(strpos($text, "/mappa") === 0 || $text == "\xF0\x9F\x8C\x8E MAPPA" || $te
 	
 }
 
+// DOC AULE ING
+elseif(strpos($text, "/doc") === 0 || $text == "\xF0\x9F\x8C\x8E doc" || $text == "\xF0\x9F\x8C\x8E doc")
+{
+	
+	$message = isset($update['message']) ? $update['message'] : "";
+	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+	$text = isset($message['text']) ? $message['text'] : "";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
+	// change image name and path
+	$postFields = array('chat_id' => $chatId, 
+						'document' => new CURLFile(realpath("./img/auleingegneria.pdf")), 
+						'caption' => "Doc Aule Ingegneria Unipa"/*$text*/);
+	$ch = curl_init(); 
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+	curl_setopt($ch, CURLOPT_URL, $botUrl); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+	// read curl response
+	$output = curl_exec($ch);
+
+ //$response = "Mappa Unipa";
+	
+}
+
 
 
 //INFO PROF
