@@ -405,6 +405,9 @@ elseif(strpos($text, "/doc") === 0 || $text == "\xF0\x9F\x8C\x8E doc" || $text =
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 	// read curl response
 	$output = curl_exec($ch);
+	
+	$response = "\xF0\x9F\x8F\xA6 Edificio \n\nSi trova dietro l'Edificio 12 (Lettere e Filosofia)\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 9.00 alle 22\n\n\xF0\x9F\x91\xA4 Info Utili\n\nChiusura dall' 8 al 21 agosto 2016; dal 23 dicembre 2016 al 1° gennaio 2017\n\n\xF0\x9F\x93\x9E Contatti:\n\nTel +39.09123899239 / 95418 (front-office)\n\nTel2. +39.09123899241 / 99243 (servizio dd)\n\nbiblioteca.scienzeumanistiche@unipa.it";
+
 
  //$response = "Mappa Unipa";
 	
