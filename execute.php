@@ -417,7 +417,7 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x91\xA4 Menu Aule \xF0\x9F\x91\xA5\n\nInvia il nome dell'aula cercata\n\n\xE2\x9A\xA0 ES. F170", 
+		 'text' => "🏪 Menu Aule 🏪\n\nInvia il nome dell'aula cercata\n\n\xE2\x9A\xA0 ES. F170", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x91\xA4 AULE IN ELENCO"))
 			,'resize_keyboard' => true
@@ -445,9 +445,29 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 
 //AULE
 
-	elseif(strpos($text, "F170") === 0 || strpos($text, "F 170") === 0 || strpos($text, "f 170") === 0 )
+	elseif(strpos($text, "F130") === 0)
 	{
-		$response = "Al momento in elenco:\n\n/profburlon \xF0\x9F\x91\xA4 Prof Burlon \n\n/proflacascia \xF0\x9F\x91\xA4 Prof La Cascia \n\nSe il prof che cerchi non è in elenco contatta @gabrieledellaria";
+		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
+	}
+	
+	elseif(strpos($text, "F140") === 0)
+	{
+		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
+	}
+	
+	elseif(strpos($text, "F150") === 0)
+	{
+		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
+	}
+	
+	elseif(strpos($text, "F160") === 0)
+	{
+		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
+	}
+	
+	elseif(strpos($text, "F180") === 0)
+	{
+		$response = "L\'aula si trova al 1° Piano dell'Ed.8";
 	}
 
 
