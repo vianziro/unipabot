@@ -55,6 +55,36 @@ if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == 
 	//$response = "\xF0\x9F\x91\x8B Ciao $firstname (@$username), benvenuto in Unipa Bot!";
 }
 
+// TORNA SUBITO AL MENU PRINCIPALE
+if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $text == "🏠 menu principale")
+{
+	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$method='sendMessage';
+	
+	$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "▶️ MENU PRINCIPALE ◀️",
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","\xF0\x9F\x93\x9A BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","\xE2\x9A\xA0 HELP","\xE2\x84\xB9 ABOUT"))
+			,'resize_keyboard' => true
+		)
+	);
+	
+	$handle=curl_init();
+	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	curl_setopt($handle,CURLOPT_POST,1);
+	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+	curl_setopt($handle,CURLOPT_ENCODING,1);
+	$dati=json_decode( curl_exec($handle) ,true);
+	curl_close($handle);
+	
+	var_dump($dati);
+	
+}
+
 else if(strpos($text, "/help") === 0 || $text == "\xE2\x81\x89 HELP" || $text == "\xE2\x81\x89 help")
 {
 	$response = "\xF0\x9F\x93\x94 ELENCOCOMANDI\n\n/start \xF0\x9F\x9A\x80 START BOT \n\n/professori \xF0\x9F\x91\xA4 Professori \n\n/mappa \xF0\x9F\x8C\x90 Mappa Unipa \n\n/orariolezioni \xF0\x9F\x95\x92 Orario Lezioni \n\n/oraribiblioteca \xF0\x9F\x8F\xA6 Orari Biblioteca \n\n/ristoro \xF0\x9F\x8D\x9D Punti Ristoro \n\n/about \xE2\x9A\xA0 Info sul Bot \n\n/help \xE2\x84\xB9 Elenco comandi \n\n";
@@ -198,7 +228,7 @@ elseif(strpos($text, "/orariolezioni") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x95\x92 SEZIONE ORARIO LEZIONI \xF0\x9F\x95\x92\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("\xF0\x9F\x95\x92 ORARIO CORSI ARCH","\xF0\x9F\x95\x92 ORARIO CORSI ECO"))
+			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🏠 MENU PRINCIPALE"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -229,7 +259,7 @@ elseif(strpos($text, "/orariolezing") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x95\x92 ORARIO LEZIONI","\xF0\x9F\x95\x92 ORARIO ING INFORMATICA"),array("\xF0\x9F\x95\x92 ORARIO ING GESTIONALE","\xF0\x9F\x95\x92 ORARIO ING MECCANICA"))
+			 "keyboard"=> array(array("\xF0\x9F\x95\x92 ORARIO LEZIONI","🏠 MENU PRINCIPALE"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA","\xF0\x9F\x95\x92 ORARIO ING GESTIONALE"),array("\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA","\xF0\x9F\x95\x92 ORARIO ING MECCANICA"))
 			,'resize_keyboard' => true
 		)
 	);
