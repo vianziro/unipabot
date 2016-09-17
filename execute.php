@@ -236,7 +236,7 @@ elseif(strpos($text, "/orariolezioni") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x95\x92 SEZIONE ORARIO LEZIONI \xF0\x9F\x95\x92\n\n".$firstname." scegli fra le opzioni sotto\n\n", 
+		 'text' => "\xF0\x9F\x95\x92 SEZIONE ORARIO LEZIONI \xF0\x9F\x95\x92\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO"))
 			,'resize_keyboard' => true
@@ -542,7 +542,7 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "🏪 Menu Aule 🏪\n\nInvia il nome dell'aula cercata\n\n\xE2\x9A\xA0 ES. F170", 
+		 'text' => "🏪 Menu Aule 🏪\n\n".$firstname." inviami il nome dell'aula che cerchi\n\n\xE2\x9A\xA0 ES. F170", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🏪 AULE IN ELENCO"))
 			,'resize_keyboard' => true
@@ -683,7 +683,7 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\nInvia il Cognome del Prof cercato\n\n\xE2\x9A\xA0 ES. Prof NomeProf", 
+		 'text' => "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\n".$firstname." inviami il Cognome del Prof che cerchi\n\n\xE2\x9A\xA0 ES. Prof NomeProf", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA4 PROF IN ELENCO"),array("\xE2\x9A\xA0 Segnala Prof"))
 			,'resize_keyboard' => true
@@ -760,7 +760,7 @@ elseif(strpos($text, "/dipartimenti") === 0 || $text == "\xF0\x9F\x8F\xA2 DIPART
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x8F\xA6 MENU DIPARTIMENTI \xF0\x9F\x91\xA5\n\nScegli il Dipartimento", 
+		 'text' => "\xF0\x9F\x8F\xA6 MENU DIPARTIMENTI \xF0\x9F\x91\xA5\n\n".$firstname." quale Dipartimento cerchi?", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 DICGIM"),array("\xF0\x9F\x8F\xA6 DIP. IDRAULICA","\xF0\x9F\x8F\xA6 DIP. CHIMICA"))
 			,'resize_keyboard' => true
@@ -825,7 +825,7 @@ elseif(strpos($text, "/macchcaffe") === 0 || $text == "\xE2\x98\x95 CAFFE" || $t
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x8F\xA6 MENU MACCHINETTE CAFFE' \xF0\x9F\x91\xA5\n\nSeleziona fra le opzioni sotto", 
+		 'text' => "\xF0\x9F\x8F\xA6 MENU MACCHINETTE CAFFE' \xF0\x9F\x91\xA5\n\n".$firstname." seleziona fra le opzioni sotto", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xE2\x98\x95 MACCH. ED.8"),array("\xE2\x98\x95 MACCH. ED.9","\xE2\x98\x95 MACCH. ED.6"))
 			,'resize_keyboard' => true
