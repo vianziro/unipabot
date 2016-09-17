@@ -1650,7 +1650,7 @@ elseif(strpos($text, "/mappaersu") === 0 || $text == "🌍 MAPPA ERSU" || $text 
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xF0\x9F\x8D\x9D MENSA SANTI ROMANO \xF0\x9F\x8D\x95\n\n\xF0\x9F\x95\x92 ORARIO ESERCIZIO\n\nIl pranzo viene servito dalle 12.00 alle 15.00, mentre la cena viene servita dalle 19.00 alle 21.30.\n\nIn più, la sala ristorazione della Residenza Universitaria S. Romano offre un servizio di pizzeria aperto ogni giorno dalle ore 19:30 alle ore 22:30.\n\nNote:La mensa Santi Romano è aperta tutto l'anno , escludendo brevi periodi  estivi e per le festività di Natale, Pasqua, 1° maggio";
+		$response = "MAPPA SERVIZI ERSU http://www.ersupalermo.it/mappa-residenze-ersu-palermo/";
 	}	
 	
 //SOTTOSEZIONE MENSE
