@@ -435,7 +435,7 @@ elseif(strpos($text, "/orariolezing") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA","\xF0\x9F\x95\x92 ORARIO ING GESTIONALE"),array("\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA","\xF0\x9F\x95\x92 ORARIO ING MECCANICA"),array("\xF0\x9F\x95\x92 ORARIO ING ENERGIA","\xF0\x9F\x95\x92 ORARIO ING CHIMICA"),array("\xF0\x9F\x95\x92 ORARIO ING AMBIENTE","\xF0\x9F\x95\x92 ORARIO ING CIV-EDI"),array("\xF0\x9F\x95\x92 ORARIO ING GEST INF","\xF0\x9F\x95\x92 ORARIO ING CIBERN"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA","\xF0\x9F\x95\x92 ORARIO ING GESTIONALE"),array("\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA","\xF0\x9F\x95\x92 ORARIO ING MECCANICA"),array("\xF0\x9F\x95\x92 ORARIO ING ENERGIA","\xF0\x9F\x95\x92 ORARIO ING CHIMICA"),array("\xF0\x9F\x95\x92 ORARIO ING AMBIENTALE","\xF0\x9F\x95\x92 ORARIO ING CIV-EDI"),array("\xF0\x9F\x95\x92 ORARIO ING GEST INF","\xF0\x9F\x95\x92 ORARIO ING CIBERN"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -1158,7 +1158,7 @@ elseif(strpos($text, "/mod2ingchi") === 0 || $text == "📄 MODULO II ING CHI" |
 
 // ORARIO LEZIONI INGEGNERIA AMBIENTALE
 
-elseif(strpos($text, "/ingamb") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING AMBIENTALE" || $text == "\xF0\x9F\x95\x92 orario ing gestionale")
+elseif(strpos($text, "/ingamb") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING AMBIENTALE" || $text == "\xF0\x9F\x95\x92 orario ing ambientale")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
