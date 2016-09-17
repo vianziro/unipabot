@@ -1282,7 +1282,7 @@ elseif(strpos($text, "/ersu") === 0 || $text == "\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\
 					Mercoledì dalle ore 15:30 alle ore 17:30\n\n\xE2\x9A\xA0 INFO\n\nPer informazioni sugli uffici, sullo stato degli atti e dei procedimenti amministrativi, nonché su ogni attività che riguardi l’Ente, inviare email a info@ersupalermo.gov.it.
 					Per informazioni riguardanti le borse e i servizi erogati dall’Ente (borse di studio, servizio abitativo, servizio ristorazione, ecc…), inviare email a borse@ersupalermo.gov.it oppure compilare il modulo online disponibile nella pagina personale dei “Servizi ERSU” del portale studenti dell’UNIPA.", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🌍 MAPPA ERSU"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🌍 MAPPA ERSU"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1302,6 +1302,28 @@ elseif(strpos($text, "/ersu") === 0 || $text == "\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\
 		
 
 }
+
+//MAPPA SERVIZI ERSU
+
+elseif(strpos($text, "/mappaersu") === 0 || $text == "🌍 MAPPA ERSU" || $text == "🌍 mappa ersu" )
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$response = "MAPPA SERVIZI ERSU http://www.ersupalermo.it/mappa-residenze-ersu-palermo/";
+	}	
 
 // SEGRETERIA 	
 elseif(strpos($text, "/segreteria") === 0 || $text == "\xF0\x9F\x8F\xAC SEGRET" || $text == "\xF0\x9F\x8F\xAC segret")
@@ -1630,28 +1652,6 @@ elseif(strpos($text, "/inforistorazione") === 0 || $text == "ℹ️ INFO RISTORA
  //$response = "Mappa Unipa";
 	
 }	
-
-//MAPPA SERVIZI ERSU
-
-elseif(strpos($text, "/mappaersu") === 0 || $text == "🌍 MAPPA ERSU" || $text == "🌍 mappa ersu" )
-	{
-		$message = isset($update['message']) ? $update['message'] : "";
-		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
-		$text = isset($message['text']) ? $message['text'] : "";
-		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
-		// change file name and path
-		$postFields = array('chat_id' => $chatId, 
-						'action' => 'typing');
-		$ch = curl_init(); 
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
-		curl_setopt($ch, CURLOPT_URL, $botUrl); 
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-		// read curl response
-		$output = curl_exec($ch);
-		
-		$response = "MAPPA SERVIZI ERSU http://www.ersupalermo.it/mappa-residenze-ersu-palermo/";
-	}	
 	
 //SOTTOSEZIONE MENSE
 
