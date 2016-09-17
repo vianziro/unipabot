@@ -1545,7 +1545,7 @@ elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $te
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x93\x84 COPISTERIE\n\n".$firstname.", ecco le copisterie che fanno per te\n\n", 
+		 'text' => "\xF0\x9F\x8D\x9D MENU MENSA\n\n".$firstname.", dove vuoi andare a mangiare?\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x9D MENSA SANTI ROMANO"),array("\xF0\x9F\x8D\x9D MENSA CIVICO","\xF0\x9F\x8D\x9D MENSA S.SAVERIO"))
 			,'resize_keyboard' => true
@@ -1571,7 +1571,7 @@ elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $te
 
 //MENSA S.ROMANO
 
-elseif(strpos($text, "/mensasromano") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA SANTI ROMANO" || $text == "\xF0\x9F\x8D\x9D MENSA SANTI ROMANO" )
+elseif(strpos($text, "/mensasromano") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA SANTI ROMANO" || $text == "\xF0\x9F\x8D\x9D mensa santi romano" )
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
