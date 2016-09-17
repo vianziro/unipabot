@@ -340,7 +340,7 @@ elseif(strpos($text, "/matascelta") === 0 || $text == "\xF0\x9F\x93\x9A MATERIE 
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xE2\x9A\xA0 Prossimamente disponibili le MATERIE A SCELTA consigliate ";
+		$response = "📖 Le materie a scelta che si consiglio sono:\n\n📓 Gestione della Produzione Industriale (ING)\n\n ";
 	}
 
 //TIROCINIO	
