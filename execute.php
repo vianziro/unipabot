@@ -800,6 +800,7 @@ elseif(strpos($text, "/salletwurth") === 0 || $text == "\xF0\x9F\x8F\xA6 SALA LE
 }
 
 // MAPPA
+
 elseif(strpos($text, "/mappa") === 0 || $text == "\xF0\x9F\x8C\x8E MAPPA" || $text == "\xF0\x9F\x8C\x8E mappa")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
@@ -1547,7 +1548,7 @@ elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $te
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8D\x9D MENU MENSA\n\n".$firstname.", dove vuoi andare a mangiare?\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x9D MENSA SANTI ROMANO"),array("\xF0\x9F\x8D\x9D MENSA CIVICO","\xF0\x9F\x8D\x9D MENSA S.SAVERIO"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","ℹ️ INFO RISTORAZIONE"),array(array("\xF0\x9F\x8D\x9D MENSA SANTI ROMANO","\xF0\x9F\x8D\x9D MENSA CIVICO"),array("\xF0\x9F\x8D\x9D MENSA S.SAVERIO"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1566,6 +1567,43 @@ elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $te
 		var_dump($dati);
 		
 	}
+
+// INFO RISTORAZIONE
+
+elseif(strpos($text, "/infomense") === 0 || $text == "ℹ️ INFO RISTORAZIONE" || $text == "ℹ️ info ristorazione")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
+	$message = isset($update['message']) ? $update['message'] : "";
+	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+	$text = isset($message['text']) ? $message['text'] : "";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
+	// change image name and path
+	$postFields = array('chat_id' => $chatId, 
+						'photo' => new CURLFile(realpath("./img/inforistorazione.png")), 
+						'caption' => $firstname.", Info sui servizi di ristorazione");
+	$ch = curl_init(); 
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+	curl_setopt($ch, CURLOPT_URL, $botUrl); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+	// read curl response
+	$output = curl_exec($ch);
+	
+}	
 	
 //SOTTOSEZIONE MENSE
 
@@ -1588,7 +1626,7 @@ elseif(strpos($text, "/mensasromano") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA 
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xF0\x9F\x8D\x9D MENSA SANTI ROMANO \xF0\x9F\x8D\x95\n\n\xF0\x9F\x95\x92 ORARIO ESERCIZIO\n\nil pranzo viene servito dalle 12.00 alle 15.00, mentre la cena viene servita dalle 19.00 alle 21.30.\n\nIn più, la sala ristorazione della Residenza Universitaria S. Romano offre un servizio di pizzeria aperto ogni giorno dalle ore 19:30 alle ore 22:30. ";
+		$response = "\xF0\x9F\x8D\x9D MENSA SANTI ROMANO \xF0\x9F\x8D\x95\n\n\xF0\x9F\x95\x92 ORARIO ESERCIZIO\n\nIl pranzo viene servito dalle 12.00 alle 15.00, mentre la cena viene servita dalle 19.00 alle 21.30.\n\nIn più, la sala ristorazione della Residenza Universitaria S. Romano offre un servizio di pizzeria aperto ogni giorno dalle ore 19:30 alle ore 22:30.\n\nNote:La mensa Santi Romano è aperta tutto l'anno , escludendo brevi periodi  estivi e per le festività di Natale, Pasqua, 1° maggio";
 	}	
 	
 //COPISTERIE
