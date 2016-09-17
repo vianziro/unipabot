@@ -715,7 +715,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING M
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I ING MEC","📄 MODULO II ING MEC"),array("\xF0\x9F\x95\x92 ORARIO ING MECCANICA"))
+			 "keyboard"=> array(array("📄 MODULO I ING MEC","📄 MODULO II ING MEC"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
 			,'resize_keyboard' => true
 		)
 	);
