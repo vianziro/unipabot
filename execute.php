@@ -105,7 +105,7 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 RISTORO" ||
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8D\x94 Punti Ristoro\n\nScegli la Panineria tra quelle sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x8D\x94 Panineria Jhonny"),array("\xF0\x9F\x8D\x94 Panineria del Viale","\xF0\x9F\x8D\x94 Panineria Massaro"))
+			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x8D\x94 Panineria Jhonny"),array("\xF0\x9F\x8D\x94 Panineria del Viale","🍴 Casa Massaro"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -137,6 +137,12 @@ elseif(strpos($text, "/jhonny") === 0 || $text == "\xF0\x9F\x8D\x94 Panineria Jh
 elseif(strpos($text, "/pandelviale") === 0 || $text == "\xF0\x9F\x8D\x94 Panineria del Viale" || $text == "\xF0\x9F\x8D\x94 panineria del viale")
 {
 	$response = "\xF0\x9F\x8D\x94 Panineria Del Viale \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nhttps://goo.gl/nGtgbY\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
+}
+
+//Casa Massaro
+elseif(strpos($text, "/casamassaro") === 0 || $text == "🍴 Casa Massaro" || $text == "🍴 casa massaro")
+{
+	$response = "\xF0\x9F\x8D\x94 Casa Massaro \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nAlla destra del Bar Massaro Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 }
 
 // MENU STUDENTI
