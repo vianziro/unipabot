@@ -2792,7 +2792,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xF0\x9F\x91\xA4 Nome: Elisabetta \n\xF0\x9F\x91\xA4 Cognome: Di Giovanni \n\xF0\x9F\x8F\xA6 Ufficio: Ed.7\nRicevimento: Martedì dalle 09:00 alle 11:00 presso Edificio 15, 7° piano\nContatti: elisabetta.digiovanni@unipa.it";
+		$response = "\xF0\x9F\x91\xA4 Nome: Elisabetta \n\xF0\x9F\x91\xA4 Cognome: Di Giovanni \n\xF0\x9F\x8F\xA6 Ufficio: Ed.15\nRicevimento: Martedì dalle 09:00 alle 11:00 presso Edificio 15, 7° piano\nContatti: elisabetta.digiovanni@unipa.it";
 	}
 
 	
