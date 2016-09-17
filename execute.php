@@ -95,11 +95,27 @@ if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $t
 
 else if(strpos($text, "/help") === 0 || $text == "\xE2\x9A\xA0 HELP" || $text == "\xE2\x9A\xA0 help")
 {
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
 	$response = "\xF0\x9F\x93\x94 Ecco i miei comandi\n\n/start \xF0\x9F\x9A\x80 START BOT \n\n/professori \xF0\x9F\x91\xA4 Professori \n\n/mappa \xF0\x9F\x8C\x90 Mappa Unipa \n\n/orariolezioni \xF0\x9F\x95\x92 Orario Lezioni \n\n/oraribiblioteca \xF0\x9F\x8F\xA6 Orari Biblioteca \n\n/ristoro \xF0\x9F\x8D\x9D Punti Ristoro \n\n/about \xE2\x9A\xA0 Info sul Bot \n\n/help \xE2\x84\xB9 Elenco comandi \n\n";
 }
 
 else if($text == "\xE2\xAC\x85 BACK" || $text == "\xE2\xAC\x85 back")
 {
+	
 	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
 	$method='sendMessage';
 	
@@ -131,6 +147,21 @@ else if($text == "\xE2\xAC\x85 BACK" || $text == "\xE2\xAC\x85 back")
 //ABOUT
 elseif(strpos($text, "/about") === 0 || $text == "\xE2\x84\xB9 ABOUT" || $text == "\xE2\x84\xB9 about")
 {
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
 	$response = "\xE2\x9A\xA0 Info:\n\nIn Unipa Bot potrai trovare tutte le info necessarie per l'Università di Palermo\n\n\xE2\x84\xB9 Credits:\n\nQuesto bot è stato creato da Gabriele Dell'Aria (@gabrieledellaria) ... Se hai suggerimenti contattami pure e sarò felice di accogliere i tuoi spunti";
 }
 
@@ -138,6 +169,21 @@ elseif(strpos($text, "/about") === 0 || $text == "\xE2\x84\xB9 ABOUT" || $text =
 elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 RISTORO" || $text == "\xF0\x9F\x8D\x94 ristoro")
 {
 	
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
 		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
 		$method='sendMessage';
 	
@@ -170,24 +216,84 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 RISTORO" ||
 //Panineria da Jhonny
 elseif(strpos($text, "/jhonny") === 0 || $text == "\xF0\x9F\x8D\x94 Panineria Jhonny" || $text == "\xF0\x9F\x8D\x94 panineria jhonny")
 {
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
 	$response = "\xF0\x9F\x8D\x94 Panineria da Jhonny \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nhttps://goo.gl/a17ehV\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 }
 
 //Panineria Del Viale
 elseif(strpos($text, "/pandelviale") === 0 || $text == "\xF0\x9F\x8D\x94 Panineria del Viale" || $text == "\xF0\x9F\x8D\x94 panineria del viale")
 {
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
 	$response = "\xF0\x9F\x8D\x94 Panineria Del Viale \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nhttps://goo.gl/nGtgbY\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 }
 
 //Casa Massaro
 elseif(strpos($text, "/casamassaro") === 0 || $text == "🍴 Casa Massaro" || $text == "🍴 casa massaro")
 {
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
 	$response = "\xF0\x9F\x8D\x94 Casa Massaro \n\n\xF0\x9F\x8C\x8E Localizzazione \xF0\x9F\x8C\x8E\n\nAlla destra del Bar Massaro\n\nOrari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 }
 
 // MENU STUDENTI
 elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU STUDENTI" || $text == "\xF0\x9F\x91\xA5 menu studenti" )
 {
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
 	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
 	$method='sendMessage';
 	
@@ -219,18 +325,63 @@ elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU S
 // MATERIE A SCELTA
 elseif(strpos($text, "/matascelta") === 0 || $text == "\xF0\x9F\x93\x9A MATERIE A SCELTA" || $text == "\xF0\x9F\x93\x9A materie a scelta")
 	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
 		$response = "\xE2\x9A\xA0 Prossimamente disponibili le MATERIE A SCELTA consigliate ";
 	}
 
 //TIROCINIO	
 elseif(strpos($text, "/tirocinio") === 0 || $text == "\xF0\x9F\x93\x91 TIROCINIO" || $text == "\xF0\x9F\x93\x91 tirocinio")
 	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
 		$response = "\xE2\x9A\xA0 Prossimamente disponibili le aziende di TIROCINIO consigliate ";
 	}	
 
 // MENU ORARIO LEZIONI
 elseif(strpos($text, "/orariolezioni") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO LEZIONI" || $text == "\xF0\x9F\x95\x92 orario lezioni")
 {
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
 	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
 	$method='sendMessage';
 	
@@ -262,6 +413,21 @@ elseif(strpos($text, "/orariolezioni") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 // MENU ORARIO LEZIONI INGEGNERIA
 elseif(strpos($text, "/orariolezing") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO CORSI ING" || $text == "\xF0\x9F\x95\x92 orario corsi ing")
 {
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
 	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
 	$method='sendMessage';
 	
@@ -293,6 +459,21 @@ elseif(strpos($text, "/orariolezing") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 // ORARIO LEZIONI INGEGNERIA INFORMATICA
 elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING INFORMATICA" || $text == "\xF0\x9F\x95\x92 orario ing informatica")
 {
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
 	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
 	$method='sendMessage';
 	
