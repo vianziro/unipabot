@@ -1548,7 +1548,7 @@ elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $te
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8D\x9D MENU MENSA\n\n".$firstname.", dove vuoi andare a mangiare?\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x9D MENSA SANTI ROMANO"),array("\xF0\x9F\x8D\x9D MENSA CIVICO","\xF0\x9F\x8D\x9D MENSA S.SAVERIO"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","ℹ️ INFO RISTORAZIONE"),array("\xF0\x9F\x8D\x9D MENSA SANTI ROMANO","\xF0\x9F\x8D\x9D MENSA CIVICO"),array("\xF0\x9F\x8D\x9D MENSA S.SAVERIO"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1567,6 +1567,45 @@ elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $te
 		var_dump($dati);
 		
 	}
+	
+// INFO RISTORAZIONE
+
+elseif(strpos($text, "/inforistorazione") === 0 || $text == "ℹ️ INFO RISTORAZIONE" || $text == "ℹ️ info ristorazione")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
+	$message = isset($update['message']) ? $update['message'] : "";
+	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+	$text = isset($message['text']) ? $message['text'] : "";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
+	// change image name and path
+	$postFields = array('chat_id' => $chatId, 
+						'photo' => new CURLFile(realpath("./img/inforistorazione.png")), 
+						'caption' => $firstname.", ecco le info sui servizi di ristorazione"/*$text*/);
+	$ch = curl_init(); 
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+	curl_setopt($ch, CURLOPT_URL, $botUrl); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+	// read curl response
+	$output = curl_exec($ch);
+
+ //$response = "Mappa Unipa";
+	
+}	
 	
 //SOTTOSEZIONE MENSE
 
