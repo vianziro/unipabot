@@ -918,7 +918,7 @@ elseif(strpos($text, "/coped9") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA E
 
 elseif(strpos($text, "/echochatid") === 0 )
 	{
-		$response = "Il tuo chat_id è ".$chat_Id;	
+		$response = "Il tuo chat_id è ".$chatId;	
 	}	
 
 else
