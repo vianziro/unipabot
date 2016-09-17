@@ -385,7 +385,7 @@ elseif(strpos($text, "/inggest") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING 
 
 //SOTTOSEZIONE MODULI ING GEST
 
-elseif(strpos($text, "/mod1inggest") === 0 || $text == "📄 MODULO I ING GEST" || $text == "📄 modulo i ing GEST")
+elseif(strpos($text, "/mod1inggest") === 0 || $text == "📄 MODULO I ING GEST" || $text == "📄 modulo i ing gest")
 {
 	
 	$message = isset($update['message']) ? $update['message'] : "";
@@ -406,7 +406,7 @@ elseif(strpos($text, "/mod1inggest") === 0 || $text == "📄 MODULO I ING GEST" 
 	
 }
 
-elseif(strpos($text, "/mod2inggest") === 0 || $text == "📄 MODULO I ING GEST" || $text == "📄 modulo i ing GEST")
+elseif(strpos($text, "/mod2inggest") === 0 || $text == "📄 MODULO II ING GEST" || $text == "📄 modulo ii ing gest")
 {
 	
 	$message = isset($update['message']) ? $update['message'] : "";
