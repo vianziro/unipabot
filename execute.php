@@ -794,7 +794,7 @@ elseif(strpos($text, "/mod2ingmec") === 0 || $text == "📄 MODULO II ING MEC" |
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'document' => new CURLFile(realpath("./orariolezioni/inginf/noLMEC2.pdf")), 
+						'document' => new CURLFile(realpath("./orariolezioni/ingmec/noLMEC2.pdf")), 
 						'caption' => $text);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
