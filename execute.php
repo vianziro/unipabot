@@ -446,7 +446,7 @@ elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "\xF0\x9F\x93\x9A BIB
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x8F\xA6 Menu Biblioteche \xF0\x9F\x8F\xA6\n\n".$firstname." scegli la Biblioteca che vuoi visitare\n\n", 
+		 'text' => "\xF0\x9F\x8F\xA6 Menu Biblioteche \xF0\x9F\x8F\xA6\n\n".$firstname.", che Biblioteca vuoi visitare?\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE","\xF0\x9F\x8F\xA6 SALA LETTURA WURTH"))
 			,'resize_keyboard' => true
@@ -498,7 +498,7 @@ elseif(strpos($text, "/mappa") === 0 || $text == "\xF0\x9F\x8C\x8E MAPPA" || $te
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaunipa.jpg")), 
-						'caption' => $firstname." ecco la Mappa Unipa!"/*$text*/);
+						'caption' => $firstname.", ecco la Mappa Unipa!"/*$text*/);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 	curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -542,7 +542,7 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "🏪 Menu Aule 🏪\n\n".$firstname." inviami il nome dell'aula che cerchi\n\n\xE2\x9A\xA0 ES. F170", 
+		 'text' => "🏪 Menu Aule 🏪\n\n".$firstname.", come si chiama l'aula che cerchi?\n\n\xE2\x9A\xA0 ES. F170", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🏪 AULE IN ELENCO"))
 			,'resize_keyboard' => true
@@ -683,7 +683,7 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\n".$firstname." inviami il Cognome del Prof che cerchi\n\n\xE2\x9A\xA0 ES. Prof NomeProf", 
+		 'text' => "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\n".$firstname.", qual'è il Cognome del Prof che cerchi?\n\n\xE2\x9A\xA0 ES. Prof NomeProf", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA4 PROF IN ELENCO"),array("\xE2\x9A\xA0 Segnala Prof"))
 			,'resize_keyboard' => true
@@ -760,7 +760,7 @@ elseif(strpos($text, "/dipartimenti") === 0 || $text == "\xF0\x9F\x8F\xA2 DIPART
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x8F\xA6 MENU DIPARTIMENTI \xF0\x9F\x91\xA5\n\n".$firstname." quale Dipartimento cerchi?", 
+		 'text' => "\xF0\x9F\x8F\xA6 MENU DIPARTIMENTI \xF0\x9F\x91\xA5\n\n".$firstname.", quale Dipartimento cerchi?", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 DICGIM"),array("\xF0\x9F\x8F\xA6 DIP. IDRAULICA","\xF0\x9F\x8F\xA6 DIP. CHIMICA"))
 			,'resize_keyboard' => true
@@ -825,7 +825,7 @@ elseif(strpos($text, "/macchcaffe") === 0 || $text == "\xE2\x98\x95 CAFFE" || $t
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x8F\xA6 MENU MACCHINETTE CAFFE' \xF0\x9F\x91\xA5\n\n".$firstname." seleziona fra le opzioni sotto", 
+		 'text' => "\xF0\x9F\x8F\xA6 MENU MACCHINETTE CAFFE' \xF0\x9F\x91\xA5\n\n".$firstname.", seleziona fra le opzioni sotto", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xE2\x98\x95 MACCH. ED.8"),array("\xE2\x98\x95 MACCH. ED.9","\xE2\x98\x95 MACCH. ED.6"))
 			,'resize_keyboard' => true
@@ -923,7 +923,7 @@ elseif(strpos($text, "/coped9") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA E
 
 else
 {
-	$response = "\xE2\x9A\xA0 Comando non valido!\n\nDigita /help per l'elenco comandi";
+	$response = "\xE2\x9A\xA0 Comando che hai eseguito non è valido!\n\nDigita /help per il mio elenco comandi";
 }
 	
 
