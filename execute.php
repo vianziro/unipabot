@@ -253,44 +253,6 @@ elseif(strpos($text, "/orariolezing") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 // ORARIO LEZIONI INGEGNERIA INFORMATICA
 elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING INFORMATICA" || $text == "\xF0\x9F\x95\x92 orario ing informatica")
 {
-	$message = isset($update['message']) ? $update['message'] : "";
-	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
-	$text = isset($message['text']) ? $message['text'] : "";
-	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
-	// change image name and path
-	$postFields = array('chat_id' => $chatId, 'photo' => new CURLFile(realpath("./img/lezioni1anno.PNG")), 'caption' => "Orario Lezioni 1° Anno Ing.Informatica");
-	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
-	curl_setopt($ch, CURLOPT_URL, $botUrl); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-	// read curl response
-	$output = curl_exec($ch);
-	
-	// change image name and path
-	$postFields = array('chat_id' => $chatId, 'photo' => new CURLFile(realpath("./img/lezioni2annoinginf.PNG")), 'caption' => "Orario Lezioni 2° Anno Ing.Informatica");
-	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
-	curl_setopt($ch, CURLOPT_URL, $botUrl); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-	// read curl response
-	$output = curl_exec($ch);
-	
-	// change image name and path
-	$postFields = array('chat_id' => $chatId, 'photo' => new CURLFile(realpath("./img/lezioni3annoinginf.PNG")), 'caption' => "Orario Lezioni 3° Anno Ing.Informatica");
-	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
-	curl_setopt($ch, CURLOPT_URL, $botUrl); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-	// read curl response
-	$output = curl_exec($ch);
-}
-
-// MENU ORARIO LEZIONI ARCH
-elseif(strpos($text, "/orariolezarch") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO CORSI ARCH" || $text == "\xF0\x9F\x95\x92 orario corsi arch")
-{
 	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
 	$method='sendMessage';
 	
@@ -298,7 +260,7 @@ elseif(strpos($text, "/orariolezarch") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x95\x92 ORARIO LEZIONI","\xF0\x9F\x95\x92 ORARIO ARCHITETTURA"),array("\xF0\x9F\x95\x92 ORARIO DISEGNO INDUSTRIALE"))
+			 "keyboard"=> array(array("📄 MODULO I INGINF","📄 MODULO II ING INF"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -315,8 +277,50 @@ elseif(strpos($text, "/orariolezarch") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 	curl_close($handle);
 	
 	var_dump($dati);
+}
+
+//SOTTOSEZIONE MODULI ING INF
+
+elseif(strpos($text, "/mod1inginf") === 0 || $text == "📄 MODULO I ING INF" || $text == "📄 modulo i ing inf")
+{
 	
-	//$response = "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\n/inginf Orari Ing.Informatica \n\n/inggest Orari Ing.Gestionale \n\n";
+	$message = isset($update['message']) ? $update['message'] : "";
+	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+	$text = isset($message['text']) ? $message['text'] : "";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
+	// change image name and path
+	$postFields = array('chat_id' => $chatId, 
+						'document' => new CURLFile(realpath("./orariolezioni/inginf/noLINFTL1.pdf")), 
+						'caption' => $text);
+	$ch = curl_init(); 
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+	curl_setopt($ch, CURLOPT_URL, $botUrl); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+	// read curl response
+	$output = curl_exec($ch);
+	
+}
+
+elseif(strpos($text, "/mod2inginf") === 0 || $text == "📄 MODULO II ING INF" || $text == "📄 modulo ii ing inf")
+{
+	
+	$message = isset($update['message']) ? $update['message'] : "";
+	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+	$text = isset($message['text']) ? $message['text'] : "";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
+	// change image name and path
+	$postFields = array('chat_id' => $chatId, 
+						'document' => new CURLFile(realpath("./orariolezioni/inginf/noLINFTL2.pdf")), 
+						'caption' => $text);
+	$ch = curl_init(); 
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+	curl_setopt($ch, CURLOPT_URL, $botUrl); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+	// read curl response
+	$output = curl_exec($ch);
+	
 }
 
 // MENU ORARI BIBLIOTECHE
@@ -540,7 +544,7 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
 		$text = isset($message['text']) ? $message['text'] : "";
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
-		// change image name and path
+		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
 						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.8"/*$text*/);
@@ -555,6 +559,7 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 
 
 //INFO PROF
+
 elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PROF" || $text == "\xF0\x9F\x91\xA4 info prof")
 {
 	
@@ -588,19 +593,20 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 }
 
 //PROF IN ELENCO
+
 	elseif(strpos($text, "/profinelenco") === 0 || $text == "\xF0\x9F\x91\xA4 PROF IN ELENCO" || $text == "\xF0\x9F\x91\xA4 prof in elenco" )
 	{
 		$response = "Al momento in elenco:\n\n/profburlon \xF0\x9F\x91\xA4 Prof Burlon \n\n/proflacascia \xF0\x9F\x91\xA4 Prof La Cascia \n\nSe il prof che cerchi non è in elenco contatta @gabrieledellaria";
 	}
 	
 //SEGNALA IL TUO PROF
+
 	elseif(strpos($text, "/segnalaprof") === 0 || $text == "\xE2\x9A\xA0 SEGNALA PROF" || $text == "\xE2\x9A\xA0 Segnala Prof" || $text == "\xE2\x9A\xA0 segnala prof")
 	{
 		$response = "Se il prof che cerchi non è in elenco contatta @gabrieledellaria riportando Nome,Cognome e Facoltà del Prof da inserire";
 	}	
 
 // Sottosezione Professori //
-
 
 elseif(strpos($text, "/profburlon") === 0 || $text == "Burlon" || $text == "burlon" || $text == "Prof Burlon" || $text == "prof burlon")
 	{
