@@ -1390,9 +1390,9 @@ elseif(strpos($text, "/mod2ingciv") === 0 || $text == "📄 MODULO II ING CIV" |
 	
 }
 
-// ORARIO LEZIONI INGEGNERIA CIB
+// ORARIO LEZIONI INGEGNERIA CIBERNETICA
 
-elseif(strpos($text, "/ingcib") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING CIBERNETICA" || $text == "\xF0\x9F\x95\x92 orario ing cibernetica")
+elseif(strpos($text, "/ingcib") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING CIBERN" || $text == "\xF0\x9F\x95\x92 orario ing cibern")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
