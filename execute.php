@@ -1284,7 +1284,7 @@ elseif(strpos($text, "/mod12arch") === 0 || $text == "📄 MODULO I-II ARCHITETT
 }
 
 // ORARIO LEZIONI DISEGNO INDUSTRIALE
-elseif(strpos($text, "/disind") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO DISEGNO INDUSTRIALE" || $text == "\xF0\x9F\x95\x92 orario disegno industriale")
+elseif(strpos($text, "/disind") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO DIS. INDUSTRIALE" || $text == "\xF0\x9F\x95\x92 orario dis. industriale")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
