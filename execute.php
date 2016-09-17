@@ -916,11 +916,10 @@ elseif(strpos($text, "/coped9") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA E
 		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
 	}	
 
-//elseif(strpos($text, "/sndmsg") === 0 )
-	//{
-		//$url = "https://api.telegram.org/bot" . BOT_TOKEN ."/sendMessage?chat_id=".$chatId."&text=".urlencode($message);
-		//file_get_contents($url);	
-	//}	
+elseif(strpos($text, "/echochatid") === 0 )
+	{
+		$response = "Il tuo chat_id è ".$chat_Id;	
+	}	
 
 else
 {
