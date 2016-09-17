@@ -142,7 +142,7 @@ elseif(strpos($text, "/pandelviale") === 0 || $text == "\xF0\x9F\x8D\x94 Paniner
 //Casa Massaro
 elseif(strpos($text, "/casamassaro") === 0 || $text == "🍴 Casa Massaro" || $text == "🍴 casa massaro")
 {
-	$response = "\xF0\x9F\x8D\x94 Casa Massaro \n\n\xF0\x9F\x8C\x8E Localizzazione Maps \xF0\x9F\x8C\x8E\n\nAlla destra del Bar Massaro Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
+	$response = "\xF0\x9F\x8D\x94 Casa Massaro \n\n\xF0\x9F\x8C\x8E Localizzazione \xF0\x9F\x8C\x8E\n\nAlla destra del Bar Massaro\n\nOrari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n";
 }
 
 // MENU STUDENTI
@@ -697,10 +697,41 @@ elseif(strpos($text, "/cla") === 0 || $text == "\xF0\x9F\x93\x96 CLA \xF0\x9F\x8
 
 
 //MACCHINETTE CAFFE
-elseif(strpos($text, "/macchcaffe") === 0 || $text == "\xE2\x98\x95 MACCH. CAFFE" || $text == "\xE2\x98\x95 macch. caffe")
+elseif(strpos($text, "/macchcaffe") === 0 || $text == "\xE2\x98\x95 CAFFE" || $text == "\xE2\x98\x95 caffe")
 	{
-		$response = "\xE2\x9A\xA0 Prossimamente disponibili le macchinette del caffe dei vari edifici ";
+		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$method='sendMessage';
+	
+	$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "\xF0\x9F\x8F\xA6 MENU MACCHINETTE CAFFE' \xF0\x9F\x91\xA5\n\nSeleziona fra le opzioni sotto", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xE2\x98\x95 MACCH. ED.8"),array("\xE2\x98\x95 MACCH. ED.9","\xE2\x98\x95 MACCH. ED.6"))
+			,'resize_keyboard' => true
+		)
+	);
+	
+	$handle=curl_init();
+	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	curl_setopt($handle,CURLOPT_POST,1);
+	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+	curl_setopt($handle,CURLOPT_ENCODING,1);
+	$dati=json_decode( curl_exec($handle) ,true);
+	curl_close($handle);
+	
+	var_dump($dati);
+		
 	}
+//SOTTOSEZIONE MACCH.
+
+//MACCH.ED.8
+elseif(strpos($text, "/macchcaffeed8") === 0 || $text == "\xE2\x98\x95 MACCH. ED.8" || $text == "\xE2\x98\x95 macch. ed.8")
+	{
+		$response = "\xF0\x9F\x8D\x9D MENSA SANTI ROMANO \xF0\x9F\x8D\x95\n\n\xF0\x9F\x95\x92 ORARIO ESERCIZIO\n\nil pranzo viene servito dalle 12.00 alle 15.00, mentre la cena viene servita dalle 19.00 alle 21.30.\n\nIn più, la sala ristorazione della Residenza Universitaria S. Romano offre un servizio di pizzeria aperto ogni giorno dalle ore 19:30 alle ore 22:30. ";
+	}	
 
 //MENSA
 elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $text == "\xF0\x9F\x8D\x9D mensa")
