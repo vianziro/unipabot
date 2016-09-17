@@ -438,7 +438,7 @@ elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "\xF0\x9F\x93\x9A BIB
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 Menu Biblioteche \xF0\x9F\x8F\xA6\n\nScegli la Biblioteca\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE","\xF0\x9F\x8F\xA6 SALA LETTURA WURTH"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE","\xF0\x9F\x8F\xA6 SALA LETTURA WURTH"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -534,7 +534,7 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 		 'chat_id' => $chatId, 
 		 'text' => "🏪 Menu Aule 🏪\n\nInvia il nome dell'aula cercata\n\n\xE2\x9A\xA0 ES. F170", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","🏪 AULE IN ELENCO"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🏪 AULE IN ELENCO"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -675,7 +675,7 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\nInvia il Cognome del Prof cercato\n\n\xE2\x9A\xA0 ES. Prof NomeProf", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x91\xA4 PROF IN ELENCO"),array("\xE2\x9A\xA0 Segnala Prof"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA4 PROF IN ELENCO"),array("\xE2\x9A\xA0 Segnala Prof"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -752,7 +752,7 @@ elseif(strpos($text, "/dipartimenti") === 0 || $text == "\xF0\x9F\x8F\xA2 DIPART
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 MENU DIPARTIMENTI \xF0\x9F\x91\xA5\n\nScegli il Dipartimento", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x8F\xA6 DICGIM"),array("\xF0\x9F\x8F\xA6 DIP. IDRAULICA","\xF0\x9F\x8F\xA6 DIP. CHIMICA"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 DICGIM"),array("\xF0\x9F\x8F\xA6 DIP. IDRAULICA","\xF0\x9F\x8F\xA6 DIP. CHIMICA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -817,7 +817,7 @@ elseif(strpos($text, "/macchcaffe") === 0 || $text == "\xE2\x98\x95 CAFFE" || $t
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 MENU MACCHINETTE CAFFE' \xF0\x9F\x91\xA5\n\nSeleziona fra le opzioni sotto", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xE2\x98\x95 MACCH. ED.8"),array("\xE2\x98\x95 MACCH. ED.9","\xE2\x98\x95 MACCH. ED.6"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xE2\x98\x95 MACCH. ED.8"),array("\xE2\x98\x95 MACCH. ED.9","\xE2\x98\x95 MACCH. ED.6"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -860,7 +860,7 @@ elseif(strpos($text, "/copisterie") === 0 || $text == "\xF0\x9F\x93\x84 COPIST" 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x93\x84 COPISTERIE\n\nScegli tra le copisterie sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xE2\xAC\x85 BACK","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA ED.9"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA ED.9"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO"))
 			,'resize_keyboard' => true
 			)
 		);
