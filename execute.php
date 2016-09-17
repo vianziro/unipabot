@@ -1729,7 +1729,7 @@ elseif(strpos($text, "/mod2ingbio") === 0 || $text == "📄 MODULO II ING BIO" |
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'document' => new CURLFile(realpath("./orariolezioni/ingbio/noLBIO1.pdf")), 
+						'document' => new CURLFile(realpath("./orariolezioni/ingbio/noLBIO2.pdf")), 
 						'caption' => $text);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
@@ -2015,7 +2015,7 @@ elseif(strpos($text, "/biblioing") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$response = "\xF0\x9F\x8F\xA6 Edificio \n\nSi trova presso l'Edificio 8\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 8.30 alle 22\n\nDa Settembre a Luglio\n\n\xF0\x9F\x91\xA4 Info Utili\n\nPotete richiedere il rinnovo dei libri in scadenza mandando una e-mail a bibling@unipa.it oppure chiamando il numero 091/23862001";
+	$response = "\xF0\x9F\x8F\xA6 Edificio \n\nSi trova presso l'Edificio 8\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLun-Ven dalle 8.30 alle 22\n\nDa Settembre a Luglio\n\n\xF0\x9F\x91\xA4 Info Utili\n\nPotete richiedere il rinnovo dei libri in scadenza mandando una e-mail a bibling@unipa.it oppure chiamando il numero 091/23862001\n\nPer prenotare un posto in sala rossa rivolgersi al Front-Office della Biblioteca";
 }
 
 // MENU ORARI BIBLIOTECA LETTERE
