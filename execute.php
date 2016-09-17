@@ -143,7 +143,7 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 RISTORO" ||
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x8D\x94 Punti Ristoro\n\nScegli la Panineria tra quelle sotto\n\n", 
+		 'text' => "\xF0\x9F\x8D\x94 Punti Ristoro\n\n".$firstname." scegli dove andare a mangiare\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 Panineria Jhonny"),array("\xF0\x9F\x8D\x94 Panineria del Viale","🍴 Casa Massaro"))
 			,'resize_keyboard' => true
