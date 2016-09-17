@@ -498,7 +498,7 @@ elseif(strpos($text, "/mappa") === 0 || $text == "\xF0\x9F\x8C\x8E MAPPA" || $te
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaunipa.jpg")), 
-						'caption' => .$firstname." ecco la Mappa Unipa!"/*$text*/);
+						'caption' => $firstname." ecco la Mappa Unipa!"/*$text*/);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 	curl_setopt($ch, CURLOPT_URL, $botUrl); 
