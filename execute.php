@@ -2169,7 +2169,7 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$response = "Le aule in elenco sono:\n\nF130\n\nF140\n\nF150\n\nF160\n\nF170\n\nPer segnalare altre aule scrivi a @gabrieledellaria";
+	$response = "Le aule in elenco sono:\n\nF130\n\nF140\n\nF150\n\nF160\n\nF170\n\nF210\n\nF220\n\nF230\n\nF240\n\nF310\n\nF320\n\nPer segnalare altre aule scrivi a @gabrieledellaria";
 }
 
 //SOTTOSEZIONE Aule
