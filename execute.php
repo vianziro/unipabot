@@ -2772,7 +2772,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xF0\x9F\x91\xA4 Nome: Philippe \n\xF0\x9F\x91\xA4 Cognome: Daverio \n\xF0\x9F\x8F\xA6 Ufficio: Ed.14\nRicevimento: Lunedì dalle 12:00 alle 17:00 presso aula 4.4 (Edificio 14)\nContatti: philippe.daverio@unipa.it";
+		$response = "\xF0\x9F\x91\xA4 Nome: Philippe \n\xF0\x9F\x91\xA4 Cognome: Daverio \n\xF0\x9F\x8F\xA6 Ufficio: Ed.14\n📝 Ricevimento: Lunedì dalle 12:00 alle 17:00 presso aula 4.4 (Edificio 14)\n✉️ Contatti: philippe.daverio@unipa.it";
 	}
 
 	elseif(strpos($text, "/profdigiovanni") === 0 || $text == "Di Giovanni" || $text == "di giovanni" || $text == "Prof Di Giovanni" || $text == "prof di giovanni")
@@ -2792,7 +2792,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xF0\x9F\x91\xA4 Nome: Elisabetta \n\xF0\x9F\x91\xA4 Cognome: Di Giovanni \n\xF0\x9F\x8F\xA6 Ufficio: Ed.15\nRicevimento: Martedì dalle 09:00 alle 11:00 presso Edificio 15, 7° piano\nContatti: elisabetta.digiovanni@unipa.it";
+		$response = "\xF0\x9F\x91\xA4 Nome: Elisabetta \n\xF0\x9F\x91\xA4 Cognome: Di Giovanni \n\xF0\x9F\x8F\xA6 Ufficio: Ed.15\n📝 Ricevimento: Martedì dalle 09:00 alle 11:00 presso Edificio 15, 7° piano\n✉️ Contatti: elisabetta.digiovanni@unipa.it";
 	}
 
 	
