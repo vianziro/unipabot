@@ -1593,7 +1593,7 @@ elseif(strpos($text, "/inforistorazione") === 0 || $text == "ℹ️ INFO RISTORA
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'photo' => new CURLFile(realpath("./img/inforistorazione.png")), 
+						'photo' => new CURLFile(realpath("./img/inforistorazione.PNG")), 
 						'caption' => $firstname.", ecco le info sui servizi di ristorazione"/*$text*/);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
