@@ -1947,7 +1947,7 @@ elseif(strpos($text, "/orariolezeco") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI"),array("\xF0\x9F\x95\x92 ORARIO SC TURISMO","\xF0\x9F\x95\x92 ORARIO STATISTICA"),array("\xF0\x9F\x95\x92 ORARIO ECO AZIENDALE"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI"),array("\xF0\x9F\x95\x92 ORARIO SC TURISMO","\xF0\x9F\x95\x92 ORARIO STATISTICA"),array("\xF0\x9F\x95\x92 ORARIO ECO AZIENDALE","\xF0\x9F\x95\x92 ORARIO ECO FINANZA","\xF0\x9F\x95\x92 ORARIO ECO SV ECONOMICO"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -1990,7 +1990,7 @@ elseif(strpos($text, "/scturismo") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO SC
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 I SEMESTRE SC TURISMO"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO"))
 			,'resize_keyboard' => true
@@ -2071,7 +2071,7 @@ elseif(strpos($text, "/statistica") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO S
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 I SEMESTRE STATISTICA"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO"))
 			,'resize_keyboard' => true
@@ -2152,7 +2152,7 @@ elseif(strpos($text, "/ecoaziendale") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 I SEMESTRE ECO AZIENDALE"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO"))
 			,'resize_keyboard' => true
@@ -2199,6 +2199,87 @@ elseif(strpos($text, "/mod12ecoaziendale") === 0 || $text == "📄 I SEMESTRE EC
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
 						'document' => new CURLFile(realpath("./orariolezioni/ecoaz/lezioniecoaziendale.pdf")), 
+						'caption' => $text);
+	$ch = curl_init(); 
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+	curl_setopt($ch, CURLOPT_URL, $botUrl); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+	// read curl response
+	$output = curl_exec($ch);
+	
+}
+
+// ORARIO LEZIONI ECO FINANZA
+elseif(strpos($text, "/ecofinanza") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ECO FINANZA" || $text == "\xF0\x9F\x95\x92 orario eco finanza")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$method='sendMessage';
+	
+	$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("📄 I SEMESTRE ECO FINANZA"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO"))
+			,'resize_keyboard' => true
+		)
+	);
+	
+	$handle=curl_init();
+	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	curl_setopt($handle,CURLOPT_POST,1);
+	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+	curl_setopt($handle,CURLOPT_ENCODING,1);
+	$dati=json_decode( curl_exec($handle) ,true);
+	curl_close($handle);
+	
+	var_dump($dati);
+}
+
+//SOTTOSEZIONE MODULI ECO FINANZA
+
+elseif(strpos($text, "/mod12ecofinanza") === 0 || $text == "📄 I SEMESTRE ECO FINANZA" || $text == "📄 i semestre eco finanza")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
+	$message = isset($update['message']) ? $update['message'] : "";
+	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+	$text = isset($message['text']) ? $message['text'] : "";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
+	// change image name and path
+	$postFields = array('chat_id' => $chatId, 
+						'document' => new CURLFile(realpath("./orariolezioni/ecofin/lezioniecofinanza.pdf")), 
 						'caption' => $text);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
