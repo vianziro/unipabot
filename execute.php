@@ -448,7 +448,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING I
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I ING INF","📄 MODULO II ING INF"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
 			,'resize_keyboard' => true
@@ -565,7 +565,7 @@ elseif(strpos($text, "/inggest") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING 
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I ING GEST","📄 MODULO II ING GEST"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
 			,'resize_keyboard' => true
@@ -682,7 +682,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING M
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I ING MEC","📄 MODULO II ING MEC"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
 			,'resize_keyboard' => true
@@ -799,7 +799,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING E
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I ING ELE","📄 MODULO II ING ELE"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
 			,'resize_keyboard' => true
@@ -916,7 +916,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING E
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I ING ENE","📄 MODULO II ING ENE"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
 			,'resize_keyboard' => true
@@ -1032,7 +1032,7 @@ elseif(strpos($text, "/ingchi") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I ING CHI","📄 MODULO II ING CHI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
 			,'resize_keyboard' => true
@@ -1149,7 +1149,7 @@ elseif(strpos($text, "/ingamb") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING A
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I ING AMB","📄 MODULO II ING AMB"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
 			,'resize_keyboard' => true
@@ -1266,7 +1266,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I ING CIV","📄 MODULO II ING CIV"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
 			,'resize_keyboard' => true
@@ -1383,7 +1383,7 @@ elseif(strpos($text, "/ingcib") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I ING CIB","📄 MODULO II ING CIB"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
 			,'resize_keyboard' => true
@@ -1500,7 +1500,7 @@ elseif(strpos($text, "/inggestinf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO I
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I ING GEST INF","📄 MODULO II ING GEST INF"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
 			,'resize_keyboard' => true
@@ -1617,7 +1617,7 @@ elseif(strpos($text, "/ingbio") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING B
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I ING BIO","📄 MODULO II ING BIO"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
 			,'resize_keyboard' => true
@@ -1735,7 +1735,7 @@ elseif(strpos($text, "/orariolezarch") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI"),array("\xF0\x9F\x95\x92 ORARIO ARCHITETTURA","\xF0\x9F\x95\x92 ORARIO DIS. INDUSTRIALE"))
 			,'resize_keyboard' => true
@@ -1781,7 +1781,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ARCHI
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I-II ARCHITETTURA"),array("\xF0\x9F\x95\x92 ORARIO CORSI ARCH"))
 			,'resize_keyboard' => true
@@ -1862,7 +1862,7 @@ elseif(strpos($text, "/disind") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO DIS. 
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("📄 MODULO I-II DIS IND"),array("\xF0\x9F\x95\x92 ORARIO CORSI ARCH"))
 			,'resize_keyboard' => true
@@ -2280,6 +2280,87 @@ elseif(strpos($text, "/mod12ecofinanza") === 0 || $text == "📄 I SEMESTRE ECO 
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
 						'document' => new CURLFile(realpath("./orariolezioni/ecofin/lezioniecofinanza.pdf")), 
+						'caption' => $text);
+	$ch = curl_init(); 
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+	curl_setopt($ch, CURLOPT_URL, $botUrl); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+	// read curl response
+	$output = curl_exec($ch);
+	
+}
+
+// ORARIO LEZIONI SV ECO
+elseif(strpos($text, "/ecofinanza") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO SV ECO" || $text == "\xF0\x9F\x95\x92 orario sv eco")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$method='sendMessage';
+	
+	$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("📄 I SEMESTRE SV ECO"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO"))
+			,'resize_keyboard' => true
+		)
+	);
+	
+	$handle=curl_init();
+	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	curl_setopt($handle,CURLOPT_POST,1);
+	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+	curl_setopt($handle,CURLOPT_ENCODING,1);
+	$dati=json_decode( curl_exec($handle) ,true);
+	curl_close($handle);
+	
+	var_dump($dati);
+}
+
+//SOTTOSEZIONE MODULI SV ECO
+
+elseif(strpos($text, "/mod12sveco") === 0 || $text == "📄 I SEMESTRE SV ECO" || $text == "📄 i semestre sv eco")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
+	$message = isset($update['message']) ? $update['message'] : "";
+	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+	$text = isset($message['text']) ? $message['text'] : "";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
+	// change image name and path
+	$postFields = array('chat_id' => $chatId, 
+						'document' => new CURLFile(realpath("./orariolezioni/ecose/lezioniecose.pdf")), 
 						'caption' => $text);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
