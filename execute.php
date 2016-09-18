@@ -3742,7 +3742,7 @@ elseif(strpos($text, "/copisterie") === 0 || $text == "\xF0\x9F\x93\x84 COPIST" 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x93\x84 COPISTERIE\n\n".$firstname.", ecco le copisterie che fanno per te\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA ED.9"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA ECONOMIA"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -3781,7 +3781,7 @@ elseif(strpos($text, "/coping") === 0 || $text == "\xF0\x9F\x93\x84 LA NUOVA COP
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
+		$response = "🌍 Posizione: Viale delle Scienze Ed. 7 (Ingegneria) scendendo sotto la Biblioteca Centrale di Ingegneria\n\n📞✉️ Contatti: +39 091.7098720 - info@lanuovacopisteria.it";
 	}
 	
 //LA NUOVA COPISTERIA BIO
@@ -3802,7 +3802,7 @@ elseif(strpos($text, "/copbio") === 0 || $text == "\xF0\x9F\x93\x84 LA NUOVA COP
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
+		$response = "🌍 Posizione: Viale delle Scienze Ed. 16 (Biologia)\n\n📞✉️ Contatti: +39 091.6526000 - info@lanuovacopisteria.it";
 	}	
 	
 //COPISTERIA LETTERE
@@ -3823,11 +3823,11 @@ elseif(strpos($text, "/coplet") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA L
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
+		$response = "🌍 Posizione: Viale delle Scienze di fronte Ed. 9 (Ing. Elettronica/Energia)\n\n";
 	}		
 	
-//COPISTERIA ED.9
-elseif(strpos($text, "/coped9") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA ED.9" || $text == "\xF0\x9F\x93\x84 copisteria ed.9")
+//COPISTERIA ECONOMIA
+elseif(strpos($text, "/copeco") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA ECONOMIA" || $text == "\xF0\x9F\x93\x84 copisteria economia")
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -3844,7 +3844,7 @@ elseif(strpos($text, "/coped9") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA E
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xE2\x9A\xA0 Prossimamente disponibile!";
+		$response = "🌍 Posizione: Viale delle Scienze al secondo ingresso dell'Ed. 13 (Economia)\n\n";
 	}	
 
 elseif(strpos($text, "/echochatid") === 0 )
