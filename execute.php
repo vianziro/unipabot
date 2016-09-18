@@ -2011,7 +2011,7 @@ elseif(strpos($text, "/scturismo") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO SC
 	var_dump($dati);
 }
 
-//SOTTOSEZIONE MODULI DIS IND
+//SOTTOSEZIONE MODULI SC TURISMO
 
 elseif(strpos($text, "/mod12scturismo") === 0 || $text == "📄 I SEMESTRE SC TURISMO" || $text == "📄 i semestre sc turismo")
 {
