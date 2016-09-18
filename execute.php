@@ -3216,7 +3216,7 @@ elseif(strpos($text, "/mensasromano") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA 
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xF0\x9F\x8D\x9D MENSA SANTI ROMANO \xF0\x9F\x8D\x95\n\n\xF0\x9F\x95\x92 ORARIO ESERCIZIO\n\nIl pranzo viene servito dalle 12.00 alle 15.00, mentre la cena viene servita dalle 19.30 alle 21.00.\n\nIn più, la sala ristorazione della Residenza Universitaria S. Romano offre un servizio di pizzeria aperto ogni giorno dalle ore 20:30 alle ore 23:30.\n\n📝 Note:\nLa mensa Santi Romano è aperta tutto l'anno , escludendo brevi periodi  estivi e per le festività di Natale, Pasqua, 1° maggio";
+		$response = "\xF0\x9F\x8D\x9D MENSA SANTI ROMANO \n\n\xF0\x9F\x95\x92 ORARIO ESERCIZIO\n\nIl pranzo viene servito dalle 12.00 alle 15.00, mentre la cena viene servita dalle 19.30 alle 21.00.\n\nIn più, la sala ristorazione della Residenza Universitaria S. Romano offre un servizio di pizzeria aperto ogni giorno dalle ore 20:30 alle ore 23:30.\n\n📝 Note:\nLa mensa Santi Romano è aperta tutto l'anno , escludendo brevi periodi  estivi e per le festività di Natale, Pasqua, 1° maggio";
 	}
 
 	//MENSA S.SAVERIO
@@ -3238,7 +3238,7 @@ elseif(strpos($text, "/mensassaverio") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xF0\x9F\x8D\x9D MENSA S.SAVERIO (Via G. Di Cristina 7) \xF0\x9F\x8D\x95\n\n\xF0\x9F\x95\x92 ORARIO ESERCIZIO\n\nIl pranzo viene servito dalle 12.00 alle 15.00, mentre la cena viene servita dalle 19.30 alle 21.00";
+		$response = "\xF0\x9F\x8D\x9D MENSA S.SAVERIO (Via G. Di Cristina 7) \n\n\xF0\x9F\x95\x92 ORARIO ESERCIZIO\n\nIl pranzo viene servito dalle 12.00 alle 15.00, mentre la cena viene servita dalle 19.30 alle 21.00";
 	}	
 
 	//MENSA CIVICO
@@ -3260,7 +3260,7 @@ elseif(strpos($text, "/mensacivico") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA C
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xF0\x9F\x8D\x9D MENSA CIVICO (ED.19 Ospedale Civico) \xF0\x9F\x8D\x95\n\n\xF0\x9F\x95\x92 ORARIO ESERCIZIO\n\nIl pranzo viene servito dalle 12.00 alle 15.00";
+		$response = "\xF0\x9F\x8D\x9D MENSA CIVICO (ED.19 Ospedale Civico) \n\n\xF0\x9F\x95\x92 ORARIO ESERCIZIO\n\nIl pranzo viene servito dalle 12.00 alle 15.00";
 	}		
 	
 //COPISTERIE
