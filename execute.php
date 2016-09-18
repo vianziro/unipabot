@@ -2036,7 +2036,7 @@ elseif(strpos($text, "/mod12scturismo") === 0 || $text == "📄 I SEMESTRE SC TU
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'document' => new CURLFile(realpath("./orariolezioni/sctur/lezioniscturismo.pdf.pdf")), 
+						'document' => new CURLFile(realpath("./orariolezioni/sctur/lezioniscturismo.pdf")), 
 						'caption' => $text);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
