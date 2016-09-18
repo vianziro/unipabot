@@ -2292,7 +2292,7 @@ elseif(strpos($text, "/mod12ecofinanza") === 0 || $text == "📄 I SEMESTRE ECO 
 }
 
 // ORARIO LEZIONI SV ECONOMICO
-elseif(strpos($text, "/ecofinanza") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO SV ECONOMICO" || $text == "\xF0\x9F\x95\x92 orario sv economico")
+elseif(strpos($text, "/ecose") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ECO SV ECONOMICO" || $text == "\xF0\x9F\x95\x92 orario eco sv economico")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -2316,7 +2316,7 @@ elseif(strpos($text, "/ecofinanza") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO S
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 I SEMESTRE SV ECONOMICO"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO"))
+			 "keyboard"=> array(array("📄 I SEMESTRE ECO SV ECONOMICO"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2337,7 +2337,7 @@ elseif(strpos($text, "/ecofinanza") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO S
 
 //SOTTOSEZIONE MODULI SV ECONOMICO
 
-elseif(strpos($text, "/mod12sveco") === 0 || $text == "📄 I SEMESTRE SV ECONOMICO" || $text == "📄 i semestre sv economico")
+elseif(strpos($text, "/mod12sveco") === 0 || $text == "📄 I SEMESTRE ECO SV ECONOMICO" || $text == "📄 i semestre eco sv economico")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
