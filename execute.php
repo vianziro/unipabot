@@ -3260,7 +3260,7 @@ elseif(strpos($text, "/mensacivico") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA C
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xF0\x9F\x8D\x9D MENSA CIVICO \xF0\x9F\x8D\x95\n\n\xF0\x9F\x95\x92 ORARIO ESERCIZIO\n\nIl pranzo viene servito dalle 12.00 alle 15.00";
+		$response = "\xF0\x9F\x8D\x9D MENSA CIVICO (ED.19 Ospedale Civico) \xF0\x9F\x8D\x95\n\n\xF0\x9F\x95\x92 ORARIO ESERCIZIO\n\nIl pranzo viene servito dalle 12.00 alle 15.00";
 	}		
 	
 //COPISTERIE
