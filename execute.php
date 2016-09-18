@@ -330,7 +330,7 @@ elseif(strpos($text, "/tirocinio") === 0 || $text == "\xF0\x9F\x93\x91 TIROCINIO
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xE2\x9A\xA0 Prossimamente disponibili le aziende di TIROCINIO consigliate ";
+		$response = "ℹ️ Per le info sul Tirocinio visita http://www.stage.unipa.it/";
 	}	
 
 // MENU ORARIO LEZIONI
