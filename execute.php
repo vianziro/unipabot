@@ -262,7 +262,7 @@ elseif(strpos($text, "/pullman") === 0 || $text == "🚎 PULLMAN" || $text == "�
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$response = "🚎 PULLMAN da e verso Unipa \n\nDA UNIPA A PALERMO CITTA': \n\nDA PALERMO CITTA' AD UNIPA: ";
+	$response = "🚎 PULLMAN da e verso Unipa \n\nDA UNIPA A PALERMO CITTA: \n\nDA PALERMO CITTA' AD UNIPA: ";
 }
 
 //PUNTI RISTORO
