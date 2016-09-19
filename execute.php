@@ -3997,6 +3997,36 @@ elseif(strpos($text, "/echochatid") === 0 )
 		
 		$response = "Il tuo chat_id è ".$chatId;	
 	}
+	
+	elseif(strpos($text, "/sndmsg") === 0 )
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		// compose reply
+		$reply =  sendMessage();
+		
+		// send reply
+		$sendto = API_URL."sendmessage?chat_id=".$chatId."&text=".$reply;
+		file_get_contents($sendto);
+
+		function sendMessage(){
+		$message = "Messaggio di prova";
+		return $message;
+		}	
+	}
 
 elseif(strpos($text, "/prova") === 0 )
 	{
