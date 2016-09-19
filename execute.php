@@ -31,7 +31,7 @@ $response2 = '';
 
 if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == "\xF0\x9F\x94\xB4 start")
 {
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -64,7 +64,7 @@ if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == 
 // TORNA SUBITO AL MENU PRINCIPALE
 if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $text == "🏠 menu principale")
 {
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -154,7 +154,7 @@ elseif(strpos($text, "/trasporti") === 0 || $text == "🚈 TRASPORTI" || $text =
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 		$method='sendMessage';
 	
 		$postField = array(
@@ -284,7 +284,7 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 RISTORO" ||
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 		$method='sendMessage';
 	
 		$postField = array(
@@ -394,7 +394,7 @@ elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU S
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -482,7 +482,7 @@ elseif(strpos($text, "/orariolezioni") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -528,7 +528,7 @@ elseif(strpos($text, "/orariolezing") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -574,7 +574,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING I
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -691,7 +691,7 @@ elseif(strpos($text, "/inggest") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING 
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -808,7 +808,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING M
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -925,7 +925,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING E
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -1042,7 +1042,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING E
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -1158,7 +1158,7 @@ elseif(strpos($text, "/ingchi") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -1275,7 +1275,7 @@ elseif(strpos($text, "/ingamb") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING A
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -1392,7 +1392,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -1509,7 +1509,7 @@ elseif(strpos($text, "/ingcib") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -1626,7 +1626,7 @@ elseif(strpos($text, "/inggestinf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO I
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -1743,7 +1743,7 @@ elseif(strpos($text, "/ingbio") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING B
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -1861,7 +1861,7 @@ elseif(strpos($text, "/orariolezarch") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -1907,7 +1907,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ARCHI
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -1988,7 +1988,7 @@ elseif(strpos($text, "/disind") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO DIS. 
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -2071,7 +2071,7 @@ elseif(strpos($text, "/orariolezeco") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -2116,7 +2116,7 @@ elseif(strpos($text, "/scturismo") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO SC
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -2197,7 +2197,7 @@ elseif(strpos($text, "/statistica") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO S
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -2278,7 +2278,7 @@ elseif(strpos($text, "/ecoaziendale") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -2359,7 +2359,7 @@ elseif(strpos($text, "/ecofinanza") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO E
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -2440,7 +2440,7 @@ elseif(strpos($text, "/ecose") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ECO SV
 		// read curl response
 		$output = curl_exec($ch);
 		
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -2522,7 +2522,7 @@ elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "\xF0\x9F\x93\x9A BIB
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -2706,7 +2706,7 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -3224,7 +3224,7 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -3399,7 +3399,7 @@ elseif(strpos($text, "/ersu") === 0 || $text == "\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 		$method='sendMessage';
 	
 		$postField = array(
@@ -3491,7 +3491,7 @@ elseif(strpos($text, "/dipartimenti") === 0 || $text == "\xF0\x9F\x8F\xA2 DIPART
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$message = isset($update['message']) ? $update['message'] : "";
@@ -3646,7 +3646,7 @@ elseif(strpos($text, "/macchcaffe") === 0 || $text == "\xE2\x98\x95 CAFFE" || $t
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 		$method='sendMessage';
 	
 		$postField = array(
@@ -3713,7 +3713,7 @@ elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $te
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 		$method='sendMessage';
 	
 		$postField = array(
@@ -3866,7 +3866,7 @@ elseif(strpos($text, "/copisterie") === 0 || $text == "\xF0\x9F\x93\x84 COPIST" 
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$botToken="254111121:AAE898EquNqARS_8UpwVepo131EdLNXLm2o";
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 		$method='sendMessage';
 	
 		$postField = array(
