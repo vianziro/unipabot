@@ -2672,7 +2672,7 @@ elseif(strpos($text, "/mappa") === 0 || $text == "\xF0\x9F\x8C\x8E MAPPA" || $te
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => $firstname.", ecco la Mappa Unipa!\n\nSotto trovi anche le mappe di Ingegneria e Architettura", 
+		 'text' => "Ecco la Mappa Unipa!\n\nSotto trovi anche le mappe di Ingegneria e Architettura", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🌍 MAPPA INGEGNERIA"),array("🌍 MAPPA ARCHITETTURA"))
 			,'resize_keyboard' => true
