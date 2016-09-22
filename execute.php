@@ -4033,12 +4033,12 @@ elseif(strpos($text, "/prova") === 0 )
 		// read curl response
 		$output = curl_exec($ch);
 
-		$response = "Ecco la posizione di".$text."!";
+		$response = "Ecco la posizione di ".$text." !";
 	}		
 
 else
 {
-	$response = "\xE2\x9A\xA0 Comando che hai eseguito non è valido!\n\nDigita /help per il mio elenco comandi";
+	$response = "\xE2\x9A\xA0 Il comando che hai eseguito non è valido!\n\nDigita /help per il mio elenco comandi";
 }
 	
 
