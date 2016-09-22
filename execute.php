@@ -1890,7 +1890,7 @@ elseif(strpos($text, "/orariolezarch") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 }
 
 // ORARIO LEZIONI ARCHITETTURA
-elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ARCHITETTURA" || $text == "\xF0\x9F\x95\x92 orario architettura")
+elseif(strpos($text, "/arch") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ARCHITETTURA" || $text == "\xF0\x9F\x95\x92 orario architettura")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -2505,7 +2505,7 @@ elseif(strpos($text, "/mod12sveco") === 0 || $text == "📄 I SEMESTRE ECO SV EC
 
 
 // MENU ORARI BIBLIOTECHE
-elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "\xF0\x9F\x93\x9A BIBLIO" || $text == "\xF0\x9F\x93\x9A biblio" )
+elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "\xF0\x9F\x93\x9A BIBLIO" || $text == "\xF0\x9F\x93\x9A biblio" || $text == "Biblioteche" || $text == "biblioteche")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
