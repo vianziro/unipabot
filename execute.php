@@ -4434,7 +4434,7 @@ elseif(strpos($text, "/coping") === 0 || $text == "\xF0\x9F\x93\x84 LA NUOVA COP
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING.\n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08.30 alle 19.00\n\n📞✉️ Contatti: +39 091.7098720\n\n💻 Sito Web: info@lanuovacopisteria.it", 
+		 	'text' => "\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING.\n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08.30 alle 19.00\n\n📞 Contatti: +39 091.7098720\n\n💻 Sito Web: www.lanuovacopisteria.com", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
 				,'resize_keyboard' => true
