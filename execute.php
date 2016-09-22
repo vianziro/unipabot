@@ -2266,7 +2266,7 @@ elseif(strpos($text, "/mod12sptupa") === 0 || $text == "📄 I-II SEMESTRE SPTUP
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'photo' => new CURLFile(realpath("./orariolezioni/sptupa/orariosptupa1.jpg")), 
+						'photo' => new CURLFile(realpath("./orariolezioni/sptupa/orariosptupa2.jpg")), 
 						'caption' => "Orario Lezioni 1° e 2° Semestre SPTUPA");
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
@@ -2282,7 +2282,7 @@ elseif(strpos($text, "/mod12sptupa") === 0 || $text == "📄 I-II SEMESTRE SPTUP
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'photo' => new CURLFile(realpath("./orariolezioni/sptupa/orariosptupa2.jpg")), 
+						'photo' => new CURLFile(realpath("./orariolezioni/sptupa/orariosptupa1.jpg")), 
 						'caption' => "Orario Lezioni 1° e 2° Semestre SPTUPA");
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
