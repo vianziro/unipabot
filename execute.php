@@ -4014,6 +4014,8 @@ elseif(strpos($text, "/prova") === 0 )
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
 		
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -4030,6 +4032,8 @@ elseif(strpos($text, "/prova") === 0 )
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		$response = "Ecco la posizione di".$text."!";
 	}		
 
 else
