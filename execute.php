@@ -4476,7 +4476,7 @@ elseif(strpos($text, "/coplet") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA L
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "\xF0\x9F\x93\x84 COPISTERIA LETTERE \n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08.00 alle 14.00\n\n", 
+		 	'text' => "\xF0\x9F\x93\x84 COPISTERIA LETTERE \n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08.30 alle 19.00\n\n☎️ Contatti: 0917098720\n\n💻 Sito Web: http://www.lanuovacopisteria.com/", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
 				,'resize_keyboard' => true
@@ -4504,8 +4504,8 @@ elseif(strpos($text, "/coplet") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA L
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
-						'latitude' => "38.1036579", 
-						'longitude' => "13.3463674");
+						'latitude' => "38.105099", 
+						'longitude' => "13.348893");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
