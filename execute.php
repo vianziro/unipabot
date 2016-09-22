@@ -4390,7 +4390,7 @@ elseif(strpos($text, "/copisterie") === 0 || $text == "\xF0\x9F\x93\x84 COPIST" 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x93\x84 COPISTERIE\n\n".$firstname.", ecco le copisterie che fanno per te\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA ECONOMIA"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA AGORÀ"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -4474,7 +4474,7 @@ elseif(strpos($text, "/coplet") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA L
 		$response = "🌍 Posizione: Viale delle Scienze di fronte Ed. 9 (Ing. Elettronica/Energia)\n\n";
 	}		
 	
-//COPISTERIA AGORA
+//COPISTERIA AGORÀ
 elseif(strpos($text, "/copagorà") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA AGORÀ" || $text == "\xF0\x9F\x93\x84 copisteria agorà")
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
