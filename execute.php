@@ -2658,7 +2658,8 @@ elseif(strpos($text, "/mappa") === 0 || $text == "\xF0\x9F\x8C\x8E MAPPA" || $te
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'photo' => new CURLFile(realpath("./img/mappaunipa.jpg"));
+						'photo' => new CURLFile(realpath("./img/mappaunipa.jpg")), 
+						'caption' => $firstname.", ecco la Mappa Unipa!"/*$text*/);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 	curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -2672,7 +2673,7 @@ elseif(strpos($text, "/mappa") === 0 || $text == "\xF0\x9F\x8C\x8E MAPPA" || $te
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "Ecco la Mappa Unipa!\n\nSotto trovi anche le mappe di Ingegneria e Architettura", 
+		 'text' => "Sotto trovi anche le mappe di Ingegneria e Architettura", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🌍 MAPPA INGEGNERIA"),array("🌍 MAPPA ARCHITETTURA"))
 			,'resize_keyboard' => true
