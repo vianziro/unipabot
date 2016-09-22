@@ -36,7 +36,7 @@ if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == 
 	
 	$postField = array(
 		 'chat_id' => $chatId
-		, 'text' => "\xF0\x9F\x91\x8B Ciao $firstname (@$username), benvenuto in Unipa Bot!\n\nOggi è il ".$today_date." e sono le ".$today_hour
+		, 'text' => "\xF0\x9F\x91\x8B Ciao $firstname (@$username), benvenuto in Unipa Bot!\n\nOggi è il ".$today_date." e sono le ".$today_hour."\n\nI miei comandi rapidi sono utlizzabili digitando le seguenti  parole: Aule - Trova Aula\nProf - Trova le info sul tuo prof\nBiblioteche - Trova le Biblioteche\nOrario Lezioni - Trova il tuo orario lezioni\n\nPer gli altri comandi clicca il bottone con i quadratini per accedere alla tastiera di navigazione"
 		, 'reply_markup' => array(
 			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","\xF0\x9F\x93\x9A BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASPORTI","\xE2\x84\xB9 INFO BOT")),
 			 'resize_keyboard' => true,
