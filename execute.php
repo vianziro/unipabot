@@ -397,8 +397,8 @@ elseif(strpos($text, "/jhonny") === 0 || $text == "\xF0\x9F\x8D\x94 Panineria Jh
 
 }
 
-//Panineria Del Viale
-elseif(strpos($text, "/pandelviale") === 0 || $text == "\xF0\x9F\x8D\x94 Panineria del Viale" || $text == "\xF0\x9F\x8D\x94 panineria del viale")
+//Panificio dello Studente
+elseif(strpos($text, "/pandelviale") === 0 || $text == "\xF0\x9F\x8D\x94 Panificio dello Studente" || $text == "\xF0\x9F\x8D\x94 panificio dello studente")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -420,7 +420,7 @@ elseif(strpos($text, "/pandelviale") === 0 || $text == "\xF0\x9F\x8D\x94 Paniner
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "\xF0\x9F\x8D\x94 Panineria Del Viale \n\n🕒 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n", 
+		 	'text' => "\xF0\x9F\x8D\x94 Panificio dello Studente 🍝\n\nSi effettua anche domicilio\n\n☎️ Contatti: 0916572790\n\nPagina fb: https://www.facebook.com/Panificio-salumeria-dello-studente-123206791362330/", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
 				,'resize_keyboard' => true
@@ -448,8 +448,8 @@ elseif(strpos($text, "/pandelviale") === 0 || $text == "\xF0\x9F\x8D\x94 Paniner
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
-						'latitude' => "38.1062386", 
-						'longitude' => "13.3525133");
+						'latitude' => "38.1037223", 
+						'longitude' => "13.3501872");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
