@@ -4525,8 +4525,8 @@ elseif(strpos($text, "/copagorà") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERI
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
-						'latitude' => "38.1032765", 
-						'longitude' => "13.3481553");
+						'latitude' => "38.1030086", 
+						'longitude' => "13.3478489");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
