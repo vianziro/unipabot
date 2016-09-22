@@ -311,7 +311,7 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 RISTORO" ||
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8D\x94 Punti Ristoro\n\n".$firstname.", scegli dove andare a mangiare\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 Panineria Jhonny"),array("\xF0\x9F\x8D\x94 Panineria del Viale","🍴 Casa Massaro"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 Panineria Jhonny"),array("🍝 Panificio dello Studente","🍴 Casa Massaro"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -398,7 +398,7 @@ elseif(strpos($text, "/jhonny") === 0 || $text == "\xF0\x9F\x8D\x94 Panineria Jh
 }
 
 //Panificio dello Studente
-elseif(strpos($text, "/pandelviale") === 0 || $text == "\xF0\x9F\x8D\x94 Panificio dello Studente" || $text == "\xF0\x9F\x8D\x94 panificio dello studente")
+elseif(strpos($text, "/panstud") === 0 || $text == "🍝 Panificio dello Studente" || $text == "\xF0\x9F\x8D\x94 panificio dello studente")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -420,7 +420,7 @@ elseif(strpos($text, "/pandelviale") === 0 || $text == "\xF0\x9F\x8D\x94 Panific
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "\xF0\x9F\x8D\x94 Panificio dello Studente 🍝\n\nSi effettua anche domicilio\n\n☎️ Contatti: 0916572790\n\nPagina fb: https://www.facebook.com/Panificio-salumeria-dello-studente-123206791362330/", 
+		 	'text' => "🍝 Panificio dello Studente \xF0\x9F\x8D\x94\n\nSi effettua anche domicilio\n\n☎️ Contatti: 0916572790\n\nPagina fb: https://www.facebook.com/Panificio-salumeria-dello-studente-123206791362330/", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
 				,'resize_keyboard' => true
