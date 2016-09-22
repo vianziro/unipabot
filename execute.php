@@ -398,7 +398,7 @@ elseif(strpos($text, "/jhonny") === 0 || $text == "\xF0\x9F\x8D\x94 Panineria Jh
 }
 
 //Panificio dello Studente
-elseif(strpos($text, "/panstud") === 0 || $text == "🍝 Panificio dello Studente" || $text == "\xF0\x9F\x8D\x94 panificio dello studente")
+elseif(strpos($text, "/panstud") === 0 || $text == "🍝 Panificio dello Studente" || $text == "🍝 panificio dello studente")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
