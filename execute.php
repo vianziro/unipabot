@@ -4021,8 +4021,8 @@ elseif(strpos($text, "/prova") === 0 )
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
-						'latitude' => "38.1070306", 
-						'longitude' => "13.3518226");
+						'latitude' => "38.1069486", 
+						'longitude' => "13.3539132");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
