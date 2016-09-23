@@ -5322,7 +5322,7 @@ elseif(strpos($text, "/copisterie") === 0 || $text == "\xF0\x9F\x93\x84 COPIST" 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x93\x84 COPISTERIE\n\n".$firstname.", ecco le copisterie che fanno per te\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA AGORA"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA AGORA"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO","\xF0\x9F\x93\x84 COPISTERIA ARCH"))
 			,'resize_keyboard' => true
 			)
 		);
