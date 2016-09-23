@@ -834,7 +834,7 @@ elseif(strpos($text, "/caldid") === 0 || $text == "📄 CALENDARIO DIDATTICO" ||
 		 'chat_id' => $chatId, 
 		 'text' => "❔ Quale Calendario Didattico vuoi?\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📄 CAL DID POLITECNICA"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("📄 CAL DID POLITECNICA"))
 			,'resize_keyboard' => true
 		)
 	);
