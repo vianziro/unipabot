@@ -5014,7 +5014,7 @@ elseif(strpos($text, "/diparch") === 0 || $text == "\xF0\x9F\x8F\xA6 DIP ARCHITE
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "La Sede Amministrativa si trova presso l'Edificio 8, scala F4 - 1° Piano (Sotto la posizione precisa)\n\n☎️ Tel. 091.23895320\n\n✉️ Email: dipartimento.architettura@unipa.it", 
+		 	'text' => "La Sede Amministrativa si trova presso l'Edificio 8, scala F4 - 1° Piano (Sotto la posizione precisa)\n\nLa Sede Centrale si trova presso l'Edificio 14\n\n☎️ Tel. 091.23895320\n\n✉️ Email: dipartimento.architettura@unipa.it", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA2 DIPART"))
 				,'resize_keyboard' => true
