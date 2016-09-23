@@ -2819,7 +2819,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO PSICO
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 I SEMETRE PSICOLOGIA"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC FORMAZIONE"))
+			 "keyboard"=> array(array("📄 I SEMESTRE PSICOLOGIA"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC FORMAZIONE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2840,7 +2840,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO PSICO
 
 //SOTTOSEZIONE MODULI PSICOLOGIA
 
-elseif(strpos($text, "/mod1psicologia") === 0 || $text == "📄 I SEMETRE PSICOLOGIA" || $text == "📄 i semestre psicologia")
+elseif(strpos($text, "/mod1psicologia") === 0 || $text == "📄 I SEMESTRE PSICOLOGIA" || $text == "📄 i semestre psicologia")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
