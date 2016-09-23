@@ -4841,7 +4841,7 @@ elseif(strpos($text, "/dipartimenti") === 0 || $text == "\xF0\x9F\x8F\xA2 DIPART
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 MENU DIPARTIMENTI \xF0\x9F\x91\xA5\n\n".$firstname.", quale Dipartimento cerchi?", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 DIID (EX DICGIM)"),array("\xF0\x9F\x8F\xA6 DIP. IDRAULICA","\xF0\x9F\x8F\xA6 DIP. CHIMICA"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 DIID (EX DICGIM)"),array("\xF0\x9F\x8F\xA6 DICAM","\xF0\x9F\x8F\xA6 DIP. CHIMICA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4888,9 +4888,9 @@ elseif(strpos($text, "/dicgim") === 0 || $text == "\xF0\x9F\x8F\xA6 DIID (EX DIC
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "Si trova dietro l'Edificio 6 (Sotto la posizione precisa)\n\nContatti:\n\nTel 09123867503\n\ndipartimento.dicgim@unipa.it", 
+		 	'text' => "Si trova dietro l'Edificio 6 (Sotto la posizione precisa)\n\n☎️ Tel. 09123867503\n\n✉️ Email: dipartimento.dicgim@unipa.it", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA2 DIPART"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -4928,8 +4928,8 @@ elseif(strpos($text, "/dicgim") === 0 || $text == "\xF0\x9F\x8F\xA6 DIID (EX DIC
 
 }
 
-// DIP. IDRAULICA	
-elseif(strpos($text, "/dipidraulica") === 0 || $text == "\xF0\x9F\x8F\xA6 DIP. IDRAULICA" || $text == "\xF0\x9F\x8F\xA6 dip. idraulica")
+// DICAM	
+elseif(strpos($text, "/dicam") === 0 || $text == "\xF0\x9F\x8F\xA6 DICAM" || $text == "\xF0\x9F\x8F\xA6 dicam")
 {	
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -4945,8 +4945,49 @@ elseif(strpos($text, "/dipidraulica") === 0 || $text == "\xF0\x9F\x8F\xA6 DIP. I
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => "Si trova dietro l'Edificio 8 (Sotto la posizione precisa)\n\n☎️ Tel. 09123867503\n\n✉️ Email: dipartimento.dicam@unipa.it", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA2 DIPART"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
 		
-		$response = "\xE2\x9A\xA0 Prossimamente disponibili le info del Dipartimento \xF0\x9F\x8F\xA6 DIP. IDRAULICA ";
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.105589", 
+						'longitude' => "13.348426");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
 
 }
 
