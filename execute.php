@@ -2875,6 +2875,87 @@ elseif(strpos($text, "/mod1psicologia") === 0 || $text == "📄 I SEMESTRE PSICO
 	
 }
 
+// ORARIO LEZIONI SC COM MEDIA
+elseif(strpos($text, "/sccommed") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO SC COM MEDIA" || $text == "\xF0\x9F\x95\x92 orario sc com media")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+	$method='sendMessage';
+	
+	$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("📄 I SEMESTRE SC COM MEDIA"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC FORMAZIONE"))
+			,'resize_keyboard' => true
+		)
+	);
+	
+	$handle=curl_init();
+	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	curl_setopt($handle,CURLOPT_POST,1);
+	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+	curl_setopt($handle,CURLOPT_ENCODING,1);
+	$dati=json_decode( curl_exec($handle) ,true);
+	curl_close($handle);
+	
+	var_dump($dati);
+}
+
+//SOTTOSEZIONE MODULI SC COM MEDIA
+
+elseif(strpos($text, "/mod1sccommed") === 0 || $text == "📄 I SEMESTRE SC COM MEDIA" || $text == "📄 i semestre sc com media")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
+	$message = isset($update['message']) ? $update['message'] : "";
+	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+	$text = isset($message['text']) ? $message['text'] : "";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
+	// change image name and path
+	$postFields = array('chat_id' => $chatId, 
+						'document' => new CURLFile(realpath("./orariolezioni/sccommed/orariosccommed.pdf")), 
+						'caption' => $text);
+	$ch = curl_init(); 
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+	curl_setopt($ch, CURLOPT_URL, $botUrl); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+	// read curl response
+	$output = curl_exec($ch);
+	
+}
+
 // MENU ORARI BIBLIOTECHE
 elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "\xF0\x9F\x93\x9A BIBLIO" || $text == "\xF0\x9F\x93\x9A biblio" || $text == "Biblioteche" || $text == "biblioteche")
 {
