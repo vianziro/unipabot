@@ -4841,7 +4841,7 @@ elseif(strpos($text, "/dipartimenti") === 0 || $text == "\xF0\x9F\x8F\xA2 DIPART
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 MENU DIPARTIMENTI \xF0\x9F\x91\xA5\n\n".$firstname.", quale Dipartimento cerchi?", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 DIID (EX DICGIM)"),array("\xF0\x9F\x8F\xA6 DICAM","\xF0\x9F\x8F\xA6 DIP. CHIMICA"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 DIID (EX DICGIM)"),array("\xF0\x9F\x8F\xA6 DICAM","\xF0\x9F\x8F\xA6 DIP ARCHITETTURA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4991,8 +4991,8 @@ elseif(strpos($text, "/dicam") === 0 || $text == "\xF0\x9F\x8F\xA6 DICAM" || $te
 
 }
 
-// DIP. CHIMICA	
-elseif(strpos($text, "/dipidraulica") === 0 || $text == "\xF0\x9F\x8F\xA6 DIP. CHIMICA	" || $text == "\xF0\x9F\x8F\xA6 dip. chimica")
+// DIP ARCHITETTURA
+elseif(strpos($text, "/diparch") === 0 || $text == "\xF0\x9F\x8F\xA6 DIP ARCHITETTURA" || $text == "\xF0\x9F\x8F\xA6 dip architettura")
 {	
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -5009,7 +5009,48 @@ elseif(strpos($text, "/dipidraulica") === 0 || $text == "\xF0\x9F\x8F\xA6 DIP. C
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xE2\x9A\xA0 Prossimamente disponibili le info del Dipartimento \xF0\x9F\x8F\xA6 DIP. CHIMICA	 ";
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => "La Sede Amministrativa si trova presso l'Edificio 8, scala F4 - 1° Piano (Sotto la posizione precisa)\n\n☎️ Tel. 091.23895320\n\n✉️ Email: dipartimento.architettura@unipa.it", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA2 DIPART"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.1050216", 
+						'longitude' => "13.3482036");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
 
 }
 
