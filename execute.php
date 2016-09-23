@@ -2773,7 +2773,7 @@ elseif(strpos($text, "/orariolezscfor") === 0 || $text == "\xF0\x9F\x95\x92 ORAR
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI"),array("\xF0\x9F\x95\x92 ORARIO PSICOLOGIA","\xF0\x9F\x95\x92 ORARIO SC COM MEDIA"),array("\xF0\x9F\x95\x92 ORARIO SC COM CULT","\xF0\x9F\x95\x92 ORARIO SC EDUC"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI"),array("\xF0\x9F\x95\x92 ORARIO PSICOLOGIA","\xF0\x9F\x95\x92 ORARIO SC COM MEDIA"),array("\xF0\x9F\x95\x92 ORARIO SC COM CULT","\xF0\x9F\x95\x92 ORARIO SC EDU"))
 			,'resize_keyboard' => true
 		)
 	);
