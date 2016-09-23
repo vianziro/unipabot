@@ -3375,7 +3375,7 @@ elseif(strpos($text, "/biblioarc") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "Si trova dentro l'Edificio 14 al 2° Piano (Sotto la posizione)\n\n🕒 Orari Esercizio\n\nLun-Gio dalle 08:30 alle 17:00\nVen dalle 08:30 alle 15:00\n\nℹ️ Info Utili\n\nChiusura dal 12 al 21 agosto 2016; dal 23 dicembre 2016 al 1° gennaio 2017\nOrario mesi di Luglio e Agosto: dal lunedì al venerdì 8.30 - 14.30\n\n\xF0\x9F\x93\x9E Tel 091590454\n\n✉️ Email:biblioteca.architettura@unipa.it", 
+		 	'text' => "Si trova dentro l'Edificio 14 al 2° Piano (Sotto la posizione)\n\n🕒 Orari Esercizio\n\nLun-Gio dalle 08:30 alle 17:00\nVen dalle 08:30 alle 15:00\n\nℹ️ Info Utili\n\nChiusura dal 12 al 21 agosto 2016; dal 23 dicembre 2016 al 1° gennaio 2017\nOrario mesi di Luglio e Agosto: dal lunedì al venerdì 8.30 - 14.30\n\n\xF0\x9F\x93\x9E Tel 091590454\n\n✉️ Email: biblioteca.architettura@unipa.it", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
@@ -3438,7 +3438,7 @@ elseif(strpos($text, "/emerotecaarc") === 0 || $text == "\xF0\x9F\x8F\xA6 EMEROT
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "L’emeroteca si trova dentro l'Edificio 14 al 3° Piano (Sotto la posizione) e offre ampi e luminosi spazi per lo studio e mette a disposizione dell’utenza 16 postazioni PC per la ricerca bibliografica\n\n🕒 Orari Esercizio\n\nLun-Gio dalle 08:30 alle 17:00\nVen dalle 08:30 alle 14:30\n\nℹ️ Info Utili\n\nChiusura dal 12 al 21 agosto 2016; dal 23 dicembre 2016 al 1° gennaio 2017\nOrario mesi di Luglio e Agosto: dal lunedì al venerdì 8.30 - 14.30\n\n\xF0\x9F\x93\x9E Tel 091590454\n\n✉️ Email:biblioteca.architettura@unipa.it", 
+		 	'text' => "L’emeroteca si trova dentro l'Edificio 14 al 3° Piano (Sotto la posizione) e offre ampi e luminosi spazi per lo studio oltre a mettere a disposizione dell’utenza 16 postazioni PC per la ricerca bibliografica\n\n🕒 Orari Esercizio\n\nLun-Gio dalle 08:30 alle 17:00\nVen dalle 08:30 alle 14:30\n\nℹ️ Info Utili\n\nChiusura dal 12 al 21 agosto 2016; dal 23 dicembre 2016 al 1° gennaio 2017\nOrario mesi di Luglio e Agosto: dal lunedì al venerdì 8.30 - 14.30\n\n\xF0\x9F\x93\x9E Tel 091590454\n\n✉️ Email: biblioteca.architettura@unipa.it", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
@@ -3468,6 +3468,69 @@ elseif(strpos($text, "/emerotecaarc") === 0 || $text == "\xF0\x9F\x8F\xA6 EMEROT
 		$postFields = array('chat_id' => $chatId, 
 						'latitude' => "38.1023439", 
 						'longitude' => "13.3470972");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+}
+
+// MENU ORARI BIBLIOTECA CLA
+elseif(strpos($text, "/bibliocla") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTECA CLA" || $text == "\xF0\x9F\x8F\xA6 biblioteca cla" )
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => "La Biblioteca del CLA si trova a Piazza S.Antonino,1 (Sotto la posizione precisa) e offre ampi e luminosi spazi per lo studio\n\n\xF0\x9F\x93\x9E Tel 0916169615 - 09123899263\n\n✉️ Email: cla@unipa.it", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.1096341", 
+						'longitude' => "13.3638764");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
