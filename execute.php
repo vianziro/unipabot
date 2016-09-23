@@ -311,7 +311,7 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 RISTORO" ||
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8D\x94 Punti Ristoro\n\n".$firstname.", scegli dove andare a mangiare\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 Panineria Jhonny"),array("🍝 Panificio dello Studente","🍴 Casa Massaro"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 PANINERIA JHONNY"),array("🍝 Panificio dello Studente","🍴 Casa Massaro"),array("\xF0\x9F\x8D\x94 BAR INGEGNERIA","\xF0\x9F\x8D\x94 BAR ARCHITETTURA"),array("\xF0\x9F\x8D\x94 BAR LETTERE"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -334,7 +334,8 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 RISTORO" ||
 }
 
 //Panineria da Jhonny
-elseif(strpos($text, "/jhonny") === 0 || $text == "\xF0\x9F\x8D\x94 Panineria Jhonny" || $text == "\xF0\x9F\x8D\x94 panineria jhonny")
+
+elseif(strpos($text, "/jhonny") === 0 || $text == "\xF0\x9F\x8D\x94 PANINERIA JHONNY" || $text == "\xF0\x9F\x8D\x94 panineria jhonny")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -398,7 +399,7 @@ elseif(strpos($text, "/jhonny") === 0 || $text == "\xF0\x9F\x8D\x94 Panineria Jh
 }
 
 //Panificio dello Studente
-elseif(strpos($text, "/panstud") === 0 || $text == "🍝 Panificio dello Studente" || $text == "🍝 panificio dello studente")
+elseif(strpos($text, "/panstud") === 0 || $text == "🍝 PANIFICIO DELLO STUDENTE" || $text == "🍝 panificio dello studente")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -461,7 +462,7 @@ elseif(strpos($text, "/panstud") === 0 || $text == "🍝 Panificio dello Student
 }
 
 //Casa Massaro
-elseif(strpos($text, "/casamassaro") === 0 || $text == "🍴 Casa Massaro" || $text == "🍴 casa massaro")
+elseif(strpos($text, "/casamassaro") === 0 || $text == "🍴 CASA MASSARO" || $text == "🍴 casa massaro")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -521,6 +522,202 @@ elseif(strpos($text, "/casamassaro") === 0 || $text == "🍴 Casa Massaro" || $t
 		// read curl response
 		$output = curl_exec($ch);
 }
+
+// BAR INGEGNERIA
+
+elseif(strpos($text, "/baring") === 0 || $text == "\xF0\x9F\x8D\x94 BAR INGEGNERIA" || $text == "\xF0\x9F\x8D\x94 bar ingegneria")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => "\xF0\x9F\x8D\x94 BAR INGEGNERIA\n\nSi trova sotto il portico dell'Ed.8\n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08:00 alle 18:30\n\nDa Settembre a Luglio\n\n", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.1049168", 
+						'longitude' => "13.3483365");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+}
+
+// BAR ARCHITETTURA
+
+elseif(strpos($text, "/bararch") === 0 || $text == "\xF0\x9F\x8D\x94 BAR ARCHITETTURA" || $text == "\xF0\x9F\x8D\x94 bar architettura")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => "\xF0\x9F\x8D\x94 BAR ARCHITETTURA\n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08:00 alle 17:30\n\nDa Settembre a Luglio\n\n", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.1025477", 
+						'longitude' => "13.3473151");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+}
+
+// BAR LETTERE
+
+elseif(strpos($text, "/bararch") === 0 || $text == "\xF0\x9F\x8D\x94 BAR LETTERE" || $text == "\xF0\x9F\x8D\x94 bar lettere")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId, LETTERE
+		 	'text' => "\xF0\x9F\x8D\x94 BAR LETTERE\n\nSi trova di fronte l'Edificio 12\n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08:00 alle 12:30\n\nDa Settembre a Luglio\n\n", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.1025863", 
+						'longitude' => "13.3441629");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+}
+
 
 // MENU STUDENTI
 elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU STUDENTI" || $text == "\xF0\x9F\x91\xA5 menu studenti" )
