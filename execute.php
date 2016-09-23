@@ -3143,7 +3143,7 @@ elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "📖 BIBLIO" || $tex
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 Menu Biblioteche \xF0\x9F\x8F\xA6\n\n".$firstname.", che Biblioteca vuoi visitare?\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE","\xF0\x9F\x8F\xA6 SALA LETTURA WURTH"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA","\xF0\x9F\x8F\xA6 EMEROTECA ARCH"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CLA","\xF0\x9F\x8F\xA6 BIBLIOTECA FIS CHIM ARCHIRAFI")),
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE","\xF0\x9F\x8F\xA6 SALA LETTURA WURTH"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA","\xF0\x9F\x8F\xA6 EMEROTECA ARCH"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CLA","\xF0\x9F\x8F\xA6 BIBLIOTECA FIS CHIM ARCHIRAFI"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA EX ARCHITETTURA")),
 			 'resize_keyboard' => true
 		)
 	);
