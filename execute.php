@@ -678,7 +678,7 @@ elseif(strpos($text, "/barlet") === 0 || $text == "\xF0\x9F\x8D\x94 BAR LETTERE"
 		$method='sendMessage';
 	
 		$postField = array(
-		 	'chat_id' => $chatId, LETTERE
+		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x8D\x94 BAR LETTERE\n\nSi trova di fronte l'Edificio 12\n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08:00 alle 12:30\n\nDa Settembre a Luglio\n\n", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
@@ -718,6 +718,7 @@ elseif(strpos($text, "/barlet") === 0 || $text == "\xF0\x9F\x8D\x94 BAR LETTERE"
 		$output = curl_exec($ch);
 
 }
+
 
 // MENU STUDENTI
 elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU STUDENTI" || $text == "\xF0\x9F\x91\xA5 menu studenti" )
