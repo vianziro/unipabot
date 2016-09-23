@@ -656,7 +656,7 @@ elseif(strpos($text, "/bararch") === 0 || $text == "\xF0\x9F\x8D\x94 BAR ARCHITE
 
 // BAR LETTERE
 
-elseif(strpos($text, "/bararch") === 0 || $text == "\xF0\x9F\x8D\x94 BAR LETTERE" || $text == "\xF0\x9F\x8D\x94 bar lettere")
+elseif(strpos($text, "/barlet") === 0 || $text == "\xF0\x9F\x8D\x94 BAR LETTERE" || $text == "\xF0\x9F\x8D\x94 bar lettere")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
