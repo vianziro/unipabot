@@ -2749,7 +2749,7 @@ elseif(strpos($text, "/mod12sveco") === 0 || $text == "📄 I SEMESTRE ECO SV EC
 // ORARIO SCIENZE DELLA FORMAZIONE
 
 // MENU ORARIO LEZIONI SCIENZE DELLA FORMAZIONE
-elseif(strpos($text, "/orariolezscfor") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO CORSI SC FORMAZIONE" || $text == "\xF0\x9F\x95\x92 orario corsi sc formazione")
+elseif(strpos($text, "/orariolezscfor") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO CORSI SC FORM" || $text == "\xF0\x9F\x95\x92 orario corsi sc form")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -2819,7 +2819,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO PSICO
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 I SEMESTRE PSICOLOGIA"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC FORMAZIONE"))
+			 "keyboard"=> array(array("📄 I SEMESTRE PSICOLOGIA"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC FORM"))
 			,'resize_keyboard' => true
 		)
 	);
