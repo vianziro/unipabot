@@ -832,7 +832,7 @@ elseif(strpos($text, "/caldid") === 0 || $text == "📄 CALENDARIO DIDATTICO" ||
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Quale Calendario Didattico vuoi?\xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "❔ Quale Calendario Didattico vuoi?\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📄 CALENDARIO DIDATTICO POLITECNICA"))
 			,'resize_keyboard' => true
