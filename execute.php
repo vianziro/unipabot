@@ -1204,7 +1204,7 @@ elseif(strpos($text, "/caldid") === 0 || $text == "📄 CALENDARI DIDATTICI" || 
 		 'chat_id' => $chatId, 
 		 'text' => "❔ Quale Calendario Didattico vuoi?\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("📄 CAL DID POLITECNICA","📄 CAL DID SC DI BASE"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("📄 CAL DID POLITECNICA","📄 CAL DID SC UMANE"),array("📄 CAL DID SC GIURIDICHE","📄 CAL DID SC DI BASE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -1287,9 +1287,9 @@ elseif(strpos($text, "/caldidpoli") === 0 || $text == "📄 CAL DID POLITECNICA"
 	
 }		
 
-// CALENDARIO DIDATTICO SCIENZE DI BASE
+// CALENDARIO DIDATTICO SCIENZE UMANE
 
-elseif(strpos($text, "/caldidscbas") === 0 || $text == "📄 CAL DID SC DI BASE" || $text == "📄 cal did sc di base")
+elseif(strpos($text, "/caldidscuma") === 0 || $text == "📄 CAL DID SC UMANE" || $text == "📄 cal did sc umane")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -1338,6 +1338,68 @@ elseif(strpos($text, "/caldidscbas") === 0 || $text == "📄 CAL DID SC DI BASE"
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
 						'document' => new CURLFile(realpath("./doc/calendarioscienzeumane.pdf")), 
+						'caption' => "Calendario Didattico della Scuola di Scienze di Base e Applicate");
+	$ch = curl_init(); 
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+	curl_setopt($ch, CURLOPT_URL, $botUrl); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+	// read curl response
+	$output = curl_exec($ch);
+	
+}		
+
+// CALENDARIO DIDATTICO SCIENZE GIURIDICHE
+
+elseif(strpos($text, "/caldidscbas") === 0 || $text == "📄 CAL DID SC GIURIDICHE" || $text == "📄 cal did sc giuridiche")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+	$method='sendMessage';
+	
+	$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "Ecco il Calendario Didattico della tua Scuola!", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
+			,'resize_keyboard' => true
+		)
+	);
+	
+	$handle=curl_init();
+	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	curl_setopt($handle,CURLOPT_POST,1);
+	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+	curl_setopt($handle,CURLOPT_ENCODING,1);
+	$dati=json_decode( curl_exec($handle) ,true);
+	curl_close($handle);
+	
+	var_dump($dati);	
+	
+	$message = isset($update['message']) ? $update['message'] : "";
+	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+	$text = isset($message['text']) ? $message['text'] : "";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
+	// change image name and path
+	$postFields = array('chat_id' => $chatId, 
+						'document' => new CURLFile(realpath("./doc/calendarioscienzegiuridiche.pdf")), 
 						'caption' => "Calendario Didattico della Scuola di Scienze di Base e Applicate");
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
