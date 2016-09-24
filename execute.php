@@ -5680,6 +5680,24 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.1058038", 
+						'longitude' => "13.3329904");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
 	}
 
 
