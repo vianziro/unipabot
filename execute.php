@@ -1312,7 +1312,7 @@ elseif(strpos($text, "/orariolezioni") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x95\x92 SEZIONE ORARIO LEZIONI \xF0\x9F\x95\x92\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO","\xF0\x9F\x95\x92 ORARIO CORSI SC FORM"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC DI BASE"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO","\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC DI BASE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3425,7 +3425,7 @@ elseif(strpos($text, "/mod12sveco") === 0 || $text == "📄 I SEMESTRE ECO SV EC
 // ORARIO SCIENZE DELLA FORMAZIONE
 
 // MENU ORARIO LEZIONI SCIENZE DELLA FORMAZIONE
-elseif(strpos($text, "/orariolezscfor") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO CORSI SC FORM" || $text == "\xF0\x9F\x95\x92 orario corsi sc form")
+elseif(strpos($text, "/orariolezscfor") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE" || $text == "\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -3495,7 +3495,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO PSICO
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 I SEMESTRE PSICOLOGIA"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC FORM"))
+			 "keyboard"=> array(array("📄 I SEMESTRE PSICOLOGIA"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3576,7 +3576,7 @@ elseif(strpos($text, "/sccommed") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO SC 
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 I SEMESTRE SC COM MEDIA"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC FORM"))
+			 "keyboard"=> array(array("📄 I SEMESTRE SC COM MEDIA"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3657,7 +3657,7 @@ elseif(strpos($text, "/sccomcult") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO SC
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 I SEMESTRE SC COM CULT"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC FORM"))
+			 "keyboard"=> array(array("📄 I SEMESTRE SC COM CULT"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3738,7 +3738,7 @@ elseif(strpos($text, "/scedu") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO SC EDU
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 I SEMESTRE SC EDU"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC FORM"))
+			 "keyboard"=> array(array("📄 I SEMESTRE SC EDU"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE"))
 			,'resize_keyboard' => true
 		)
 	);
