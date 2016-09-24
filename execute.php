@@ -5689,8 +5689,8 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
-						'latitude' => "38.1052043", 
-						'longitude' => "13.3487577");
+						'latitude' => "38.1051803", 
+						'longitude' => "13.3487588");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
