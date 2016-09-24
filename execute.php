@@ -3422,10 +3422,10 @@ elseif(strpos($text, "/mod12sveco") === 0 || $text == "📄 I SEMESTRE ECO SV EC
 	
 }
 
-// ORARIO SCIENZE DELLA FORMAZIONE
+// ORARIO SCIENZE UMANE
 
 // MENU ORARIO LEZIONI SCIENZE DELLA FORMAZIONE
-elseif(strpos($text, "/orariolezscfor") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE" || $text == "\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE")
+elseif(strpos($text, "/orariolezscuma") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE" || $text == "\xF0\x9F\x95\x92 orario corsi sc umane")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
