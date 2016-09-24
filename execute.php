@@ -6058,7 +6058,7 @@ elseif(strpos($text, "/coparch") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA 
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "\xF0\x9F\x93\x84 COPISTERIA ARCHITETTURA \n\nSi trova di fronte l'ingresso dell'Edificio 14\n\n", 
+		 	'text' => "\xF0\x9F\x93\x84 COPISTERIA ARCHITETTURA \n\nSi trova di fronte l'ingresso dell'Edificio 14\n\n🕒 Orario Esercizio: 08:00 - 19:00", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
 				,'resize_keyboard' => true
