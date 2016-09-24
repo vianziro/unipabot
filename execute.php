@@ -1178,9 +1178,9 @@ elseif(strpos($text, "/auludu") === 0 || $text == "🏪 UDU" || $text == "🏪 u
 
 }
 
-// CALENDARIO DIDATTICO
+// CALENDARI DIDATTICI
 
-elseif(strpos($text, "/caldid") === 0 || $text == "📄 CALENDARIO DIDATTICO" || $text == "📄 calendario didattico")
+elseif(strpos($text, "/caldid") === 0 || $text == "📄 CALENDARI DIDATTICI" || $text == "📄 calendari didattici")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -1251,7 +1251,7 @@ elseif(strpos($text, "/caldidpoli") === 0 || $text == "📄 CAL DID POLITECNICA"
 		 'chat_id' => $chatId, 
 		 'text' => "Ecco il Calendario Didattico della tua Scuola!", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📄 CALENDARIO DIDATTICO"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -1313,7 +1313,7 @@ elseif(strpos($text, "/caldidscbas") === 0 || $text == "📄 CAL DID SC DI BASE"
 		 'chat_id' => $chatId, 
 		 'text' => "Ecco il Calendario Didattico della tua Scuola!", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📄 CALENDARIO DIDATTICO"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
 			,'resize_keyboard' => true
 		)
 	);
