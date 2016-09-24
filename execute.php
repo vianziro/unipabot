@@ -805,7 +805,7 @@ elseif(strpos($text, "/tirocinio") === 0 || $text == "\xF0\x9F\x93\x91 TIROCINIO
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "ℹ️ Per le info sul Tirocinio visita http://www.stage.unipa.it/";
+		$response = "ℹ️ Per le info sul Tirocinio visita http://www.stage.unipa.it/\n\nPer conoscere le offerte delle aziende visita http://aziende.unipa.it/searches";
 	}
 
 // AULETTE ASSOCIAZIONI
