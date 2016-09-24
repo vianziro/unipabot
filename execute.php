@@ -763,7 +763,6 @@ elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU S
 	
 	var_dump($dati);
 	
-	//$response = "\xF0\x9F\x8F\xA6 Menu Studenti \xF0\x9F\x8F\xA6\n\n/orariolezioni \xF0\x9F\x95\x92 ORARI LEZIONI \n\n/materieascelta \xF0\x9F\x95\x92 MATERIE A SCELTA CONSIGLIATE \n\n/tirocinio \xF0\x9F\x95\x92 TIROCINIO \n\n";
 }
 
 // MATERIE A SCELTA
@@ -805,7 +804,7 @@ elseif(strpos($text, "/tirocinio") === 0 || $text == "\xF0\x9F\x93\x91 TIROCINIO
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "ℹ️ Per le info sul Tirocinio visita http://www.stage.unipa.it/\n\n📜 Per conoscere le offerte delle aziende visita http://aziende.unipa.it/searches";
+		$response = "ℹ️ Per le info sul Tirocinio visita http://www.stage.unipa.it/\n\n📜 Per conoscere le offerte delle aziende visita http://aziende.unipa.it/searches\n\nPer richiedere convenzioni per Tirocini presso Enti/Aziende nazionali http://www.unipa.it/amministrazione/area2/set17/Accreditamento-Aziende/procedura_aziende_nazionali.html";
 	}
 
 // AULETTE ASSOCIAZIONI
