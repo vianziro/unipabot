@@ -156,7 +156,7 @@ elseif(strpos($text, "/about") === 0 || $text == "\xE2\x84\xB9 ABOUT" || $text =
 
 // TRASPORTI
 
-elseif(strpos($text, "/trasporti") === 0 || $text == "🚈 TRASPORTI" || $text == "🚈 trasporti")
+elseif(strpos($text, "/trasp") === 0 || $text == "🚈 TRASP" || $text == "🚈 trasp")
 {
 	
 	$message = isset($update['message']) ? $update['message'] : "";
