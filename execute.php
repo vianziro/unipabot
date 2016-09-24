@@ -783,7 +783,7 @@ elseif(strpos($text, "/matascelta") === 0 || $text == "\xF0\x9F\x93\x9A MATERIE 
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "📖 Le materie a scelta che ti consiglio sono:\n\n📓 Gestione della Produzione Industriale (ING)\n\n ";
+		$response = "📖 Le materie a scelta che ti consiglio sono:\n\n📓 Gestione della Produzione Industriale (ING)\n\nBiologia della Riproduzione ed Etologia (SCUOLA SCIENZE DI BASE)\n\nEcologia degli ambienti marini costieri  (SCUOLA SCIENZE DI BASE)\n\nStoria della Chimica (SCUOLA SCIENZE DI BASE)\n\nMetodologie Biochimiche (SCUOLA SCIENZE DI BASE)\n\nBiologia riproduttiva e dello sviluppo dei vegetali (SCUOLA SCIENZE DI BASE)\n\nPalinologia e Paleobotanica A. Troia (SCUOLA SCIENZE DI BASE)\n\nMetodi di data processing per la vulcanologia e la geochimica (SCUOLA SCIENZE DI BASE)\n\nCambiamenti climatici e record geologico (SCUOLA SCIENZE DI BASE)\n\n";
 	}
 
 //TIROCINIO	
