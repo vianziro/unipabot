@@ -920,7 +920,7 @@ elseif(strpos($text, "/aulviving") === 0 || $text == "🏪 VIVERE INGEGNERIA" ||
 
 // 🏪 AISA
 
-elseif(strpos($text, "/aulaisa") === 0 || $text == "🏪 AISA" || $text == "🏪 AISA")
+elseif(strpos($text, "/aulaisa") === 0 || $text == "🏪 AISA" || $text == "🏪 aisa")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
