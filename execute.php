@@ -7007,6 +7007,318 @@ elseif(strpos($text, "F010") === 0 || $text == "f010")
 		$output = curl_exec($ch);
 	}
 
+	elseif(strpos($text, "B010") === 0 || $text == "b010")
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
+						'caption' => "L'aula ".$text." si trova al Piano Terra dell'Ed.6 (DICPM - Dip. di Ingegneria Chimica dei Processi e dei Materiali)");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+			$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.10623", 
+						'longitude' => "13.3503068");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	}
+
+	elseif(strpos($text, "B020") === 0 || $text == "b020")
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
+						'caption' => "L'aula ".$text." si trova al Piano Terra dell'Ed.6 (DICPM - Dip. di Ingegneria Chimica dei Processi e dei Materiali)");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+			$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.10623", 
+						'longitude' => "13.3503068");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	}
+
+	elseif(strpos($text, "B110") === 0 || $text == "b110")
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.6 (DICPM - Dip. di Ingegneria Chimica dei Processi e dei Materiali)");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+			$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.10623", 
+						'longitude' => "13.3503068");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	}
+
+	elseif(strpos($text, "B120") === 0 || $text == "b120")
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.6 (DICPM - Dip. di Ingegneria Chimica dei Processi e dei Materiali)");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+			$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.10623", 
+						'longitude' => "13.3503068");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	}
+
+	elseif(strpos($text, "B210") === 0 || $text == "b210")
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
+						'caption' => "L'aula ".$text." si trova al 2° Piano dell'Ed.6 (DICPM - Dip. di Ingegneria Chimica dei Processi e dei Materiali)");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+			$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.10623", 
+						'longitude' => "13.3503068");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	}
+
+	elseif(strpos($text, "B310") === 0 || $text == "b310")
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
+						'caption' => "L'aula ".$text." si trova al 3° Piano dell'Ed.6 (DICPM - Dip. di Ingegneria Chimica dei Processi e dei Materiali)");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+			$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.10623", 
+						'longitude' => "13.3503068");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	}
+
 //INFO PROF
 
 elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PROF" || $text == "\xF0\x9F\x91\xA4 info prof" || $text == "Prof" || $text == "prof")
