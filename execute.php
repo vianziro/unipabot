@@ -7620,8 +7620,8 @@ elseif(strpos($text, "F010") === 0 || $text == "f010")
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
-						'latitude' => "38.10209", 
-						'longitude' => "13.3451011");
+						'latitude' => "38.1038976", 
+						'longitude' => "13.3431922");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
