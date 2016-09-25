@@ -6839,9 +6839,9 @@ elseif(strpos($text, "F010") === 0 || $text == "f010")
 		$text = isset($message['text']) ? $message['text'] : "";
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
 		// change file name and path
-		$postFields = array('chat_id' => $chatId, 
-						'latitude' => "38.1056519", 
-						'longitude' => "13.3495314");
+			$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.10623", 
+						'longitude' => "13.3503068");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -6891,9 +6891,9 @@ elseif(strpos($text, "F010") === 0 || $text == "f010")
 		$text = isset($message['text']) ? $message['text'] : "";
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
 		// change file name and path
-		$postFields = array('chat_id' => $chatId, 
-						'latitude' => "38.1056519", 
-						'longitude' => "13.3495314");
+			$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.10623", 
+						'longitude' => "13.3503068");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -6943,9 +6943,9 @@ elseif(strpos($text, "F010") === 0 || $text == "f010")
 		$text = isset($message['text']) ? $message['text'] : "";
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
 		// change file name and path
-		$postFields = array('chat_id' => $chatId, 
-						'latitude' => "38.1056519", 
-						'longitude' => "13.3495314");
+			$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.10623", 
+						'longitude' => "13.3503068");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -6996,8 +6996,8 @@ elseif(strpos($text, "F010") === 0 || $text == "f010")
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
-						'latitude' => "38.1056519", 
-						'longitude' => "13.3495314");
+						'latitude' => "38.10623", 
+						'longitude' => "13.3503068");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
