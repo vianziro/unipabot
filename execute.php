@@ -6147,7 +6147,7 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali))"/*$text*/);
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali)"/*$text*/);
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -6199,7 +6199,7 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali))"/*$text*/);
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali)"/*$text*/);
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -6251,7 +6251,7 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali))"/*$text*/);
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali)"/*$text*/);
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -6303,7 +6303,7 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 2° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali))"/*$text*/);
+						'caption' => "L'aula ".$text." si trova al 2° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali)"/*$text*/);
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -6355,7 +6355,7 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 2° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali))"/*$text*/);
+						'caption' => "L'aula ".$text." si trova al 2° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali)"/*$text*/);
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
