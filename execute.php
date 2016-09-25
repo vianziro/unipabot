@@ -29,7 +29,7 @@ header("Content-Type: application/json");
 $response = '';
 $response2 = '';
 
-if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == "\xF0\x9F\x94\xB4 start")
+if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == "\xF0\x9F\x94\xB4 start" || $text=="CIAO" || $text == "ciao")
 {
 	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
