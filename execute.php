@@ -180,7 +180,7 @@ elseif(strpos($text, "/send") === 0 || $text == "🔵 MSG BROADCAST" || $text ==
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x8D\x94 PANINERIA DA JHONNY \n\n🕒 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST GLOBALE"))
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG GLOBALE"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -200,7 +200,7 @@ elseif(strpos($text, "/send") === 0 || $text == "🔵 MSG BROADCAST" || $text ==
 }
 
 // INVIO MESSAGGIO BROADCAST A TUTTI GLI ISCRITTI
-elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG BROADCAST GLOBALE" || $text == "🔵 msg broadcast globale")
+elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $text == "🔵 msg globale")
 {
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId_Simy = 164137894;
@@ -8591,7 +8591,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xF0\x9F\x91\xA4 Nome: Laura \n\xF0\x9F\x91\xA4 Cognome: Giarrè \n\xF0\x9F\x8F\xA6 Ufficio: Ed.15\n📝 Ricevimento:\n\nMartedì dalle 18:00 alle 19:00 presso DEIM - Edificio 9\n\nMercoledì dalle 8:30 alle 10:30 presso DEIM - Edificio 9\n\n✉️ Contatti: laura.giarre@unipa.it";
+		$response = "\xF0\x9F\x91\xA4 Nome: Laura \n\n\xF0\x9F\x91\xA4 Cognome: Giarrè \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.9\n\n📝 Ricevimento: Martedì dalle 18:00 alle 19:00 presso DEIM - Edificio 9\n\nMercoledì dalle 8:30 alle 10:30 presso DEIM - Edificio 9\n\n✉️ Contatti: laura.giarre@unipa.it";
 	}
 
 	
