@@ -5239,7 +5239,7 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 
 //AULE
 
-	elseif(strpos($text, "F130") === 0 || $text == "f130" || $text == "F130")
+	elseif(strpos($text, "F130") === 0 || $text == "f130" || $text == "F130" || $text == "Aula Tortorici" || $text == "aula tortorici" || $text == "tortorici")
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
