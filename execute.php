@@ -178,7 +178,7 @@ elseif(strpos($text, "/send") === 0 || $text == "🔵 MSG BROADCAST" || $text ==
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "\xF0\x9F\x8D\x94 PANINERIA DA JHONNY \n\n🕒 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n", 
+		 	'text' => "⚠️ Aggiornati tutti gli orari dei corsi di Ingegneria", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG GLOBALE"))
 				,'resize_keyboard' => true
@@ -186,7 +186,7 @@ elseif(strpos($text, "/send") === 0 || $text == "🔵 MSG BROADCAST" || $text ==
 		);
 	
 		$handle=curl_init();
-		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method?text=⚠️%20Aggiornati%20tutti%20gli%20orari%20dei%20corsi%20di%20Ingegneria&chat_id=$chatId");
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
 		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
 		curl_setopt($handle,CURLOPT_POST,1);
 		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
@@ -9572,7 +9572,7 @@ elseif(strpos($text, "/bagni") === 0 || $text == "🚽 BAGNI" || $text == "🚽 
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "\xF0\x9F\x8D\x94 PANINERIA DA JHONNY \n\n🕒 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n", 
+		 	'text' => "⚠️ Scegli fra le opzioni sotto", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚽 BAGNI ED.8"))
 				,'resize_keyboard' => true
