@@ -4868,7 +4868,7 @@ elseif(strpos($text, "/biblioexarch") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIO
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "La Ex Biblioteca di Architettura si trova presso l'Edificio 8 al Piano Terra sotto il porticato (Sotto la posizione precisa) e offre ampi e luminosi spazi per lo studio\n\n🕒 Orari Esercizio:\n\nLun-Gio dalle 08:30 alle 17:00\nVen dalle 08:30 alle 13:30\n\nℹ️ Info Utili\n\nChiusura dal 12 al 26 agosto 2016; dal 23 dicembre 2016 al 5 gennaio 2017\nOrario mesi di Luglio e Agosto: dal lunedì al venerdì 8.30-14.30\n\n\xF0\x9F\x93\x9E Tel 09123896204 / 62108\n\n✉️ Email: biblioteca.architettura@unipa.it", 
+		 	'text' => "La ".$text." si trova presso l'Edificio 8 al Piano Terra sotto il porticato (Sotto la posizione precisa) e offre ampi e luminosi spazi per lo studio\n\n🕒 Orari Esercizio:\n\nLun-Gio dalle 08:30 alle 17:00\nVen dalle 08:30 alle 13:30\n\nℹ️ Info Utili\n\nChiusura dal 12 al 26 agosto 2016; dal 23 dicembre 2016 al 5 gennaio 2017\nOrario mesi di Luglio e Agosto: dal lunedì al venerdì 8.30-14.30\n\n\xF0\x9F\x93\x9E Tel 09123896204 / 62108\n\n✉️ Email: biblioteca.architettura@unipa.it", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
