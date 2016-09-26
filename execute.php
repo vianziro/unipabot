@@ -5315,7 +5315,7 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		// change image name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.8"/*$text*/);
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.8 subito dopo la F130"/*$text*/);
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -5343,7 +5343,7 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		$output = curl_exec($ch);
 	}
 	
-	elseif(strpos($text, "F150") === 0 || $text == "f150" || $text == "F150")
+	elseif(strpos($text, "F150") === 0 || $text == "f150" || $text == "F150" || $text == "Aula Capito" || $text == "aula capito" || $text == "capito" || $text == "aula capitò" || $text == "capitò")
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -5395,7 +5395,7 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		$output = curl_exec($ch);
 	}
 	
-	elseif(strpos($text, "F160") === 0 || $text == "f160" || $text == "F160")
+	elseif(strpos($text, "F160") === 0 || $text == "f160" || $text == "F160" || $text == "Aula Rubino" || $text == "aula rubino" || $text == "rubino" )
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -5447,7 +5447,8 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		$output = curl_exec($ch);
 	}
 	
-	elseif(strpos($text, "F170") === 0 || $text == "f170" || $text == "F170")
+
+	elseif(strpos($text, "F170") === 0 || $text == "f170" || $text == "F170" || $text == "Aula Alberti" || $text == "aula alberti" || $text == "alberti" )
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -5499,7 +5500,60 @@ else if(strpos($text, "/auleinelenco") === 0 || $text == "🏪 AULE IN ELENCO" |
 		$output = curl_exec($ch);
 	}
 
-elseif(strpos($text, "F010") === 0 || $text == "f010")
+
+	elseif(strpos($text, "F180") === 0 || $text == "f180" || $text == "F180" || $text == "Aula Manzella" || $text == "aula manzella" || $text == "manzella" )
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.8");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.1051803", 
+						'longitude' => "13.3487588");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	}
+
+	elseif(strpos($text, "F010") === 0 || $text == "f010")
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -5576,6 +5630,58 @@ elseif(strpos($text, "F010") === 0 || $text == "f010")
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
 						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.8 sul corridio che dà sul piazzale di Ingegneria"/*$text*/);
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.1051803", 
+						'longitude' => "13.3487588");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	}
+
+elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.8 accanto alla F160"/*$text*/);
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
