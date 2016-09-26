@@ -186,7 +186,7 @@ elseif(strpos($text, "/send") === 0 || $text == "🔵 MSG BROADCAST" || $text ==
 		);
 	
 		$handle=curl_init();
-		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method?text=prova&chat_id=$chatId");
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method?text=Aggiornati%20tutti%20gli%20orari%20dei%20corsi%20di%20Ingegneria&chat_id=$chatId");
 		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
 		curl_setopt($handle,CURLOPT_POST,1);
 		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
