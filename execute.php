@@ -134,7 +134,7 @@ else if(strpos($text, "/help") === 0 || $text == "\xE2\x9A\xA0 HELP" || $text ==
 }
 
 //ABOUT
-elseif(strpos($text, "/info") === 0 || $text == "ℹ️ INFO BOT" || $text == "ℹ️ INFO BOT")
+elseif(strpos($text, "/info") === 0 || $text == "ℹ️ INFO BOT" || $text == "ℹ️ info bot")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
