@@ -9704,7 +9704,7 @@ elseif(strpos($text, "/bagnied6ch") === 0 || $text == "🚽 BAGNI ED.6 CHIMICA" 
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "I ".$text." sono al Piano Terra vicino all'Aula B010, 
+		 	'text' => "I ".$text." sono al Piano Terra vicino all'Aula B010", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚽 BAGNI"))
 				,'resize_keyboard' => true
