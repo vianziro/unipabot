@@ -9127,7 +9127,7 @@ elseif(strpos($text, "/macchcaffe") === 0 || $text == "\xE2\x98\x95 CAFFE" || $t
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 MENU MACCHINETTE CAFFE' \xF0\x9F\x91\xA5\n\n".$firstname.", seleziona fra le opzioni sotto", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xE2\x98\x95 MACCH. ED.8"),array("\xE2\x98\x95 MACCH. ED.9","\xE2\x98\x95 MACCH. ED.6"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xE2\x98\x95 MACCH. ED.8"),array("\xE2\x98\x95 MACCH. ED.9","\xE2\x98\x95 MACCH. ED.6"),array("\xE2\x98\x95 MACCH. ED.12","\xE2\x98\x95 MACCH. ED.13"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -9146,6 +9146,7 @@ elseif(strpos($text, "/macchcaffe") === 0 || $text == "\xE2\x98\x95 CAFFE" || $t
 		var_dump($dati);
 		
 	}
+
 //SOTTOSEZIONE MACCH.
 
 // MACCH.ED.8
@@ -9166,7 +9167,7 @@ elseif(strpos($text, "/macchcaffeed8") === 0 || $text == "\xE2\x98\x95 MACCH. ED
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "Le macchinette si trovano al primo piano quasi alla fine del corridoio all'altezza della F170 e alla fine del corridoio sulla sinistra\n\nAl secondo piano dentro l'Auletta di Vivere Ingegneria";
+		$response = "ℹ️ Le macchinette si trovano al primo piano quasi alla fine del corridoio all'altezza della F170 e alla fine del corridoio sulla sinistra\n\nAl secondo piano dentro l'Auletta di Vivere Ingegneria";
 	}
 
 // MACCH.ED.9
@@ -9187,7 +9188,7 @@ elseif(strpos($text, "/macchcaffeed9") === 0 || $text == "\xE2\x98\x95 MACCH. ED
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "Le macchinette si trovano al Piano Terra subito dopo l'entrata dell'edificio e al Primo Piano vicino la U110";
+		$response = "ℹ️ Le macchinette si trovano al Piano Terra subito dopo l'entrata dell'edificio e al Primo Piano vicino la U110";
 	}
 
 // MACCH.ED.6
@@ -9208,8 +9209,52 @@ elseif(strpos($text, "/macchcaffeed6") === 0 || $text == "\xE2\x98\x95 MACCH. ED
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "DIP. CHIMICA: Le macchinette si trovano al Piano Terra subito dopo l'entrata dell'edificio\n\nDIFO: Le macchinette si trovano al 3° Piano";
-	}					
+		$response = "🏦 DIP. CHIMICA: Le macchinette si trovano al Piano Terra subito dopo l'entrata dell'edificio\n\n🏦 DIFO: Le macchinette si trovano al 3° Piano";
+	}
+
+// MACCH.ED.13
+
+elseif(strpos($text, "/macchcaffeed13") === 0 || $text == "\xE2\x98\x95 MACCH. ED.13" || $text == "\xE2\x98\x95 macch. ed.13")
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$response = "ℹ️ Le macchinette si trovano al Piano Terra subito dopo l'entrata dell'edificio";
+	}
+
+// MACCH.ED.12
+
+elseif(strpos($text, "/macchcaffeed12") === 0 || $text == "\xE2\x98\x95 MACCH. ED.12" || $text == "\xE2\x98\x95 macch. ed.12")
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$response = "ℹ️ Le macchinette si trovano al Piano Terra in fondo al corridoio d'ingresso";
+	}									
 
 //MENSA
 elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $text == "\xF0\x9F\x8D\x9D mensa")
