@@ -3368,31 +3368,15 @@ elseif(strpos($text, "/mod12sptupa") === 0 || $text == "📄 I-II SEMESTRE SPTUP
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
-	
-	$message = isset($update['message']) ? $update['message'] : "";
-	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
-	$text = isset($message['text']) ? $message['text'] : "";
-	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
-	// change image name and path
-	$postFields = array('chat_id' => $chatId, 
-						'photo' => new CURLFile(realpath("./orariolezioni/sptupa/orariosptupa2.jpg")), 
-						'caption' => "Orario Lezioni 1° e 2° Semestre SPTUPA");
-	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
-	curl_setopt($ch, CURLOPT_URL, $botUrl); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-	// read curl response
-	$output = curl_exec($ch);
 
 	$message = isset($update['message']) ? $update['message'] : "";
 	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
 	$text = isset($message['text']) ? $message['text'] : "";
-	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendPhoto";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'photo' => new CURLFile(realpath("./orariolezioni/sptupa/orariosptupa1.jpg")), 
-						'caption' => "Orario Lezioni 1° e 2° Semestre SPTUPA");
+						'document' => new CURLFile(realpath("./orariolezioni/sptupa/orariolezsptupa.pdf")), 
+						'caption' => $text);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 	curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -3400,7 +3384,6 @@ elseif(strpos($text, "/mod12sptupa") === 0 || $text == "📄 I-II SEMESTRE SPTUP
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 	// read curl response
 	$output = curl_exec($ch);
-	
 }
 
 // CORSI ECONOMIA
