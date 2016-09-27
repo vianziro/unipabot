@@ -9231,7 +9231,7 @@ elseif(strpos($text, "/macchcaffeed13") === 0 || $text == "\xE2\x98\x95 MACCH. E
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "ℹ️ Le macchinette si trovano al Piano Terra subito dopo l'entrata dell'edificio";
+		$response = "ℹ️ Le macchinette si trovano al Piano Terra subito dopo l'entrata dal primo ingresso dell'edificio";
 	}
 
 // MACCH.ED.12
