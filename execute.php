@@ -3331,7 +3331,7 @@ elseif(strpos($text, "/sptupa") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO SPTUP
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 I-II SEMESTRE SPTUPA"),array("\xF0\x9F\x95\x92 ORARIO CORSI ARCH"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("📄 I SEMESTRE SPTUPA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3352,7 +3352,7 @@ elseif(strpos($text, "/sptupa") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO SPTUP
 
 //SOTTOSEZIONE MODULI SPTU
 
-elseif(strpos($text, "/mod12sptupa") === 0 || $text == "📄 I-II SEMESTRE SPTUPA" || $text == "📄 i-ii semestre sptupa")
+elseif(strpos($text, "/mod12sptupa") === 0 || $text == "📄 I SEMESTRE SPTUPA" || $text == "📄 i semestre sptupa")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
