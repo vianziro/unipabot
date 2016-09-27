@@ -225,7 +225,7 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 		 	'chat_id' => $chatId, 
 		 	'text' => "⚠️ Aggiornati tutti gli orari dei corsi di Ingegneria", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
 				,'resize_keyboard' => true
 			)
 		);
