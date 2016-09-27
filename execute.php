@@ -8557,7 +8557,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		$response = "\xF0\x9F\x91\xA4 Nome: Elisabetta \n\xF0\x9F\x91\xA4 Cognome: Di Giovanni \n\xF0\x9F\x8F\xA6 Ufficio: Ed.15\n📝 Ricevimento: Martedì dalle 09:00 alle 11:00 presso Edificio 15, 7° piano\n✉️ Contatti: elisabetta.digiovanni@unipa.it";
 	}
 
-	elseif(strpos($text, "/profgiarre") === 0 || $text == "Giarre" || $text == "giarre" || $text == "Giarrè" || $text == "giarrè"|| $text == "Prof Giarre" || $text == "prof giarre" || $text == "Prof Giarrè" || $text == "prof giarrè")
+	elseif(strpos($text, "/profgiarre") === 0 || $text == "Giarre" || $text == "giarre" || $text == "Giarré" || $text == "giarré"|| $text == "Prof Giarre" || $text == "prof giarre" || $text == "Prof Giarré" || $text == "prof giarré")
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -9233,7 +9233,7 @@ elseif(strpos($text, "/copisterie") === 0 || $text == "\xF0\x9F\x93\x84 COPIST" 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x93\x84 COPISTERIE\n\n".$firstname.", ecco le copisterie che fanno per te\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA AGORA"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO","\xF0\x9F\x93\x84 COPISTERIA ARCH"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA AGORA"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO","\xF0\x9F\x93\x84 COPISTERIA ARCH"),array("\xF0\x9F\x93\x84 COPISTERIA DA.MI.RA"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -9318,6 +9318,7 @@ elseif(strpos($text, "/coping") === 0 || $text == "\xF0\x9F\x93\x84 LA NUOVA COP
 	}
 	
 //LA NUOVA COPISTERIA BIO
+
 elseif(strpos($text, "/copbio") === 0 || $text == "\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO" || $text == "\xF0\x9F\x93\x84 la nuova copisteria bio")
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
@@ -9569,7 +9570,71 @@ elseif(strpos($text, "/coparch") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA 
 		// read curl response
 		$output = curl_exec($ch);
 
-	}	
+	}
+
+// COPISTERIA DA.MI.RA
+	
+elseif(strpos($text, "/copdamira") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA DA.MI.RA" || $text == "\xF0\x9F\x93\x84 copisteria da.mi.ra")
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => $text."\n\n🕒 Orari Esercizio\n\nDa Lunedì a Venerdì dalle 8.00 alle 13:30 e dalle 15:00 alle 19:30\n\nSabato dalle 8:00 alle 13:00\n\nNota: nel mese di agosto dalle 8:30 alle 13 tutti i giorni\n\n📞 Contatti: +39 091.6526000\n\n💻 Sito Web: http://www.damira.net/", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.107339", 
+						'longitude' => "13.35294");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+	}			
 
 	// BAGNI
 
