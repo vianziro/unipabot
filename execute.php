@@ -9596,7 +9596,7 @@ elseif(strpos($text, "/copdamira") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERI
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => $text."\n\n🕒 Orari Esercizio\n\nDa Lunedì a Venerdì dalle 8.00 alle 13:30 e dalle 15:00 alle 19:30\n\nSabato dalle 8:00 alle 13:00\n\nNota: nel mese di agosto dalle 8:30 alle 13 tutti i giorni\n\n📞 Contatti: +39 091.6526000\n\n💻 Sito Web: http://www.damira.net/", 
+		 	'text' => $text."\n\n🕒 Orari Esercizio\n\nDa Lunedì a Venerdì dalle 8.00 alle 13:30 e dalle 15:00 alle 19:30\n\nSabato dalle 8:00 alle 13:00\n\nNota: nel mese di agosto dalle 8:30 alle 13 tutti i giorni\n\n📞 Contatti:  091421125\n\n💻 Sito Web: http://www.damira.net/", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
 				,'resize_keyboard' => true
