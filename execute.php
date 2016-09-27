@@ -3169,7 +3169,7 @@ elseif(strpos($text, "/arch") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ARCHITE
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I-II ARCHITETTURA"),array("\xF0\x9F\x95\x92 ORARIO CORSI ARCH"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("📄 I SEMESTRE ARCHITETTURA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3190,7 +3190,7 @@ elseif(strpos($text, "/arch") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ARCHITE
 
 //SOTTOSEZIONE MODULI ARCHITETTURA
 
-elseif(strpos($text, "/mod12arch") === 0 || $text == "📄 MODULO I-II ARCHITETTURA" || $text == "📄 modulo i-ii architettura")
+elseif(strpos($text, "/mod12arch") === 0 || $text == "📄 I SEMESTRE ARCHITETTURA" || $text == "📄 i semestre architettura")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
