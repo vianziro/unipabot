@@ -3250,7 +3250,7 @@ elseif(strpos($text, "/disind") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO DIS. 
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I-II DIS IND"),array("\xF0\x9F\x95\x92 ORARIO CORSI ARCH"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("📄 I SEMESTRE DIS IND"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3271,7 +3271,7 @@ elseif(strpos($text, "/disind") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO DIS. 
 
 //SOTTOSEZIONE MODULI DIS IND
 
-elseif(strpos($text, "/mod12disind") === 0 || $text == "📄 MODULO I-II DIS IND" || $text == "📄 modulo i-ii dis ind")
+elseif(strpos($text, "/mod12disind") === 0 || $text == "📄 I SEMESTRE DIS IND" || $text == "📄 i semestre dis ind")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
