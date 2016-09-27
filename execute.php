@@ -177,7 +177,7 @@ elseif(strpos($text, "/info") === 0 || $text == "ℹ️ INFO BOT" || $text == "�
 }
 
 // INVIO MESSAGGIO BROADCAST
-elseif(strpos($text, "/send") === 0 || $text == "🔵 MSG BROADCAST" || $text == "🔵 msg broadcast")
+elseif(strpos($text, "/msg") === 0 || $text == "🔵 MSG BROADCAST" || $text == "🔵 msg broadcast")
 {
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
