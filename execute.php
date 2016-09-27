@@ -223,7 +223,7 @@ elseif(strpos($text, "/msg") === 0 || $text == "🔵 MSG BROADCAST" || $text == 
 
 //PASSWORD ACCESSO BROADCAST
 
-elseif(strpos($text, "gino") === 0 || $text == "gino")
+elseif(strpos($text, "otbapinu") === 0 || $text == "otbapinu")
 {
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
