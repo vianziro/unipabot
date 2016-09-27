@@ -133,7 +133,29 @@ else if(strpos($text, "/help") === 0 || $text == "\xE2\x9A\xA0 HELP" || $text ==
 	$response = "\xF0\x9F\x93\x94 Ecco i miei comandi\n\n/start \xF0\x9F\x9A\x80 START BOT \n\n/professori \xF0\x9F\x91\xA4 Professori \n\n/mappa \xF0\x9F\x8C\x90 Mappa Unipa \n\n/orariolezioni \xF0\x9F\x95\x92 Orario Lezioni \n\n/oraribiblioteca \xF0\x9F\x8F\xA6 Orari Biblioteca \n\n/ristoro \xF0\x9F\x8D\x9D Punti Ristoro \n\n/about \xE2\x9A\xA0 Info sul Bot \n\n/help \xE2\x84\xB9 Elenco comandi \n\n";
 }
 
-//ABOUT
+// 🖥 NEWS UNIPA
+
+elseif(strpos($text, "/news") === 0 || $text == "🖥 NEWS UNIPA" || $text == "🖥 news unipa")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
+	$response = "LEGGI LE NEWS SU https://www.facebook.com/unipawebradio/";
+}
+
+// NEWS UNIPA
 elseif(strpos($text, "/info") === 0 || $text == "ℹ️ INFO BOT" || $text == "ℹ️ info bot")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
@@ -203,7 +225,7 @@ elseif(strpos($text, "/send") === 0 || $text == "🔵 MSG BROADCAST" || $text ==
 elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $text == "🔵 msg globale")
 {
 		$message = isset($update['message']) ? $update['message'] : "";
-		$chatId_Simy = 164137894;
+		$chatId = 164137894; // ID SIMY
 		$text = isset($message['text']) ? $message['text'] : "";
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
 		// change file name and path
