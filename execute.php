@@ -5886,7 +5886,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		$output = curl_exec($ch);
 	}
 
-	elseif(strpos($text, "F220") === 0 || $text == "f220" || $text == "F220")
+	elseif(strpos($text, "F220") === 0 || $text == "f220" || $text == "F220" || $text == "Aula Damiani Almeyda" || $text == "aula damiani almeyda")
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -5938,7 +5938,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		$output = curl_exec($ch);
 	}
 
-	elseif(strpos($text, "F230") === 0 || $text == "f230" || $text == "F230")
+	elseif(strpos($text, "F230") === 0 || $text == "f230" || $text == "F230" || $text == "Aula Zanca" || $text == "aula zanca")
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
