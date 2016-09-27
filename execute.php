@@ -152,10 +152,10 @@ elseif(strpos($text, "/news") === 0 || $text == "🖥 NEWS UNIPA" || $text == "�
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$response = "LEGGI LE NEWS SU https://www.facebook.com/unipawebradio/";
+	$response = "https://www.facebook.com/unipawebradio/";
 }
 
-// NEWS UNIPA
+// INFO BOT
 elseif(strpos($text, "/info") === 0 || $text == "ℹ️ INFO BOT" || $text == "ℹ️ info bot")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
