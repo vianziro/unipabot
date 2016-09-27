@@ -9148,7 +9148,7 @@ elseif(strpos($text, "/macchcaffe") === 0 || $text == "\xE2\x98\x95 CAFFE" || $t
 	}
 //SOTTOSEZIONE MACCH.
 
-//MACCH.ED.8
+// MACCH.ED.8
 elseif(strpos($text, "/macchcaffeed8") === 0 || $text == "\xE2\x98\x95 MACCH. ED.8" || $text == "\xE2\x98\x95 macch. ed.8")
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
@@ -9166,8 +9166,50 @@ elseif(strpos($text, "/macchcaffeed8") === 0 || $text == "\xE2\x98\x95 MACCH. ED
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "\xE2\x98\x95 MACCH. ED.8\n\nLe macchinette si trovano al primo piano quasi alla fine del corridoio all'altezza della F170 e alla fine del corridoio sulla sinistra\n\nAl secondo piano dentro l'Auletta di Vivere Ingegneria";
-	}	
+		$response = "Le macchinette si trovano al primo piano quasi alla fine del corridoio all'altezza della F170 e alla fine del corridoio sulla sinistra\n\nAl secondo piano dentro l'Auletta di Vivere Ingegneria";
+	}
+
+// MACCH.ED.9
+elseif(strpos($text, "/macchcaffeed9") === 0 || $text == "\xE2\x98\x95 MACCH. ED.9" || $text == "\xE2\x98\x95 macch. ed.9")
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$response = "Le macchinette si trovano al Piano Terra subito dopo l'entrata dell'edificio e al Primo Piano vicino la U110";
+	}
+
+// MACCH.ED.6
+elseif(strpos($text, "/macchcaffeed6") === 0 || $text == "\xE2\x98\x95 MACCH. ED.6" || $text == "\xE2\x98\x95 macch. ed.6")
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$response = "DIP. CHIMICA: Le macchinette si trovano al Piano Terra subito dopo l'entrata dell'edificio\n\nDIFO: Le macchinette si trovano al 3° Piano";
+	}					
 
 //MENSA
 elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $text == "\xF0\x9F\x8D\x9D mensa")
