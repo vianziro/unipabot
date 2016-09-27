@@ -1836,7 +1836,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING I
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I ING INF","📄 MODULO II ING INF"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING INF","📄 MODULO II ING INF"))
 			,'resize_keyboard' => true
 		)
 	);
