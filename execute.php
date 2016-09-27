@@ -2070,7 +2070,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING M
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I ING MEC","📄 MODULO II ING MEC"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING MEC","📄 MODULO II ING MEC"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2187,7 +2187,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING E
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I ING ELE","📄 MODULO II ING ELE"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ELE","📄 MODULO II ING ELE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2304,7 +2304,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING E
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I ING ENE","📄 MODULO II ING ENE"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ENE","📄 MODULO II ING ENE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2420,7 +2420,7 @@ elseif(strpos($text, "/ingchi") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I ING CHI","📄 MODULO II ING CHI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CHI","📄 MODULO II ING CHI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2537,7 +2537,7 @@ elseif(strpos($text, "/ingamb") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING A
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I ING AMB","📄 MODULO II ING AMB"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING AMB","📄 MODULO II ING AMB"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2654,7 +2654,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I ING CIV","📄 MODULO II ING CIV"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CIV","📄 MODULO II ING CIV"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2771,7 +2771,7 @@ elseif(strpos($text, "/ingcib") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I ING CIB","📄 MODULO II ING CIB"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CIB","📄 MODULO II ING CIB"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2888,7 +2888,7 @@ elseif(strpos($text, "/inggestinf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO I
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I ING GEST INF","📄 MODULO II ING GEST INF"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST INF","📄 MODULO II ING GEST INF"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3005,7 +3005,7 @@ elseif(strpos($text, "/ingbio") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING B
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("📄 MODULO I ING BIO","📄 MODULO II ING BIO"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING BIO","📄 MODULO II ING BIO"))
 			,'resize_keyboard' => true
 		)
 	);
