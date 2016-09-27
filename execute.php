@@ -152,7 +152,7 @@ elseif(strpos($text, "/news") === 0 || $text == "🖥 NEWS UNIPA" || $text == "�
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$response = "https://www.facebook.com/unipawebradio/";
+	$response = "🖥 LEGGI LE NEWS SU https://telegram.me/UnipaBotCh";
 }
 
 // INFO BOT
