@@ -428,7 +428,7 @@ elseif(strpos($text, "/bus") === 0 || $text == "🚌 AUTOBUS" || $text == "🚌 
 		 'chat_id' => $chatId, 
 		 'text' => $firstname.", ecco le Linee ".$text." che puoi prendere!", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"),array("🚌 LINEA 104","🚌 LINEA 109"),array("🚌 LINEA 118","🚌 LINEA 307"),array("🚌 LINEA 309","🚌 LINEA 364"),array("🚌 LINEA 380","🚌 LINEA EXPR"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚌 LINEA 104","🚌 LINEA 109"),array("🚌 LINEA 118","🚌 LINEA 307"),array("🚌 LINEA 309","🚌 LINEA 364"),array("🚌 LINEA 380","🚌 LINEA EXPR"))
 			,'resize_keyboard' => true
 			)
 		);
