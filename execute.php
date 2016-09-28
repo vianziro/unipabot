@@ -772,7 +772,7 @@ elseif(strpos($text, "/linea380") === 0 || $text == "🚌 LINEA 380" || $text ==
 
 // 🚌 LINEA EXPR
  
-elseif(strpos($text, "/lineaexpr") === 0 || $text == "🚌 LINEA EXPR" || $text == "🚌 linea EXPR")
+elseif(strpos($text, "/lineaexpr") === 0 || $text == "🚌 LINEA EXPR" || $text == "🚌 linea expr")
 {	
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
