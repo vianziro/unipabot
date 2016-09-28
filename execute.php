@@ -405,7 +405,7 @@ elseif(strpos($text, "/trasp") === 0 || $text == "🚈 TRASP" || $text == "🚈 
 
 // AUTOBUS 
 elseif(strpos($text, "/bus") === 0 || $text == "🚌 AUTOBUS" || $text == "🚌 autobus")
-{
+{	
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
 		$text = isset($message['text']) ? $message['text'] : "";
@@ -420,8 +420,32 @@ elseif(strpos($text, "/bus") === 0 || $text == "🚌 AUTOBUS" || $text == "🚌 
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+		
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
 	
-	$response = "🚌 AUTOBUS da e verso Unipa \n\nDA UNIPA A PALERMO CITTA': \n\nDA PALERMO CITTA' AD UNIPA: ";
+		$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => $firstname.", ecco le Linee Autobus che puoi prendere!", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 LINEA 104"),array("🚌 LINEA 109","🚌 LINEA 118","🚌 LINEA 307"),array("🚌 LINEA 309","🚌 LINEA 364"),array("🚌 LINEA 380","🚌 LINEA EXPR"))
+			,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
 }
 
 // METRO
