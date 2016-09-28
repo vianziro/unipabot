@@ -420,31 +420,6 @@ elseif(strpos($text, "/bus") === 0 || $text == "🚌 AUTOBUS" || $text == "🚌 
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
-		
-		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
-		$method='sendMessage';
-	
-		$postField = array(
-		 'chat_id' => $chatId, 
-		 'text' => $firstname.", ecco le Linee ".$text." che puoi prendere!", 
-		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚌 LINEA 104","🚌 LINEA 109"),array("🚌 LINEA 118","🚌 LINEA 307"),array("🚌 LINEA 309","🚌 LINEA 364"),array("🚌 LINEA 380","🚌 LINEA EXPR"))
-			,'resize_keyboard' => true
-			)
-		);
-	
-		$handle=curl_init();
-		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
-		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
-		curl_setopt($handle,CURLOPT_POST,1);
-		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
-		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
-		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
-		curl_setopt($handle,CURLOPT_ENCODING,1);
-		$dati=json_decode( curl_exec($handle) ,true);
-		curl_close($handle);
-	
-		var_dump($dati);
 
 		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 		$method='sendMessage';
