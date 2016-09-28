@@ -430,6 +430,9 @@ elseif(strpos($text, "/bus") === 0 || $text == "🚌 AUTOBUS" || $text == "🚌 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚌 LINEA 104","🚌 LINEA 109"),array("🚌 LINEA 118","🚌 LINEA 307"),array("🚌 LINEA 309","🚌 LINEA 364"),array("🚌 LINEA 380","🚌 LINEA EXPR"))
 			,'resize_keyboard' => true
+			),
+		 'inline_keyboard' => array(
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚌 LINEA 104","🚌 LINEA 109"),array("🚌 LINEA 118","🚌 LINEA 307"),array("🚌 LINEA 309","🚌 LINEA 364"),array("🚌 LINEA 380","🚌 LINEA EXPR"))
 			)
 		);
 	
