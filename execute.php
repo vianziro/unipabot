@@ -564,7 +564,7 @@ elseif(strpos($text, "/linea118") === 0 || $text == "🚌 LINEA 118" || $text ==
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => $firstname.", ecco gli orari della ".$text." \n\nPer le info dettagliate e in tempo reale utilizza @openamatbot", 
+		 'text' => *$firstname*.", ecco gli orari della ".$text." \n\nPer le info dettagliate e in tempo reale utilizza @openamatbot", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
