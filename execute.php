@@ -4978,7 +4978,7 @@ elseif(strpos($text, "/postidisp") === 0 || $text == "📘 POSTI DISPONIBILI SAL
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "Nella Biblioteca Centraledi Ingegneria ci sono 0 posti disponibili!\n\nhttp://polib.unipa.it/enus_distroweb/politecnico/BINGE/enus_new/mappa.php", 
+		 	'text' => "Per visualizzare i posti disponibili nella Sala Lettura clicca sul link sotto ⤵\n\nhttp://polib.unipa.it/enus_distroweb/politecnico/BINGE/enus_new/mappa.php", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("📖 BIBLIO"))
 				,'resize_keyboard' => true
