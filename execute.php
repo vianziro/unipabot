@@ -29,6 +29,8 @@ header("Content-Type: application/json");
 $response = '';
 $response2 = '';
 
+$text_msg_broadcast = "⚠️ Aggiornati tutti gli orari dei corsi di Ingegneria";
+
 if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == "\xF0\x9F\x94\xB4 start" || $text=="CIAO" || $text == "ciao")
 {
 	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
@@ -246,7 +248,7 @@ elseif(strpos($text, "otbapinu") === 0 || $text == "otbapinu")
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "⚠️ Aggiornati tutti gli orari dei corsi di Ingegneria", 
+		 	'text' => $text_msg_broadcast, 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG GLOBALE"))
 				,'resize_keyboard' => true
@@ -270,7 +272,6 @@ elseif(strpos($text, "otbapinu") === 0 || $text == "otbapinu")
 // INVIO MESSAGGIO BROADCAST A TUTTI GLI ISCRITTI
 elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $text == "🔵 msg globale")
 {
-		$text_msg = "⚠️ Aggiornati tutti gli orari dei corsi di Ingegneria";
 
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId_Adri = 213854702; 
@@ -294,7 +295,7 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 	
 		$postField = array(
 		 	'chat_id' => $chatId_1, 
-		 	'text' => $text_msg, 
+		 	'text' => $text_msg_broadcast, 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
 				,'resize_keyboard' => true
