@@ -270,8 +270,10 @@ elseif(strpos($text, "otbapinu") === 0 || $text == "otbapinu")
 // INVIO MESSAGGIO BROADCAST A TUTTI GLI ISCRITTI
 elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $text == "🔵 msg globale")
 {
+		$text_msg = "⚠️ Aggiornati tutti gli orari dei corsi di Ingegneria";
+
 		$message = isset($update['message']) ? $update['message'] : "";
-		$chatId_1 = 164137894; // ID SIMY
+		$chatId_Adri = 213854702; 
 		$text = isset($message['text']) ? $message['text'] : "";
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
 		// change file name and path
@@ -292,7 +294,7 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 	
 		$postField = array(
 		 	'chat_id' => $chatId_1, 
-		 	'text' => "⚠️ Aggiornati tutti gli orari dei corsi di Ingegneria", 
+		 	'text' => $text_msg, 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
 				,'resize_keyboard' => true
