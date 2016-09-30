@@ -1580,7 +1580,7 @@ elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU S
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 Menu Studenti \xF0\x9F\x8F\xA6\n\n".$firstname.", scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI"),array("\xF0\x9F\x93\x9A MATERIE A SCELTA","\xF0\x9F\x93\x91 TIROCINIO"),array("📄 CALENDARI DIDATTICI","🏪 AULETTE ASSOCIAZIONI"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"),array("\xF0\x9F\x95\x92 ORARIO LEZIONI TRI","\xF0\x9F\x95\x92 ORARIO LEZIONI MAG"),array("\xF0\x9F\x93\x9A MATERIE A SCELTA","\xF0\x9F\x93\x91 TIROCINIO"),array("📄 CALENDARI DIDATTICI","🏪 AULETTE ASSOCIAZIONI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2465,8 +2465,9 @@ elseif(strpos($text, "/caldidscbas") === 0 || $text == "📄 CAL DID SC DI BASE"
 	
 }			
 
-// MENU ORARIO LEZIONI
-elseif(strpos($text, "/orariolezioni") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO LEZIONI" || $text == "\xF0\x9F\x95\x92 orario lezioni" || $text == "ORARIO LEZIONI" || $text == "orario lezioni")
+// MENU ORARIO LEZIONI TRIENNALE
+
+elseif(strpos($text, "/orariolezionitri") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO LEZIONI TRI" || $text == "\xF0\x9F\x95\x92 orario lezioni tri" || $text == "ORARIO LEZIONI TRI" || $text == "orario lezioni tri")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -5084,6 +5085,52 @@ elseif(strpos($text, "/mod1farmacia") === 0 || $text == "📄 I SEMESTRE FARMACI
 	// read curl response
 	$output = curl_exec($ch);
 	
+}
+
+// MENU ORARIO LEZIONI MAGISTRALE
+
+elseif(strpos($text, "/orariolezionitri") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO LEZIONI MAG" || $text == "\xF0\x9F\x95\x92 orario lezioni mag" || $text == "ORARIO LEZIONI MAG" || $text == "orario lezioni mag")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+	$method='sendMessage';
+	
+	$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "⭕️ Scegli fra le opzioni sotto\n\n", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING MAG","\xF0\x9F\x95\x92 ORARIO CORSI ARCH MAG"))
+			,'resize_keyboard' => true
+		)
+	);
+	
+	$handle=curl_init();
+	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	curl_setopt($handle,CURLOPT_POST,1);
+	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+	curl_setopt($handle,CURLOPT_ENCODING,1);
+	$dati=json_decode( curl_exec($handle) ,true);
+	curl_close($handle);
+	
+	var_dump($dati);
+
 }
 
 
