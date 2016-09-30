@@ -4914,9 +4914,9 @@ elseif(strpos($text, "/biblioing") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Ven dalle 8.30 alle 22\n\nDa Settembre a Luglio\n\nℹ️ Info Utili\n\nPotete richiedere il rinnovo dei libri in scadenza mandando una e-mail a bibling@unipa.it oppure chiamando il numero 091/23862001\n\nPer prenotare un posto in sala rossa rivolgersi al Front-Office della Biblioteca\n\nhttp://biblioing.unipa.it:8080/engine/BookingEngine#LoadEvent:88097:false", 
+		 	'text' => "\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Ven dalle 8.30 alle 22\n\nDa Settembre a Luglio\n\nℹ️ Info Utili\n\nPotete richiedere il rinnovo dei libri in scadenza mandando una e-mail a bibling@unipa.it oppure chiamando il numero 091/23862001\n\nPer prenotare un posto in sala rossa ved il link sotto\n\nhttp://biblioing.unipa.it:8080/engine/BookingEngine#LoadEvent:88097:false", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("📘 POSTI DISPONIBILI SALA LETTURA BIB ING"),array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -4952,6 +4952,70 @@ elseif(strpos($text, "/biblioing") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 		// read curl response
 		$output = curl_exec($ch);
 
+}
+
+// 📘 POSTI DISPONIBILI SALA LETTURA BIB ING
+
+elseif(strpos($text, "/postidisp") === 0 || $text == "📘 POSTI DISPONIBILI SALA LETTURA BIB ING" || $text == "📘 posti disponibili sala lettura bib ing" )
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => "Nella Biblioteca Centraledi Ingegneria ci sono 0 posti disponibili!", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("📖 BIBLIO"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.1025863", 
+						'longitude' => "13.3441629");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
 }
 
 // MENU ORARI BIBLIOTECA LETTERE
