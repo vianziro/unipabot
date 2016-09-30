@@ -274,6 +274,50 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 {
 
 		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		$text_ok = "☑ Messaggio Broadcast: ".$text_msg_broadcast." correttamente inviato!";
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => $text_ok, 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+	// MESSAGGIO PER GLI ISCRITTI
+
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId_Adri = 213854702; 
 		$text = isset($message['text']) ? $message['text'] : "";
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
@@ -288,13 +332,11 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 		// read curl response
 		$output = curl_exec($ch);
 
-		$text_ok = "☑ Messaggio Broadcast correttamente inviato!";
-
 		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 		$method='sendMessage';
 	
 		$postField = array(
-		 	'chat_id' => $chatId_1, 
+		 	'chat_id' => $chatId_Adri, 
 		 	'text' => $text_msg_broadcast, 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
@@ -315,9 +357,8 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 	
 		var_dump($dati);
 
-
 		$message = isset($update['message']) ? $update['message'] : "";
-		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$chatId_Mario = 12679403;
 		$text = isset($message['text']) ? $message['text'] : "";
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
 		// change file name and path
@@ -331,14 +372,212 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 		// read curl response
 		$output = curl_exec($ch);
 
-		$text_ok = "☑ Messaggio Broadcast correttamente inviato!";
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId_Mario, 
+		 	'text' => $text_msg_broadcast, 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId_Roby = 148082843;
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
 
 		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 		$method='sendMessage';
 	
 		$postField = array(
-		 	'chat_id' => $chatId, 
-		 	'text' => $text_ok, 
+		 	'chat_id' => $chatId_Roby, 
+		 	'text' => $text_msg_broadcast, 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId_Simy = 164137894;
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId_Simy, 
+		 	'text' => $text_msg_broadcast, 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId_Allie = 147239346;
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId_Allie, 
+		 	'text' => $text_msg_broadcast, 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId_Adriana = 130295342;
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId_Adriana, 
+		 	'text' => $text_msg_broadcast, 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId_Io = 18261059;
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId_Io, 
+		 	'text' => $text_msg_broadcast, 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
 				,'resize_keyboard' => true
