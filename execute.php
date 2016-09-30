@@ -5113,7 +5113,7 @@ elseif(strpos($text, "/orariolezionitri") === 0 || $text == "\xF0\x9F\x95\x92 OR
 		 'chat_id' => $chatId, 
 		 'text' => "⭕️ Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING MAG","\xF0\x9F\x95\x92 ORARIO CORSI ARCH MAG"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"))
 			,'resize_keyboard' => true
 		)
 	);
