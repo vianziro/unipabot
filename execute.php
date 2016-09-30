@@ -5157,7 +5157,7 @@ elseif(strpos($text, "/orariolezingmag") === 0 || $text == "\xF0\x9F\x95\x92 ORA
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "⭕️ Scegli Corso di Laurea\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI MAG"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA MAG","\xF0\x9F\x95\x92 ORARIO ING GESTIONALE MAG"))
 			,'resize_keyboard' => true
@@ -5181,7 +5181,7 @@ elseif(strpos($text, "/orariolezingmag") === 0 || $text == "\xF0\x9F\x95\x92 ORA
 }
 
 // ORARIO LEZIONI INGEGNERIA INFORMATICA
-elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING INFORMATICA" || $text == "\xF0\x9F\x95\x92 orario ing informatica")
+elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING INFORMATICA MAG" || $text == "\xF0\x9F\x95\x92 orario ing informatica mag")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -5205,7 +5205,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING I
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING INF","📄 MODULO II ING INF"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING INF MAG","📄 MODULO II ING INF MAG"))
 			,'resize_keyboard' => true
 		)
 	);
