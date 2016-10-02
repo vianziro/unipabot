@@ -175,7 +175,7 @@ elseif(strpos($text, "/info") === 0 || $text == "ℹ️ INFO BOT" || $text == "�
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$response = "In Unipa Bot potrai trovare tutte le info necessarie per l'Università di Palermo\n\n👤 Credits: Questo bot è stato creato da Gabriele Dell'Aria (@gabrieledellaria)\n\nSe hai suggerimenti contattami pure e sarò felice di accogliere i tuoi spunti";
+	$response = "In Unipa Bot potrai trovare tutte le info necessarie per l'Università di Palermo\n\n👤 Credits: Questo bot è stato creato da Gabriele Dell'Aria (@gabrieledellaria)\n\nℹ Fonte Dati Principale: unipa.it\n\n🚌 Fonte Dati Autobus: @openamatbot\n\n🚅 Fonte Dati Treni: @OrarioTreniBot\n\nSe hai suggerimenti contattami pure e sarò felice di accogliere i tuoi spunti";
 }
 
 // INVIO MESSAGGIO BROADCAST
