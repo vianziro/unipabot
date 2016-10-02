@@ -1440,7 +1440,7 @@ elseif(strpos($text, "/pullman") === 0 || $text == "ðŸšŽ PULLMAN" || $text == "ð
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
 						'document' => new CURLFile(realpath("./doc/orariopullmann.pdf")), 
-						'caption' => "DA UNIPA A CATTOLICA - RIBERA - SCIACCA - MENFI - SAMBUCA - BIVIO GULFA E DA CATTOLICA - RIBERA - SCIACCA - MENFI - SAMBUCA - BIVIO GULFA AD UNIPA");
+						'caption' => "AUTOLINEE GALLO || DA UNIPA A CATTOLICA - RIBERA - SCIACCA - MENFI - SAMBUCA - BIVIO GULFA E DA CATTOLICA - RIBERA - SCIACCA - MENFI - SAMBUCA - BIVIO GULFA AD UNIPA");
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 	curl_setopt($ch, CURLOPT_URL, $botUrl); 
