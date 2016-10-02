@@ -1098,71 +1098,7 @@ elseif(strpos($text, "/metro") === 0 || $text == "🚈 METRO" || $text == "🚈 
 	$dati=json_decode( curl_exec($handle) ,true);
 	curl_close($handle);
 	
-	var_dump($dati);	
-	
-	$message = isset($update['message']) ? $update['message'] : "";
-	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
-	$text = isset($message['text']) ? $message['text'] : "";
-	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
-	// change image name and path
-	$postFields = array('chat_id' => $chatId, 
-						'document' => new CURLFile(realpath("./doc/orarilineaa.pdf")), 
-						'caption' => "🕒 ORARI 🚈 LINEA A - Palermo C.le -> Notarbartolo");
-	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
-	curl_setopt($ch, CURLOPT_URL, $botUrl); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-	// read curl response
-	$output = curl_exec($ch);
-
-	$message = isset($update['message']) ? $update['message'] : "";
-	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
-	$text = isset($message['text']) ? $message['text'] : "";
-	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
-	// change image name and path
-	$postFields = array('chat_id' => $chatId, 
-						'document' => new CURLFile(realpath("./doc/orarilineab.pdf")), 
-						'caption' => "🕒 ORARI 🚈 LINEA B - Notarbartolo -> Giachery");
-	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
-	curl_setopt($ch, CURLOPT_URL, $botUrl); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-	// read curl response
-	$output = curl_exec($ch);
-
-	$message = isset($update['message']) ? $update['message'] : "";
-	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
-	$text = isset($message['text']) ? $message['text'] : "";
-	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
-	// change image name and path
-	$postFields = array('chat_id' => $chatId, 
-						'document' => new CURLFile(realpath("./doc/orarilineac1.pdf")), 
-						'caption' => "🕒 ORARI 🚈 LINEA C - Palermo C.le -> Termini Imerese");
-	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
-	curl_setopt($ch, CURLOPT_URL, $botUrl); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-	// read curl response
-	$output = curl_exec($ch);
-
-	$message = isset($update['message']) ? $update['message'] : "";
-	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
-	$text = isset($message['text']) ? $message['text'] : "";
-	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
-	// change image name and path
-	$postFields = array('chat_id' => $chatId, 
-						'document' => new CURLFile(realpath("./doc/orarilineac2.pdf")), 
-						'caption' => "🕒 ORARI 🚈 LINEA C - Termini Imerese -> Palermo C.le");
-	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
-	curl_setopt($ch, CURLOPT_URL, $botUrl); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-	// read curl response
-	$output = curl_exec($ch);
+	var_dump($dati);
 }
 
 // 🚈 LINEA A
@@ -1188,7 +1124,7 @@ elseif(strpos($text, "/lineaa") === 0 || $text == "🚈 LINEA A" || $text == "�
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "🚈 METRO da e verso Unipa \n\n", 
+		 'text' => "🚈 LINEA A da e verso Unipa\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚈 METRO"))
 			,'resize_keyboard' => true
@@ -1223,7 +1159,51 @@ elseif(strpos($text, "/lineaa") === 0 || $text == "🚈 LINEA A" || $text == "�
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 	// read curl response
 	$output = curl_exec($ch);
+}
 
+// 🚈 LINEA B
+elseif(strpos($text, "/lineab") === 0 || $text == "🚈 LINEA B" || $text == "🚈 linea b")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+	$method='sendMessage';
+	
+	$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "🚈 LINEA B da e verso Unipa\n\n", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚈 METRO"))
+			,'resize_keyboard' => true
+		)
+	);
+	
+	$handle=curl_init();
+	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	curl_setopt($handle,CURLOPT_POST,1);
+	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+	curl_setopt($handle,CURLOPT_ENCODING,1);
+	$dati=json_decode( curl_exec($handle) ,true);
+	curl_close($handle);
+	
+	var_dump($dati);	
+	
 	$message = isset($update['message']) ? $update['message'] : "";
 	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
 	$text = isset($message['text']) ? $message['text'] : "";
@@ -1239,7 +1219,51 @@ elseif(strpos($text, "/lineaa") === 0 || $text == "🚈 LINEA A" || $text == "�
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 	// read curl response
 	$output = curl_exec($ch);
+}
 
+// 🚈 LINEA C
+elseif(strpos($text, "/lineac") === 0 || $text == "🚈 LINEA C" || $text == "🚈 linea c")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+	$method='sendMessage';
+	
+	$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "🚈 LINEA C da e verso Unipa\n\n", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚈 METRO"))
+			,'resize_keyboard' => true
+		)
+	);
+	
+	$handle=curl_init();
+	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	curl_setopt($handle,CURLOPT_POST,1);
+	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+	curl_setopt($handle,CURLOPT_ENCODING,1);
+	$dati=json_decode( curl_exec($handle) ,true);
+	curl_close($handle);
+	
+	var_dump($dati);	
+	
 	$message = isset($update['message']) ? $update['message'] : "";
 	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
 	$text = isset($message['text']) ? $message['text'] : "";
