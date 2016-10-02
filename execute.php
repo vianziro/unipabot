@@ -6736,7 +6736,7 @@ elseif(strpos($text, "/mod2ingmecmag") === 0 || $text == "📄 MODULO II ING MEC
 
 // ORARIO LEZIONI INGEGNERIA EDILE - ARCHITETTURA MAG
 
-elseif(strpos($text, "/ingesisedimag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING EDI ARCH MAG" || $text == "\xF0\x9F\x95\x92 orario edi arch mag")
+elseif(strpos($text, "/ingesisedimag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING EDI ARCH MAG" || $text == "\xF0\x9F\x95\x92 orario ing edi arch mag")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
