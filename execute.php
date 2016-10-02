@@ -112,7 +112,7 @@ else if(strpos($text, "/cmdrapidi") === 0 || $text == "🔧 CMD RAPIDI" || $text
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$response = "ℹ️ Comandi rapidi:\n\nAule - Trova Aula\n\nProf - Trova le info sul tuo prof\n\nBiblioteche - Trova le Biblioteche\n\nOrario Lezioni Tri - Trova l'orario lezioni dei corsi triennali\nOrario Lezioni Mag - Trova l'orario lezioni dei corsi magistrali";
+	$response = "ℹ️ Comandi rapidi:\n\nAule - Trova Aula\n\nProf - Trova le info sul tuo prof\n\nBiblioteche - Trova le Biblioteche\n\nOrario Lezioni Tri - Trova l'orario lezioni dei corsi triennali\n\nOrario Lezioni Mag - Trova l'orario lezioni dei corsi magistrali";
 }
 
 else if(strpos($text, "/help") === 0 || $text == "\xE2\x9A\xA0 HELP" || $text == "\xE2\x9A\xA0 help")
