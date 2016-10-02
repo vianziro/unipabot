@@ -5198,7 +5198,7 @@ elseif(strpos($text, "/orariolezingmag") === 0 || $text == "\xF0\x9F\x95\x92 ORA
 		 'chat_id' => $chatId, 
 		 'text' => "⭕️ Scegli Corso di Laurea\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI MAG"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA MAG","\xF0\x9F\x95\x92 ORARIO ING GESTIONALE MAG"),array("\xF0\x9F\x95\x92 ORARIO ING AMBIENTALE MAG","\xF0\x9F\x95\x92 ORARIO ING CHIMICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING MATERIALI MAG","\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING CIVILE MAG","\xF0\x9F\x95\x92 ORARIO ING ENERGETICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING AEROSPAZIALE MAG","\xF0\x9F\x95\x92 ORARIO ING ELETTRICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING SIS EDILIZI MAG","\xF0\x9F\x95\x92 ORARIO ING TELECOMUNICAZIONI MAG"),array("\xF0\x9F\x95\x92 ORARIO ING MECCANICA MAG","\xF0\x9F\x95\x92 ORARIO ING EDILE - ARCHITETTURA MAG"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI MAG"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA MAG","\xF0\x9F\x95\x92 ORARIO ING GESTIONALE MAG"),array("\xF0\x9F\x95\x92 ORARIO ING AMBIENTALE MAG","\xF0\x9F\x95\x92 ORARIO ING CHIMICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING MATERIALI MAG","\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING CIVILE MAG","\xF0\x9F\x95\x92 ORARIO ING ENERGETICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING AEROSPAZIALE MAG","\xF0\x9F\x95\x92 ORARIO ING ELETTRICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING SIS EDILIZI MAG","\xF0\x9F\x95\x92 ORARIO ING TELECOMUNICAZIONI MAG"),array("\xF0\x9F\x95\x92 ORARIO ING MECCANICA MAG","\xF0\x9F\x95\x92 ORARIO ING EDILE ARCHITETTURA MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -6736,7 +6736,7 @@ elseif(strpos($text, "/mod2ingmecmag") === 0 || $text == "📄 MODULO II ING MEC
 
 // ORARIO LEZIONI INGEGNERIA EDILE - ARCHITETTURA MAG
 
-elseif(strpos($text, "/ingesisedimag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING EDILE - ARCHITETTURA MAG" || $text == "\xF0\x9F\x95\x92 orario edile - architettura mag")
+elseif(strpos($text, "/ingesisedimag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING EDILE ARCHITETTURA MAG" || $text == "\xF0\x9F\x95\x92 orario edile architettura mag")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
