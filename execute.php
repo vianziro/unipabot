@@ -1080,7 +1080,7 @@ elseif(strpos($text, "/metro") === 0 || $text == "🚈 METRO" || $text == "🚈 
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "🚈 METRO da e verso Unipa \n\n", 
+		 'text' => "🚈 METRO da e verso Unipa \n\n⭕️ Scegli la linea di cui vuoi le info sugli orari", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚈 LINEA A","🚈 LINEA B"),array("🚈 LINEA C"))
 			,'resize_keyboard' => true
