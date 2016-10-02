@@ -12869,10 +12869,6 @@ elseif(strpos($text, "/prova") === 0 )
 
 
 
-else
-{
-	$response = "\xE2\x9A\xA0 Il comando che hai eseguito non è valido!\n\nDigita /help per il mio elenco comandi";
-}
 	
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
