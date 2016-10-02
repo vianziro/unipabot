@@ -689,6 +689,79 @@ elseif(strpos($text, "/bus") === 0 || $text == "🚌 AUTOBUS" || $text == "🚌 
 		var_dump($dati);
 }
 
+// MESSAGGI DOPO INVIO COMANDO INLINE PER OPENAMATBOT
+
+// @openamatbot 104
+
+elseif(strpos($text, "@openamatbot 104") === 0 || $text == "@openamatbot 104")
+{	
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => $firstname.", ecco gli orari della linea da te richiesta!", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
+			,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "Digita @openamatbot 104 per avere le info sull'arrivo della ".$text." presso la tua fermata", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
+			,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+}
+
 // 🚌 LINEA 104
 
 elseif(strpos($text, "/linea104") === 0 || $text == "🚌 LINEA 104" || $text == "🚌 linea 104")
