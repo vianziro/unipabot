@@ -738,7 +738,7 @@ elseif(strpos($text, "/linea104") === 0 || $text == "🚌 LINEA 104" || $text ==
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "@openamatbot 104", 
+		 'text' => "Digita @openamatbot 104 per avere le info sull'arrivo della ".$text." presso la tua fermata", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
