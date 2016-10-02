@@ -668,7 +668,7 @@ elseif(strpos($text, "/bus") === 0 || $text == "🚌 AUTOBUS" || $text == "🚌 
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => $firstname.", ecco le Linee ".$text." che puoi prendere!", 
+		 'text' => "⭕️ Scegli la linea di cui vuoi le info sugli orari", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚌 LINEA 104","🚌 LINEA 109"),array("🚌 LINEA 118","🚌 LINEA 307"),array("🚌 LINEA 309","🚌 LINEA 364"),array("🚌 LINEA 380","🚌 LINEA EXPR"))
 			,'resize_keyboard' => true
@@ -786,7 +786,7 @@ elseif(strpos($text, "/linea104") === 0 || $text == "🚌 LINEA 104" || $text ==
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => $firstname.", ecco gli orari della ".$text." \n\nPer le info dettagliate e in tempo reale utilizza @openamatbot", 
+		 'text' => $firstname.", ecco gli orari della ".$text." \n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
@@ -857,7 +857,7 @@ elseif(strpos($text, "/linea109") === 0 || $text == "🚌 LINEA 109" || $text ==
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => $firstname.", ecco gli orari della ".$text." \n\nPer le info dettagliate e in tempo reale utilizza @openamatbot", 
+		 'text' => $firstname.", ecco gli orari della ".$text." \n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
@@ -928,7 +928,7 @@ elseif(strpos($text, "/linea118") === 0 || $text == "🚌 LINEA 118" || $text ==
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => $firstname.", ecco gli orari della ".$text." \n\nPer le info dettagliate e in tempo reale utilizza @openamatbot", 
+		 'text' => $firstname.", ecco gli orari della ".$text." \n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
@@ -998,7 +998,7 @@ elseif(strpos($text, "/linea307") === 0 || $text == "🚌 LINEA 307" || $text ==
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => $firstname.", ecco gli orari della ".$text." \n\nPer le info dettagliate e in tempo reale utilizza @openamatbot", 
+		 'text' => $firstname.", ecco gli orari della ".$text." \n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
@@ -1069,7 +1069,7 @@ elseif(strpos($text, "/linea309") === 0 || $text == "🚌 LINEA 309" || $text ==
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => $firstname.", ecco gli orari della ".$text." \n\nPer le info dettagliate e in tempo reale utilizza @openamatbot", 
+		 'text' => $firstname.", ecco gli orari della ".$text." \n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
@@ -1140,7 +1140,7 @@ elseif(strpos($text, "/linea364") === 0 || $text == "🚌 LINEA 364" || $text ==
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => $firstname.", ecco gli orari della ".$text." \n\nPer le info dettagliate e in tempo reale utilizza @openamatbot", 
+		 'text' => $firstname.", ecco gli orari della ".$text." \n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
@@ -1211,7 +1211,7 @@ elseif(strpos($text, "/linea380") === 0 || $text == "🚌 LINEA 380" || $text ==
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => $firstname.", ecco gli orari della ".$text." \n\nPer le info dettagliate e in tempo reale utilizza @openamatbot", 
+		 'text' => $firstname.", ecco gli orari della ".$text." \n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
@@ -1282,7 +1282,7 @@ elseif(strpos($text, "/lineaexpr") === 0 || $text == "🚌 LINEA EXPR" || $text 
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => $firstname.", ecco gli orari della ".$text." \n\nPer le info dettagliate e in tempo reale utilizza @openamatbot", 
+		 'text' => $firstname.", ecco gli orari della ".$text." \n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
