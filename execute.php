@@ -7167,7 +7167,7 @@ elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "📖 BIBLIO" || $tex
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 Menu Biblioteche \xF0\x9F\x8F\xA6\n\n".$firstname.", che Biblioteca vuoi visitare?\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE","\xF0\x9F\x8F\xA6 SALA LETTURA WURTH"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA","\xF0\x9F\x8F\xA6 EMEROTECA ARCH"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CLA","\xF0\x9F\x8F\xA6 BIBLIOTECA FIS CHIM ARCHIRAFI"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA DICAM")),
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE","\xF0\x9F\x8F\xA6 SALA LETTURA WURTH"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA","\xF0\x9F\x8F\xA6 EMEROTECA ARCH"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CLA","\xF0\x9F\x8F\xA6 BIBLIOTECA FIS CHIM ARCHIRAFI"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA DICAM","\xF0\x9F\x8F\xA6 BIBLIOTECA GEOTECNICA")),
 			 'resize_keyboard' => true
 		)
 	);
@@ -7313,6 +7313,70 @@ elseif(strpos($text, "/postidisp") === 0 || $text == "📘 POSTI DISPONIBILI SAL
 		// read curl response
 		$output = curl_exec($ch);
 	
+}
+
+// MENU ORARI BIBLIOTECA GEOTECNICA
+elseif(strpos($text, "/bibliogeo") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTECA GEOTECNICA" || $text == "\xF0\x9F\x8F\xA6 biblioteca geotecnica" )
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => "Si trova presso l'Edificio 8 sotto il primo portico (posizione precisa sotto)\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Ven dalle 8:30 alle 17:00\n\nDa Settembre a Luglio\n\nℹ️ Info Utili\n\nOrario Esercizio mesi di Luglio e Agosto: dal Lunedì al Venerdì 8:30 - 14:30\n\nChiusura:\n\n
+				dal 8 al 26 agosto 2016 e dal 23 dicembre 2016 al 1° gennaio 2017", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.1046242", 
+						'longitude' => "13.3485952");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
 }
 
 // MENU ORARI BIBLIOTECA LETTERE
