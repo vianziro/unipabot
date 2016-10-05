@@ -5314,7 +5314,7 @@ elseif(strpos($text, "/orariolezscbase") === 0 || $text == "\xF0\x9F\x95\x92 ORA
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI"),array("\xF0\x9F\x95\x92 ORARIO FARMACIA"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO FARMACIA"))
 			,'resize_keyboard' => true
 		)
 	);
