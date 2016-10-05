@@ -7338,7 +7338,7 @@ elseif(strpos($text, "/bibliogeo") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "Si trova presso l'Edificio 8 sotto il primo portico (posizione precisa sotto)\n\n\xF0\x9F\x95\x92Orari Esercizio:\n\nLun-Ven dalle 8:30 alle 17:00\n\nDa Settembre a Luglio\n\nℹ️ Info Utili\n\n\xF0\x9F\x95\x92 Orario Esercizio mesi di Luglio e Agosto: dal Lunedì al Venerdì 8:30 - 14:30\n\n🛑 Chiusura: dal 8 al 26 agosto 2016 e dal 23 dicembre 2016 al 1° gennaio 2017", 
+		 	'text' => "Si trova presso l'Edificio 8 sotto il primo portico (posizione precisa sotto)\n\n\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Ven dalle 8:30 alle 17:00\n\nDa Settembre a Luglio\n\nℹ️ Info Utili\n\n\xF0\x9F\x95\x92 Orario Esercizio mesi di Luglio e Agosto: dal Lunedì al Venerdì 8:30 - 14:30\n\n📌 Chiusura: dal 8 al 26 agosto 2016 e dal 23 dicembre 2016 al 1° gennaio 2017", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
