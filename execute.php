@@ -2956,7 +2956,7 @@ elseif(strpos($text, "/mod1inginf") === 0 || $text == "📄 MODULO I ING INF" ||
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'document' => new CURLFile(realpath("http://www.unipa.it/scuole/politecnica/.content/orario_lezioni/1mod/noLINFTL1.pdf")), 
+						'document' => new CURLFile("http://www.unipa.it/scuole/politecnica/.content/orario_lezioni/1mod/noLINFTL1.pdf"), 
 						'caption' => $text);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
