@@ -7165,7 +7165,7 @@ elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "📖 BIBLIO" || $tex
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x8F\xA6 Menu Biblioteche \xF0\x9F\x8F\xA6\n\n".$firstname.", che Biblioteca vuoi visitare?\n\n", 
+		 'text' => "\xF0\x9F\x8F\xA6 Menu Biblioteche \xF0\x9F\x8F\xA6\n\n".$firstname.", che Biblioteca vuoi visitare?\n\nPer le info sui servizi bibliotecari visita http://www.unipa.it/biblioteche/Formazione-degli-utenti-corsi-guide-e-tutorial/", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE","\xF0\x9F\x8F\xA6 SALA LETTURA WURTH"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA","\xF0\x9F\x8F\xA6 EMEROTECA ARCH"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CLA","\xF0\x9F\x8F\xA6 BIBLIOTECA FIS CHIM ARCHIRAFI"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA DICAM","\xF0\x9F\x8F\xA6 BIBLIOTECA GEOTECNICA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA IDRAULICA")),
 			 'resize_keyboard' => true
