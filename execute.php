@@ -7384,7 +7384,7 @@ elseif(strpos($text, "/biblioing") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "Si trova accanto la Biblioteca di Geotecnica sotto il primo portico dell'Ed.8\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Gio dalle 8.30 alle 17\n\nVen dalle 8.30 alle 13:30\n\nDa Settembre a Luglio", 
+		 	'text' => "Si trova accanto la Biblioteca di Geotecnica sotto il primo portico dell'Ed.8\n\n\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Gio dalle 8.30 alle 17\n\nVen dalle 8.30 alle 13:30\n\nDa Settembre a Luglio", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
