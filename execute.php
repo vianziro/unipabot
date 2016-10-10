@@ -7167,7 +7167,7 @@ elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "📖 BIBLIO" || $tex
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 Menu Biblioteche \xF0\x9F\x8F\xA6\n\n".$firstname.", che Biblioteca vuoi visitare?", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","INFO SISTEMA BIBLIOTECARIO"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA","\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE"),array("\xF0\x9F\x8F\xA6 SALA LETTURA WURTH","\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA"),array("\xF0\x9F\x8F\xA6 EMEROTECA ARCH","\xF0\x9F\x8F\xA6 BIBLIOTECA CLA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA FIS CHIM ARCHIRAFI","\xF0\x9F\x8F\xA6 BIBLIOTECA DICAM"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA IDRAULICA","\xF0\x9F\x8F\xA6 BIBLIOTECA GEOTECNICA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA (ED.8)")),
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","ℹ️ INFO SISTEMA BIBLIOTECARIO"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA","\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE"),array("\xF0\x9F\x8F\xA6 SALA LETTURA WURTH","\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA"),array("\xF0\x9F\x8F\xA6 EMEROTECA ARCH","\xF0\x9F\x8F\xA6 BIBLIOTECA CLA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA FIS CHIM ARCHIRAFI","\xF0\x9F\x8F\xA6 BIBLIOTECA DICAM"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA IDRAULICA","\xF0\x9F\x8F\xA6 BIBLIOTECA GEOTECNICA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA (ED.8)")),
 			 'resize_keyboard' => true
 		)
 	);
@@ -7190,7 +7190,7 @@ elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "📖 BIBLIO" || $tex
 
 // INFO SISTEMA BIBLIOTECARIO
 
-elseif(strpos($text, "/infosisbiblio") === 0 || $text == "INFO SISTEMA BIBLIOTECARIO" || $text == "info sistema bibliotecario" )
+elseif(strpos($text, "/infosisbiblio") === 0 || $text == "ℹ️ INFO SISTEMA BIBLIOTECARIO" || $text == "ℹ️ info sistema bibliotecario" )
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -7359,6 +7359,69 @@ elseif(strpos($text, "/postidisp") === 0 || $text == "📘 POSTI DISPONIBILI SAL
 		// read curl response
 		$output = curl_exec($ch);
 	
+}
+
+// MENU ORARI BIBLIOTECA ARCHITETTURA (ED.8)
+elseif(strpos($text, "/biblioing") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA (ED.8)" || $text == "\xF0\x9F\x8F\xA6 biblioteca architettura (ed.8)" )
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => "Si trova accanto la Biblioteca di Geotecnica sotto il primo portico dell'Ed.8\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Gio dalle 8.30 alle 17\n\nVen dalle 8.30 alle 13:30\n\nDa Settembre a Luglio", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+		// SEND LOCATION ( INVIO POSIZIONE )
+		
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendLocation";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'latitude' => "38.1046242", 
+						'longitude' => "13.3485952");
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+
 }
 
 // MENU ORARI BIBLIOTECA IDRAULICA
