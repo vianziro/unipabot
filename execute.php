@@ -11400,7 +11400,7 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\n".$firstname.", qual'è il Cognome del Prof che cerchi?\n\n\xE2\x9A\xA0 ES. Prof NomeProf", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA4 PROF IN ELENCO"),array("\xE2\x9A\xA0 Segnala Prof"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xE2\x9A\xA0 SEGNALA PROF"),array())
 			,'resize_keyboard' => true
 		)
 	);
@@ -11421,28 +11421,6 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 	//$response = "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\n/profingegneria \xF0\x9F\x91\xA4 Prof Ingegneria \n\n/profarchitettura \xF0\x9F\x91\xA4 Prof Architett. \n\n/profeconomia \xF0\x9F\x91\xA4 Prof Economia \n\n";
 	
 }
-
-//PROF IN ELENCO
-
-	elseif(strpos($text, "/profinelenco") === 0 || $text == "\xF0\x9F\x91\xA4 PROF IN ELENCO" || $text == "\xF0\x9F\x91\xA4 prof in elenco" )
-	{
-		$message = isset($update['message']) ? $update['message'] : "";
-		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
-		$text = isset($message['text']) ? $message['text'] : "";
-		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
-		// change file name and path
-		$postFields = array('chat_id' => $chatId, 
-						'action' => 'typing');
-		$ch = curl_init(); 
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
-		curl_setopt($ch, CURLOPT_URL, $botUrl); 
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
-		// read curl response
-		$output = curl_exec($ch);
-		
-		$response = "Al momento in elenco:\n\n\xF0\x9F\x91\xA4 Prof Burlon \n\n\xF0\x9F\x91\xA4 Prof La Cascia \n\nSe il prof che cerchi non è in elenco contatta @gabrieledellaria";
-	}
 	
 //SEGNALA IL TUO PROF
 
@@ -11568,7 +11546,45 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		$response = "\xF0\x9F\x91\xA4 Nome: Laura \n\n\xF0\x9F\x91\xA4 Cognome: Giarrè \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.9\n\n📝 Ricevimento: Martedì dalle 18:00 alle 19:00 presso DEIM - Edificio 9\n\nMercoledì dalle 8:30 alle 10:30 presso DEIM - Edificio 9\n\n✉️ Contatti: laura.giarre@unipa.it";
 	}
 
-	
+	elseif( $text == "Fagiolini" || $text == "fagiolini" || $text == "Prof Fagiolini" || $text == "prof fagiolini" )
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$response = "\xF0\x9F\x91\xA4 Nome: Adriano \n\n\xF0\x9F\x91\xA4 Cognome: Fagiolini \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.10\n\n📝 Ricevimento: Giovedì dalle 9:30 alle 12:30 presso Viale delle Scienze, Edificio 10\n\n✉️ Contatti: adriano.fagiolini@unipa.it - +3909123863613";
+	}
+
+		elseif( $text == "Vassallo" || $text == "vassallo" || $text == "Prof Vassallo" || $text == "prof vassallo" )
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$response = "\xF0\x9F\x91\xA4 Nome: Giorgio \n\n\xF0\x9F\x91\xA4 Cognome: Vassallo \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Martedì dalle 11:00 alle 13:00 presso Viale delle Scienze, Ed. 6 terzo piano\n\n✉️ Contatti: giorgio.vassallo@unipa.it - +3909123862637";
+	}
 	
 // ERSU 	
 elseif(strpos($text, "/ersu") === 0 || $text == "\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6" || $text == "\xF0\x9F\x8F\xA8 ersu \xF0\x9F\x92\xB6")
