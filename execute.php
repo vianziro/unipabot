@@ -7212,7 +7212,7 @@ elseif(strpos($text, "/infosisbiblio") === 0 || $text == "INFO SISTEMA BIBLIOTEC
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "Per le info sui servizi bibliotecari visita http://www.unipa.it/biblioteche/Formazione-degli-utenti-corsi-guide-e-tutorial/", 
+		 	'text' => "Per le info sui servizi bibliotecari visita http://www.unipa.it/biblioteche/Formazione-degli-utenti-corsi-guide-e-tutorial/\n\nPer accedere al catalogo bibliografico online visita http://aleph22.unipa.it:8991/F", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
