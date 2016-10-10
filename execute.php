@@ -8256,7 +8256,7 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 		 'chat_id' => $chatId, 
 		 'text' => "🏪 Menu Aule 🏪\n\n".$firstname.", come si chiama l'aula che cerchi?\n\n\xE2\x9A\xA0 ES. F170", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🏪 AULE IN ELENCO"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -11441,7 +11441,7 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "Se il prof che cerchi non è in elenco contatta @gabrieledellaria riportando Nome,Cognome e Facoltà del Prof da inserire";
+		$response = "Se il prof che cerchi non è stato trovato contatta @gabrieledellaria riportando Nome,Cognome e Facoltà del Prof da inserire";
 	}	
 
 // Sottosezione Professori //
@@ -11584,6 +11584,46 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		$output = curl_exec($ch);
 		
 		$response = "\xF0\x9F\x91\xA4 Nome: Giorgio \n\n\xF0\x9F\x91\xA4 Cognome: Vassallo \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Martedì dalle 11:00 alle 13:00 presso Viale delle Scienze, Ed. 6 terzo piano\n\n✉️ Contatti: giorgio.vassallo@unipa.it - +3909123862637";
+	}
+
+	elseif( $text == "Lo Presti" || $text == "lo presti" || $text == "Prof Lo Presti" || $text == "prof lo presti" )
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$response = "\xF0\x9F\x91\xA4 Nome: Liliana \n\n\xF0\x9F\x91\xA4 Cognome: Lo Presti \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Martedì dalle 15:00 alle 18:00 presso Ufficio del docente (DIID, V.le delle Scienze Ed.6 III piano, stanza n. 7)\n\n✉️ Contatti: liliana.lopresti@unipa.it - +3909123899526";
+	}
+
+	elseif( $text == "Sorbello" || $text == "sorbello" || $text == "Prof Sorbello" || $text == "prof sorbello" )
+	{
+		$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+		
+		$response = "\xF0\x9F\x91\xA4 Nome: Rosario \n\n\xF0\x9F\x91\xA4 Cognome: Sorbello \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Lunedì dalle 11:00 alle 13:00 presso Stanza del Professore, Edificio 6, terzo piano\n\n✉️ Contatti: rosario.sorbello@unipa.it - +3909123862635\n\nE' consigliabile contattarlo via WhatsApp";
 	}
 	
 // ERSU 	
