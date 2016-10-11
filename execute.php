@@ -1910,7 +1910,7 @@ elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU S
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 Menu Studenti \xF0\x9F\x8F\xA6\n\n".$firstname.", scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","CALCOLO MEDIA"),array("\xF0\x9F\x95\x92 ORARIO LEZIONI TRI","\xF0\x9F\x95\x92 ORARIO LEZIONI MAG"),array("\xF0\x9F\x93\x9A MATERIE A SCELTA","\xF0\x9F\x93\x91 TIROCINIO"),array("📄 CALENDARI DIDATTICI","🏪 AULETTE ASSOCIAZIONI"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📈 CALCOLO MEDIA"),array("\xF0\x9F\x95\x92 ORARIO LEZIONI TRI","\xF0\x9F\x95\x92 ORARIO LEZIONI MAG"),array("\xF0\x9F\x93\x9A MATERIE A SCELTA","\xF0\x9F\x93\x91 TIROCINIO"),array("📄 CALENDARI DIDATTICI","🏪 AULETTE ASSOCIAZIONI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -1932,7 +1932,7 @@ elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU S
 
 // CALCOLO MEDIA
 
-elseif(strpos($text, "/calmedia") === 0 || $text == "CALCOLO MEDIA" || $text == "calcolo media")
+elseif(strpos($text, "/calmedia") === 0 || $text == "📈 CALCOLO MEDIA" || $text == "calcolo media")
 	{
 		$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -1954,9 +1954,13 @@ elseif(strpos($text, "/calmedia") === 0 || $text == "CALCOLO MEDIA" || $text == 
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => $firstname.", quale auletta cerchi?\n\n", 
+		 'text' => "Ecco un'esempio pratico di come calcolare la tua Media Ponderata:\n\n
+					Esame 1: voto 30 – 6 Cfu.\n\n
+					Esame 2: voto 25 – 6 Cfu.\n\n
+					Esame 3: voto 20 – 12 Cfu.\n\n
+					Sommando i crediti avremo un totale di 24 Cfu. La formula da applicare per ottenere la media ponderata è la seguente: [(30 x 6) + (25 x 6) + (20 x 12)] / 24 = (180 + 150 + 240) / 24 = 23,75.\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI")
 			,'resize_keyboard' => true
 			)
 		);
