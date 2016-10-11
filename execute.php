@@ -2344,7 +2344,7 @@ elseif(strpos($text, "/auludu") === 0 || $text == "🏪 UDU" || $text == "🏪 u
 
 // CALENDARI DIDATTICI
 
-elseif(strpos($text, "/caldid") === 0 || $text == "📄 CALENDARI DIDATTICI" || $text == "📄 calendari didattici")
+elseif(strpos($text, "/caldid") === 0 || $text == "📄 CALENDARI DIDATTICI" || $text == "📄 calendari didattici" || $text == "calendario didattico" || $text == "calendariodidattico")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
