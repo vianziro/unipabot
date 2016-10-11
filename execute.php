@@ -625,7 +625,7 @@ elseif(strpos($text, "/trasp") === 0 || $text == "🚈 TRASP" || $text == "🚈 
 		 'chat_id' => $chatId, 
 		 'text' => "🚈 TRASPORTI\n\n".$firstname.", scegli il tuo mezzo di trasporto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"),array("🚈 METRO","🚎 PULLMAN"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"),array("🚈 METRO","🚎 PULLMAN"),array(""))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1311,7 +1311,7 @@ elseif(strpos($text, "/lineac") === 0 || $text == "🚈 LINEA C" || $text == "�
 		// read curl response
 		$output = curl_exec($ch);
 
-		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
 	
 	$postField = array(
@@ -1386,8 +1386,31 @@ elseif(strpos($text, "/treno") === 0 || $text == "🚈 TRENO" || $text == "🚈 
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+	$method='sendMessage';
 	
-	$response = "🚈 TRENO da e verso Unipa \n\nDA UNIPA A PALERMO CITTA': \n\nDA PALERMO CITTA' AD UNIPA: ";
+	$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "Digita @OrarioTreniBot NomeStazionePartenza - NomeStazioneArrivo per avere le info sui treni che effettuano il percorso delle stazioni scelte\n\nIn alternativa digita @OrarioTreniBot NomeStazionePartenza per scoprire i treni che partono e arrivano nella stazione scelta\n\nLe stazioni inserite per Palermo sono:\n\nPALERMO CENTRALE\n\nPALERMO BRANCACCIO\n\nPALERMO NOTARBARTOLO\n\n", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"))
+			,'resize_keyboard' => true
+		)
+	);
+	
+	$handle=curl_init();
+	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	curl_setopt($handle,CURLOPT_POST,1);
+	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+	curl_setopt($handle,CURLOPT_ENCODING,1);
+	$dati=json_decode( curl_exec($handle) ,true);
+	curl_close($handle);
+	
+	var_dump($dati);	
 }
 
 // PULLMAN
