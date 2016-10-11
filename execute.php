@@ -1954,10 +1954,10 @@ elseif(strpos($text, "/calcmedia") === 0 || $text == "📈 CALCOLO MEDIA" || $te
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "Ecco un esempio pratico di come calcolare la tua Media Ponderata:\n\n
+		 'text' => "Ecco un esempio pratico di come calcolare la tua Media Ponderata:\n
 					Esame 1: voto 30 – 6 Cfu.\n\n
 					Esame 2: voto 25 – 6 Cfu.\n\n
-					Esame 3: voto 20 – 12 Cfu.\n Sommando i crediti avremo un totale di 24 Cfu. La formula da applicare per ottenere la media ponderata è la seguente:\n\n [(30 x 6) + (25 x 6) + (20 x 12)] / 24 = (180 + 150 + 240) / 24 = 23,75.\n\n", 
+					Esame 3: voto 20 – 12 Cfu.\n\nSommando i crediti avremo un totale di 24 Cfu. La formula da applicare per ottenere la media ponderata è la seguente:\n\n [(30 x 6) + (25 x 6) + (20 x 12)] / 24 = (180 + 150 + 240) / 24 = 23,75.\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"))
 			,'resize_keyboard' => true
