@@ -625,7 +625,7 @@ elseif(strpos($text, "/trasp") === 0 || $text == "🚈 TRASP" || $text == "🚈 
 		 'chat_id' => $chatId, 
 		 'text' => "🚈 TRASPORTI\n\n".$firstname.", scegli il tuo mezzo di trasporto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"),array("🚈 METRO","🚎 PULLMAN"),array(""))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"),array("🚈 METRO","🚎 PULLMAN"),array("🚈 TRENO"))
 			,'resize_keyboard' => true
 			)
 		);
