@@ -7257,7 +7257,7 @@ elseif(strpos($text, "/biblioing") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Ven dalle 8.30 alle 22\n\nDa Settembre a Luglio\n\nℹ️ Info Utili\n\nPotete richiedere il rinnovo dei libri in scadenza mandando una e-mail a bibling@unipa.it oppure chiamando il numero 091/23862001\n\nPer prenotare un posto in sala rossa ved il link sotto\n\nhttp://biblioing.unipa.it:8080/engine/BookingEngine#LoadEvent:88097:false", 
+		 	'text' => "\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Ven dalle 8.30 alle 22\n\nDa Settembre a Luglio\n\nℹ️ Info Utili\n\nPotete richiedere il rinnovo dei libri in scadenza mandando una e-mail a bibling@unipa.it oppure chiamando il numero 091/23862001\n\nPer prenotare un posto in sala rossa ved il link sotto\n\nhttp://biblioing.unipa.it:8080/engine/BookingEngine", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("📘 POSTI DISPONIBILI SALA LETTURA BIB ING"),array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
