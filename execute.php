@@ -29,6 +29,9 @@ header("Content-Type: application/json");
 $response = '';
 $response2 = '';
 
+$message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
+$message_inline_Id = isset($message_inline['message_id']) ? $message_inline['message_id'] : "";
+
 $text_msg_broadcast = "⚠️ Aggiornati tutti gli orari dei corsi di Ingegneria";
 
 if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == "\xF0\x9F\x94\xB4 start" || $text=="CIAO" || $text == "ciao")
