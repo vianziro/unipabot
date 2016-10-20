@@ -121,7 +121,7 @@ if(strpos($text, "/meteo") === 0 || $text=="METEO" || $text == "meteo")
 }
 
 // TORNA SUBITO AL MENU PRINCIPALE
-if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $text == "🏠 menu principale")
+else if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $text == "🏠 menu principale")
 {
 	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
