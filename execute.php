@@ -7355,7 +7355,7 @@ elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "📖 BIBLIO" || $tex
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 Menu Biblioteche \xF0\x9F\x8F\xA6\n\n".$firstname.", che Biblioteca vuoi visitare?", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","ℹ️ INFO SISTEMA BIBLIOTECARIO"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA","\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE"),array("\xF0\x9F\x8F\xA6 SALA LETTURA WURTH","\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA"),array("\xF0\x9F\x8F\xA6 EMEROTECA ARCH","\xF0\x9F\x8F\xA6 BIBLIOTECA CLA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA FIS CHIM ARCHIRAFI","\xF0\x9F\x8F\xA6 BIBLIOTECA DICAM"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA IDRAULICA","\xF0\x9F\x8F\xA6 BIBLIOTECA GEOTECNICA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CHIMICA ED.6","\xF0\x9F\x8F\xA6 BIBLIOTECA ED.9"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA (ED.8)")),
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","ℹ️ INFO SISTEMA BIBLIOTECARIO"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA","\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE"),array("\xF0\x9F\x8F\xA6 SALA LETTURA WURTH","\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA"),array("\xF0\x9F\x8F\xA6 EMEROTECA ARCH","\xF0\x9F\x8F\xA6 BIBLIOTECA CLA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA FIS CHIM ARCHIRAFI","\xF0\x9F\x8F\xA6 BIBLIOTECA DICAM"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA IDRAULICA","\xF0\x9F\x8F\xA6 BIBLIOTECA GEOTECNICA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CHIMICA ED.6","\xF0\x9F\x8F\xA6 BIBLIOTECA ED.9 2° PIANO"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA (ED.8)")),
 			 'resize_keyboard' => true
 		)
 	);
