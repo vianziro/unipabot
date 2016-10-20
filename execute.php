@@ -188,7 +188,7 @@ else if(strpos($text, "/eventiunipa") === 0 || $text == "↕ EVENTI UNIPA" || $t
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "Digita sotto @meteovunque_bot Palermo per conoscere il meteo ad Unipa", 
+		 	'text' => "Per conoscere tutti gli eventi che si terranno ad Unipa visita\n\nhttps://www.unipa.it/?lista=eventi&id=9e1c1205-d2c4-11e4-a2b8-005056010139", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 				,'resize_keyboard' => true
