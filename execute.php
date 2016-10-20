@@ -137,7 +137,7 @@ else if(strpos($text, "/meteo") === 0 || $text == "METEO" || $text == "meteo")
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$response = "@meteoovunque_bot Palermo";
+	$response = "@meteovunque_bot Palermo";
 }
 
 // COMANDI RAPIDI 
