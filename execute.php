@@ -89,7 +89,7 @@ if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == 
 }
 
 // TORNA SUBITO AL MENU PRINCIPALE
-if(strpos($text, "/meteo") === 0 || $text=="METEO" || $text == "meteo")
+else if(strpos($text, "/meteo") === 0 || $text=="METEO" || $text == "meteo")
 {
 	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
