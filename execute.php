@@ -89,39 +89,7 @@ if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == 
 }
 
 // TORNA SUBITO AL MENU PRINCIPALE
-else if(strpos($text, "/meteo") === 0 || $text=="METEO" || $text == "meteo")
-{
-	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
-	$method='sendMessage';
-	
-	$postField = array(
-		 'chat_id' => $chatId, 
-		 'text' => "Per conoscere il Meteo ad Unipa clicca il bottone sotto",
-		 'reply_markup' => array(
-			 "keyboard"=> array(array("@meteovunque_bot Palermo"),array("🏠 MENU PRINCIPALE"))
-			,'resize_keyboard' => true,
-			'selective' => false,
-			'one_time_keyboard' => false
-		)
-	);
-	
-	$handle=curl_init();
-	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
-	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
-	curl_setopt($handle,CURLOPT_POST,1);
-	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
-	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
-	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
-	curl_setopt($handle,CURLOPT_ENCODING,1);
-	$dati=json_decode( curl_exec($handle) ,true);
-	curl_close($handle);
-	
-	var_dump($dati);
-	
-}
-
-// TORNA SUBITO AL MENU PRINCIPALE
-else if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $text == "🏠 menu principale")
+if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $text == "🏠 menu principale")
 {
 	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
