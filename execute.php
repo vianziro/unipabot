@@ -67,7 +67,7 @@ if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == 
 		 'chat_id' => $chatId
 		, 'text' => "\xF0\x9F\x91\x8B Ciao $firstname (@$username), benvenuto in Unipa Bot!\n\nℹ️ Comandi rapidi:\n\nAule - Trova Aula\nProf - Trova le info sul tuo prof\nBiblioteche - Trova le Biblioteche\nOrario Lezioni Tri - Trova l'orario lezioni dei corsi triennali\nOrario Lezioni Mag - Trova l'orario lezioni dei corsi magistrali"
 		, 'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI UNIPA","🖥 NEWS UNIPA","🌥 METEO"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
+			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
 			 'resize_keyboard' => true
 		)
 	);
@@ -98,7 +98,7 @@ if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $t
 		 'chat_id' => $chatId, 
 		 'text' => "▶️ MENU PRINCIPALE ◀️\n\n ".$firstname." cosa vuoi fare?",
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI UNIPA","🖥 NEWS UNIPA","🌥 METEO"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT"))
+			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT"))
 			,'resize_keyboard' => true,
 			'selective' => false,
 			'one_time_keyboard' => false
@@ -165,7 +165,7 @@ else if(strpos($text, "/meteo") === 0 || $text == "🌥 METEO" || $text == "🌥
 	
 }
 
-else if(strpos($text, "/eventiunipa") === 0 || $text == "↕ EVENTI UNIPA" || $text == "↕ eventi unipa")
+else if(strpos($text, "/eventiunipa") === 0 || $text == "↕ EVENTI" || $text == "↕ eventi")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -254,7 +254,7 @@ else if(strpos($text, "/help") === 0 || $text == "\xE2\x9A\xA0 HELP" || $text ==
 
 // 🖥 NEWS UNIPA
 
-elseif(strpos($text, "/news") === 0 || $text == "🖥 NEWS UNIPA" || $text == "🖥 news unipa")
+elseif(strpos($text, "/news") === 0 || $text == "🖥 NEWS" || $text == "🖥 news")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
