@@ -1,10 +1,10 @@
 <?php 
 
-require('aule.php');
-
 define("BOT_TOKEN", "240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs");
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
+
+require_once('aule.php');
 
 if(!$update)
 {
