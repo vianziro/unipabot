@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'PollBot.php'
+require_once 'aule.php'
 
 define("BOT_TOKEN", "240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs");
 $content = file_get_contents("php://input");
