@@ -29,32 +29,7 @@ header("Content-Type: application/json");
 $response = '';
 $response2 = '';
 
-$message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
-$message_inline_Id = isset($message_inline['message_id']) ? $message_inline['message_id'] : "";
 
-$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
-	$method='sendMessage';
-	
-	$postField_inline = array(
-		 'inline_query_id' => $message_inline_Id, 
-		 'text' => "TESTO PROVA INLINE QUERY",
-		'cache_time' => 1,
-		'results' => array('type' => 'article','id' => 'invito'.rand(0,65535),'title' => 'prova msg', 'input_message_content' => 'provaMSN','message_text' => 'msg', 'description' => 'Prova description'),
-		'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("🖥 NEWS UNIPA","🔧 CMD RAPIDI","ℹ️ INFO BOT"))
-		)
-	);
-	
-	$handle=curl_init();
-	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
-	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
-	curl_setopt($handle,CURLOPT_POST,1);
-	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField_inline));
-	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
-	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
-	curl_setopt($handle,CURLOPT_ENCODING,1);
-	$dati=json_decode( curl_exec($handle) ,true);
-	curl_close($handle);
 
 $text_msg_broadcast = "⚠️ Aggiornati tutti gli orari dei corsi di Ingegneria";
 
@@ -117,6 +92,42 @@ if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $t
 	curl_close($handle);
 	
 	var_dump($dati);
+	
+}
+
+else if(strpos($text, "/inline") === 0 || $text == "INLINE" || $text == "inline")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		
+	$message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
+	$message_inline_Id = isset($message_inline['message_id']) ? $message_inline['message_id'] : "";
+
+	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+	$method='sendMessage';
+	
+	$postField_inline = array(
+		 'inline_query_id' => $message_inline_Id, 
+		 'text' => "TESTO PROVA INLINE QUERY",
+		'cache_time' => 1,
+		'results' => array('type' => 'article','id' => 'invito'.rand(0,65535),'title' => 'prova msg', 'input_message_content' => 'provaMSN','message_text' => 'msg', 'description' => 'Prova description'),
+		'reply_markup' => array(
+			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("🖥 NEWS UNIPA","🔧 CMD RAPIDI","ℹ️ INFO BOT"))
+		)
+	);
+	
+	$handle=curl_init();
+	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+	curl_setopt($handle,CURLOPT_POST,1);
+	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField_inline));
+	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+	curl_setopt($handle,CURLOPT_ENCODING,1);
+	$dati=json_decode( curl_exec($handle) ,true);
+	curl_close($handle);
 	
 }
 
