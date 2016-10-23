@@ -4,7 +4,7 @@ define("BOT_TOKEN", "240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs");
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
 
-if(!$update)
+if(!$content)
 {
   exit;
 }
@@ -26,8 +26,7 @@ $today_hour = date("H:i:s");
 $text = trim($text);
 $text = strtolower($text);
 header("Content-Type: application/json");
-$response = '';
-$response2 = '';
+
 
 $message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
 $message_inline_Id = isset($message_inline['message_id']) ? $message_inline['message_id'] : "";
@@ -13482,9 +13481,5 @@ elseif(strpos($text, "/prova") === 0 )
 	
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
-$parameters["method"] = "sendMessage";
-echo json_encode($parameters);
-
-$parameters = array('chat_id' => $chatId, "text" => $response2);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
