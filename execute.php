@@ -46,7 +46,6 @@ $postField_inline = array(
 		 'type' => 'article'
 		,'id' => 'invito'.rand(0,65535)
 		,'title' => 'prova msg'
-		,'input_message_content' => 'provaMSN'	//Non so cosa sia
 		,'message_text' => 'msg'
 		,'description' => 'Prova description'
 		,'reply_markup'=>['inline_keyboard'=>[
