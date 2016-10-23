@@ -5,7 +5,6 @@ $content = file_get_contents("php://input");
 
 $fHandle=fopen('mioLog.txt','w');
 fwrite($fHandle,$content);
-fclose($fHandle);
 
 $update = json_decode($content, true);
 
@@ -37,7 +36,7 @@ $message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
 
 $message_inline_Id = isset($message_inline['id']) ? $message_inline['id'] : "";
 
-$method='sendMessage';
+$method='answerInlineQuery';
 $botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 
 $postField_inline = array(
