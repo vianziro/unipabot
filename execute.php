@@ -2,6 +2,11 @@
 
 define("BOT_TOKEN", "240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs");
 $content = file_get_contents("php://input");
+
+$fHandle=fopen('mioLog.txt','w');
+fwrite($fHandle,$content);
+fclose($fHandle);
+
 $update = json_decode($content, true);
 
 if(!$content)
@@ -29,18 +34,19 @@ header("Content-Type: application/json");
 
 
 $message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
-$message_inline_Id = isset($message_inline['message_id']) ? $message_inline['message_id'] : "";
+$message_inline_Id = isset($message_inline['id']) ? $message_inline['id'] : "";
 
 $botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
-	$method='sendMessage';
+	$method='answerInlineQuery';
 	
 	$postField_inline = array(
-		 'inline_query_id' => $message_inline_Id, 
-		 'text' => "TESTO PROVA INLINE QUERY",
+		'inline_query_id' => $message_inline_Id, 
 		'cache_time' => 1,
 		'results' => array('type' => 'article','id' => 'invito'.rand(0,65535),'title' => 'prova msg', 'input_message_content' => 'provaMSN','message_text' => 'msg', 'description' => 'Prova description'),
-		'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("🖥 NEWS UNIPA","🔧 CMD RAPIDI","ℹ️ INFO BOT"))
+		,'reply_markup'=>['inline_keyboard'=>[
+			[	 ['text'=>'testo pulsante','url'=>"http://robylandia.net" ] ]
+		]]
+
 		)
 	);
 	
@@ -48,12 +54,18 @@ $botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
 	curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
 	curl_setopt($handle,CURLOPT_POST,1);
-	curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField_inline));
+	curl_setopt($handle,CURLOPT_POSTFIELDS, $postField_inline);
 	curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
 	curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
 	curl_setopt($handle,CURLOPT_ENCODING,1);
 	$dati=json_decode( curl_exec($handle) ,true);
+
+	fwrite($fHandle,"\n\nRisposta ricevuta da telegram:\n$dati");
+
 	curl_close($handle);
+
+	fclose($fHandle);
+
 
 $text_msg_broadcast = "⚠️ Aggiornati tutti gli orari dei corsi di Ingegneria";
 
