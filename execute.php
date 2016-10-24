@@ -52,7 +52,7 @@ $postField_inline = array(
 			[	 ['text'=>'testo pulsante','url'=>"http://robylandia.net" ] ]
 		]]
 
-		)
+		),
 );
 
 $handle=curl_init();
