@@ -51,6 +51,8 @@ $postField_inline = array(
 		,'reply_markup'=>['inline_keyboard'=>[
 			[	 ['text'=>'testo pulsante','url'=>"http://robylandia.net" ] ]
 		]]
+
+		)
 );
 
 $handle=curl_init();
