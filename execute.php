@@ -42,14 +42,15 @@ $botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 $postField_inline = array(
 	'inline_query_id' => $message_inline_Id, 
 	'cache_time' => 1,
-	"results" => [
-          [
-            "type" => "article",
-            "id" => "0",
-            "title" => "Unnikked Blog",
-            "message_text" => "I'm the author of this bot, please visit my blog for more https://unnikked.ga",
-          ],  
-        ]
+	'results' => array(
+		 'type' => 'article'
+		,'id' => '0'
+		,'title' => 'prova msg'
+		,'message_text' => 'msg'
+		,'description' => 'Prova description'
+		,'reply_markup'=>['inline_keyboard'=>[
+			[	 ['text'=>'testo pulsante','url'=>"http://robylandia.net" ] ]
+		]]
 
 		),
 );
