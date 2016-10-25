@@ -44,8 +44,8 @@ $postField_inline = array(
 	'cache_time' => 1,
 	'results' => array(
 		 'type' => 'article'
-		,'id' => 'invito'.rand(0,65535)
-		,'title' => 'prova msg'
+		,'id' => '0'
+		,'title' => 'inline'
 		,'reply_markup'=>['inline_keyboard'=>[
 			[	 ['text'=>'testo pulsante','url'=>"http://robylandia.net" ] ]
 		]]
