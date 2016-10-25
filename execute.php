@@ -61,8 +61,6 @@ else if( isset($update['inline_query']) ) {
 	'inline_query_id' => $query_id,
 	'cache_time' => 1,
 	'results' => $inlineQueryResults
-
-		),
 );
 
 $handle=curl_init();
