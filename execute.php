@@ -205,7 +205,7 @@ else if(strpos($text, "/catonl") === 0 || $text == "📘 CATALOGO ONLINE 💻" |
 		 	'chat_id' => $chatId, 
 		 	'text' => "Per cercare un libro nel Catalogo di Ateneo visita il sito\n\nhttp://aleph22.unipa.it:8991/F\n\nHai tre modalità di ricerca all'interno di esso:\nRicerca semplice: Permette di scegliere dal menù a tendina il campo su cui si vuole effettuare la ricerca (autore, titolo, soggetto..)\n\nRicerca multicampo: Consente la ricerca contemporanea su diversi indici. Più campi compili, più sarà puntuale la tua ricerca\n\nRicerca avanzata: Permette di formulare richieste complesse attraverso la compilazione di diversi campi di ricerca e l'uso di filtri per affinare il risultato", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","GUIDA ALL'USO"))
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","ℹ GUIDA ALL'USO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -225,7 +225,7 @@ else if(strpos($text, "/catonl") === 0 || $text == "📘 CATALOGO ONLINE 💻" |
 	
 }
 
-else if(strpos($text, "/guidacatonl") === 0 || $text == "GUIDA ALL'USO" || $text == "guida all'uso")
+else if(strpos($text, "/guidacatonl") === 0 || $text == "ℹ GUIDA ALL'USO" || $text == "ℹ guida all'uso")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
