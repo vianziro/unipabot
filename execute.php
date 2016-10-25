@@ -34,7 +34,7 @@ header("Content-Type: application/json");
 
 function queryDuckDuckGo($query) {
   
-  $content = file_get_contents('https://duckduckgo.com/html/?q=' . urlencode($query));
+  $content = file_get_contents("php://input");
   
   if(!$content) return [[
     "type" => "article",
@@ -78,6 +78,10 @@ if (isset($update["message"])) {
     $inlineQuery = $update["inline_query"];
     $queryId = $inlineQuery["id"];
     $queryText = $inlineQuery["query"];
+
+    $message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
+
+	$message_inline_Id = isset($message_inline['id']) ? $message_inline['id'] : "";
     
     if (isset($queryText) && $queryText !== "") {
       apiRequestJson("answerInlineQuery", [
@@ -87,7 +91,7 @@ if (isset($update["message"])) {
       ]);
     } else {
       apiRequestJson("answerInlineQuery", [
-        "inline_query_id" => $queryId,
+        "inline_query_id" => $message_inline_Id,
         "results" => [
           [
             "type" => "article",
@@ -99,11 +103,6 @@ if (isset($update["message"])) {
       ]);
     }
 }
-
-
-$message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
-
-$message_inline_Id = isset($message_inline['id']) ? $message_inline['id'] : "";
 
 $method='answerInlineQuery';
 $botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
