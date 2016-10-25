@@ -32,40 +32,50 @@ $text = strtolower($text);
 header("Content-Type: application/json");
 
 
-$message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
-
-$message_inline_Id = isset($message_inline['id']) ? $message_inline['id'] : "";
-
-$method='answerInlineQuery';
-$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
-
-$postField_inline = array(
-	'inline_query_id' => $message_inline_Id, 
-	'cache_time' => 1,
-	'results' => array(
-		 'type' => 'article'
-		,'id' => '0'
-		,'title' => 'prova msg'
-		,'message_text' => 'msg'
-		,'description' => 'Prova description'
-		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'testo pulsante','url'=>"http://robylandia.net" ] ]
-		]]
-
-		),
-);
-
-$handle=curl_init();
-curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
-curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
-curl_setopt($handle,CURLOPT_POST,1);
-curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField_inline));
-curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
-curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
-curl_setopt($handle,CURLOPT_ENCODING,1);
-$dati=json_decode( curl_exec($handle) ,true);	
-
-curl_close($handle);
+else if( isset($update['inline_query']) ) {
+  $query_id     = $update['inline_query']['id'];
+  $query_text   = $update['inline_query']['query'];
+  $chat_id      = $update['inline_query']['from']['id'];
+  $inlineQueryResults = array(
+    array(
+      'type' => 'article',
+      'id' => '0',
+      'title' => 'Article One',
+      'message_text' => 'This is an example for article one'
+    ),
+    array(
+      'type' => 'article',
+      'id' => '0',
+      'title' => 'Article Two',
+      'message_text' => 'This is an example for article two'
+    )
+  );
+  //$msg = serialize($inlineQueryResults);
+  //file_get_contents(API_URL."/sendMessage?chat_id=".$chat_id."&text=".urlencode($msg));
+  //file_get_contents(API_URL."/answerInlineQuery?inline_query_id=".$query_id."&results=".$msg);
+  apiRequestJson("answerInlineQuery", array(
+    'inline_query_id' => $query_id,
+    'results' => $inlineQueryResults
+  ));
+  /*$query_id = $update['inline_query']['id'];
+  $query_text = $update['inline_query']['query'];
+  $inlineQueryResults = array(
+    array(
+      'type' => 'article',
+      'id' => '0',
+      'title' => 'Article One',
+      'message_text' => 'This is an example for article one'
+    ),
+    array(
+      'type' => 'article',
+      'id' => '0',
+      'title' => 'Article Two',
+      'message_text' => 'This is an example for article two'
+    )
+  );
+  echo '<pre>'; print_r($inlineQueryResults); echo '</pre>'; die();
+  file_get_contents(API_URL."/answerInlineQuery?inline_query_id=".$query_id."&results=".urlencode(json_encode($inlineQueryResults)));*/
+}
 
 fwrite($fHandle,"\n\nRisposta ricevuta da telegram:\n$dati");
 
