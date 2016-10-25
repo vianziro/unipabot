@@ -32,6 +32,75 @@ $text = strtolower($text);
 header("Content-Type: application/json");
 
 
+function queryDuckDuckGo($query) {
+  
+  $content = file_get_contents('https://duckduckgo.com/html/?q=' . urlencode($query));
+  
+  if(!$content) return [[
+    "type" => "article",
+    "id" => "0",
+    "title" => "Service unavailable",
+    "message_text" => "Service unavailable",
+  ]];
+  
+  $crawler = new Crawler($content);
+  
+  $results = $crawler->filter(".links_main .large");
+  foreach ($results as $result) {
+    $titles[] = trim($result->textContent);
+  }
+  
+  $results = $crawler->filter(".links_main .snippet");
+  foreach ($results as $result) {
+    $snippets[] = trim($result->textContent);
+  }
+  
+  $results = $crawler->filter(".links_main .url");
+  foreach ($results as $result) {
+    $urls[] = trim($result->textContent);
+  }
+  
+  foreach (range(0, count($titles) - 1) as $i) {
+    $collection[] = [
+      "type" => "article",
+      "id" => "$i",
+      "title" => "$titles[$i]",
+      "message_text" => "$titles[$i]\n$snippets[$i]\n$urls[$i]",
+    ];
+  }
+  
+  return $collection;
+}
+
+if (isset($update["message"])) {
+  processMessage($update["message"]);
+} else if (isset($update["inline_query"])) {
+    $inlineQuery = $update["inline_query"];
+    $queryId = $inlineQuery["id"];
+    $queryText = $inlineQuery["query"];
+    
+    if (isset($queryText) && $queryText !== "") {
+      apiRequestJson("answerInlineQuery", [
+        "inline_query_id" => $queryId,
+        "results" => queryDuckDuckGo($queryText),
+        "cache_time" => 86400,
+      ]);
+    } else {
+      apiRequestJson("answerInlineQuery", [
+        "inline_query_id" => $queryId,
+        "results" => [
+          [
+            "type" => "article",
+            "id" => "0",
+            "title" => "Unnikked Blog",
+            "message_text" => "I'm the author of this bot, please visit my blog for more https://unnikked.ga",
+          ],  
+        ]
+      ]);
+    }
+}
+
+
 $message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
 
 $message_inline_Id = isset($message_inline['id']) ? $message_inline['id'] : "";
@@ -39,33 +108,7 @@ $message_inline_Id = isset($message_inline['id']) ? $message_inline['id'] : "";
 $method='answerInlineQuery';
 $botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 
-$postField_inline = array(
-	'inline_query_id' => $message_inline_Id, 
-	'cache_time' => 1,
-	'results' => array(
-		 'type' => 'article'
-		,'id' => 'invito'.rand(0,65535)
-		,'title' => 'prova msg'
-		,'message_text' => 'msg'
-		,'description' => 'Prova description'
-		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'testo pulsante','url'=>"http://robylandia.net" ] ]
-		]]
 
-		),
-);
-
-$handle=curl_init();
-curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
-curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
-curl_setopt($handle,CURLOPT_POST,1);
-curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField_inline));
-curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
-curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
-curl_setopt($handle,CURLOPT_ENCODING,1);
-$dati=json_decode( curl_exec($handle) ,true);	
-
-curl_close($handle);
 
 fwrite($fHandle,"\n\nRisposta ricevuta da telegram:\n$dati");
 
