@@ -53,7 +53,7 @@ $postField_inline = array(
 		,'message_text' => 'Ecco le NEWS riguardanti Unipa'		
 		,'description' => 'Scopri le News di Unipa'		
 		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'NEWS BY UNIPABOT','callback_data'=> "CACCA" ] ]
+			[	 ['text'=>'NEWS BY UNIPABOT','url'=> "http://telegram.me/UnipaBotCh" ] ]
 		]]
 	))
 );
