@@ -46,7 +46,7 @@ $botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 $postField_inline = array(
 	 'inline_query_id' => $message_inline_Id
 	,'cache_time' => 1
-	,'results' => array(
+	,'results' => array(array(
 		 'type' => 'article'
 		,'id' => 'random_no_cache'.rand(0,65535)		
 		,'title' => 'inline'
@@ -55,7 +55,7 @@ $postField_inline = array(
 		,'reply_markup'=>['inline_keyboard'=>[
 			[	 ['text'=>'testo pulsante','url'=>"http://robylandia.net" ] ]
 		]]
-	)
+	))
 );
 
 fwrite($fHandle,"\n\nPostField inviato a telegram:\n".JSON_ENCODE($postField_inline)."\n");
