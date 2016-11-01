@@ -49,11 +49,11 @@ $postField_inline = array(
 	,'results' => array(array(
 		 'type' => 'article'
 		,'id' => 'random_no_cache'.rand(0,65535)		
-		,'title' => 'inline'
+		,'title' => '🌥 METEO'
 		,'message_text' => 'msg'		
 		,'description' => 'Prova description'		
 		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'testo pulsante','url'=>"http://robylandia.net" ] ]
+			[	 ['text'=>'🌥 METEO','url'=>"http://robylandia.net" ] ]
 		]]
 	))
 );
