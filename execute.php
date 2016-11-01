@@ -417,7 +417,7 @@ elseif(strpos($text, "/news") === 0 || $text == "🖥 NEWS" || $text == "🖥 ne
 		// read curl response
 		$output = curl_exec($ch);
 	
-	$response = "@UnipaBot NEWS";
+	$response = "Digita @UnipaBot NEWS o vai direttamente al canale @UnipaBotCh";
 }
 
 // INFO BOT
