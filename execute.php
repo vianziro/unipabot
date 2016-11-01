@@ -49,11 +49,11 @@ $postField_inline = array(
 	,'results' => array(array(
 		 'type' => 'article'
 		,'id' => 'random_no_cache'.rand(0,65535)		
-		,'title' => 'COMANDO METEO'
-		,'message_text' => '🌥 METEO'		
-		,'description' => 'Scopri il meteo di Palermo'		
+		,'title' => 'NEWS'
+		,'message_text' => 'NEWS'		
+		,'description' => 'Scopri le News di Unipa'		
 		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'CACCA','callback_data'=> "CACCA" ] ]
+			[	 ['text'=>'NEWS BY UNIPABOT','url'=> "http://telegram.me/UnipaBotCh" ] ]
 		]]
 	))
 );
