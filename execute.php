@@ -53,7 +53,7 @@ $postField_inline = array(
 		,'message_text' => '🌥 METEO'		
 		,'description' => 'Scopri il meteo di Palermo'		
 		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'🌥 METEO','switch_inline_query_current_chat'=> "🌥 METEO" ] ]
+			[	 ['text'=>'🌥 METEO','switch_inline_query'=> "🌥 CACCA" ] ]
 		]]
 	))
 );
