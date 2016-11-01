@@ -12350,8 +12350,31 @@ elseif(strpos($text, "/segreteria") === 0 || $text == "\xF0\x9F\x8F\xAC SEGRET" 
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
-		
-		$response = "\xF0\x9F\x8F\xAC SEGRETERIA STUDENTI \xF0\x9F\x92\xAC\n\nSi trova in Viale delle Scienze, Ed. 3\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLunedì, Mercoledì, Venerdì dalle ore 09.00 alle ore 13.00\nMartedì e Giovedì dalle ore 15.00 alle ore 17.00 (escluso Luglio e Agosto)\n\n\xF0\x9F\x93\x9E CONTATTI \n\nEmail: segreterie.studenti@unipa.it\nTel. +3909123867526\nTel.2 +3909123886472\nFax. +3909123860506";
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => "\xF0\x9F\x8F\xAC SEGRETERIA STUDENTI \xF0\x9F\x92\xAC\n\nSi trova in Viale delle Scienze, Ed. 3\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLunedì, Mercoledì, Venerdì dalle ore 09.00 alle ore 13.00\nMartedì e Giovedì dalle ore 15.00 alle ore 17.00 (escluso Luglio e Agosto)\n\n\xF0\x9F\x93\x9E CONTATTI \n\nEmail: segreterie.studenti@unipa.it\nTel. +3909123867526\nTel.2 +3909123886472\nFax. +3909123860506", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
+			 'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
 
 }
 
