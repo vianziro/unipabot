@@ -49,8 +49,8 @@ $postField_inline = array(
 	,'results' => array(array(
 		 'type' => 'article'
 		,'id' => 'random_no_cache'.rand(0,65535)		
-		,'title' => '🌥 METEO'
-		,'message_text' => 'msg'		
+		,'title' => 'Scopri il meteo di Palermo'
+		,'message_text' => '🌥 METEO'		
 		,'description' => 'Prova description'		
 		,'reply_markup'=>['inline_keyboard'=>[
 			[	 ['text'=>'🌥 METEO','url'=>"http://robylandia.net" ] ]
