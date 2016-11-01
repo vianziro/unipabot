@@ -416,8 +416,31 @@ elseif(strpos($text, "/news") === 0 || $text == "🖥 NEWS" || $text == "🖥 ne
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
 	
-	$response = "Digita @UnipaBot NEWS o vai direttamente al canale @UnipaBotCh";
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => "Digita @UnipaBot NEWS o vai direttamente al canale @UnipaBotCh", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
 }
 
 // INFO BOT
@@ -437,8 +460,31 @@ elseif(strpos($text, "/info") === 0 || $text == "ℹ️ INFO BOT" || $text == "�
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
 	
-	$response = "✍ In Unipa Bot potrai trovare tutte le info necessarie per l'Università di Palermo\n\n👤 Credits: Questo bot è stato ideato e creato da Gabriele Dell'Aria (@gabrieledellaria)\n\nℹ Fonte Dati Principale: unipa.it\n\n🚌 Fonte Dati Autobus: @openamatbot\n\n🚅 Fonte Dati Treni: @OrarioTreniBot\n\n⚠ Se hai suggerimenti contattami pure e sarò felice di accogliere i tuoi spunti";
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => "✍ In Unipa Bot potrai trovare tutte le info necessarie per l'Università di Palermo\n\n👤 Credits: Questo bot è stato ideato e creato da Gabriele Dell'Aria (@gabrieledellaria)\n\nℹ Fonte Dati Principale: unipa.it\n\n🚌 Fonte Dati Autobus: @openamatbot\n\n🚅 Fonte Dati Treni: @OrarioTreniBot\n\n⚠ Se hai suggerimenti contattami pure e sarò felice di accogliere i tuoi spunti", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+				,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
 }
 
 // INVIO MESSAGGIO BROADCAST
