@@ -53,7 +53,7 @@ $postField_inline = array(
 		,'message_text' => '🌥 METEO'		
 		,'description' => 'Prova description'		
 		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'🌥 METEO','callback_data'=> '🌥 METEO' ] ]
+			[	 ['text'=>'🌥 METEO','callback_data'=> "🌥 METEO" ] ]
 		]]
 	))
 );
