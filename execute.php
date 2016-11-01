@@ -49,11 +49,11 @@ $postField_inline = array(
 	,'results' => array(array(
 		 'type' => 'article'
 		,'id' => 'random_no_cache'.rand(0,65535)		
-		,'title' => 'Scopri il meteo di Palermo'
+		,'title' => 'COMANDO METEO'
 		,'message_text' => '🌥 METEO'		
-		,'description' => 'Prova description'		
+		,'description' => 'Scopri il meteo di Palermo'		
 		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'🌥 METEO','callback_data'=> "🌥 METEO" ] ]
+			[	 ['text'=>'🌥 METEO','switch_inline_query_current_chat'=> "🌥 METEO" ] ]
 		]]
 	))
 );
@@ -77,9 +77,6 @@ curl_close($handle);
 fwrite($fHandle,"\n\nRisposta ricevuta da telegram:\n$dati");
 
 fclose($fHandle);
-
-
-
 
 
 $text_msg_broadcast = "⚠️ Aggiornati tutti gli orari dei corsi di Ingegneria";
