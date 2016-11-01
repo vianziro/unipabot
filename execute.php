@@ -143,6 +143,34 @@ if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $t
 	
 }
 
+else if(strpos($text, "/cacca") === 0 || $text == "CACCA" || $text == "cacca")
+{
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='CallbackQuery';
+	
+		$postField = array(
+		 	'id' => "2",
+		 	'from' => $chatId, 
+		 	'message' => "CACCA",
+		 	'inline_query_id' => $message_inline_Id
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+	
+}
+
 else if(strpos($text, "/meteo") === 0 || $text == "🌥 METEO" || $text == "🌥 meteo")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
