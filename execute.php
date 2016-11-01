@@ -372,8 +372,32 @@ else if(strpos($text, "/cmdrapidi") === 0 || $text == "🔧 CMD RAPIDI" || $text
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
 	
-	$response = "ℹ️ Comandi rapidi:\n\nAule - Trova Aula\n\nProf - Trova le info sul tuo prof\n\nBiblioteche - Trova le Biblioteche\n\nOrario Lezioni Tri - Trova l'orario lezioni dei corsi triennali\n\nOrario Lezioni Mag - Trova l'orario lezioni dei corsi magistrali";
+		$postField = array(
+		 	'chat_id' => $chatId, 
+		 	'text' => "ℹ️ Comandi rapidi:\n\nAule - Trova Aula\n\nProf - Trova le info sul tuo prof\n\nBiblioteche - Trova le Biblioteche\n\nOrario Lezioni Tri - Trova l'orario lezioni dei corsi triennali\n\nOrario Lezioni Mag - Trova l'orario lezioni dei corsi magistrali", 
+		 	'reply_markup' => array(
+				 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
+			 'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
 }
 
 else if(strpos($text, "/help") === 0 || $text == "\xE2\x9A\xA0 HELP" || $text == "\xE2\x9A\xA0 help")
