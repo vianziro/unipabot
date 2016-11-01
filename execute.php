@@ -44,9 +44,9 @@ $method='answerInlineQuery';
 $botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 
 $postField_inline = array(
-	'inline_query_id' => $message_inline_Id, 
-	'cache_time' => 1,
-	'results' => array(
+	 'inline_query_id' => $message_inline_Id
+	,'cache_time' => 1
+	,'results' => array(
 		 'type' => 'article'
 		,'id' => 'random_no_cache'.rand(0,65535)		
 		,'title' => 'inline'
@@ -55,11 +55,10 @@ $postField_inline = array(
 		,'reply_markup'=>['inline_keyboard'=>[
 			[	 ['text'=>'testo pulsante','url'=>"http://robylandia.net" ] ]
 		]]
-
-		),
+	)
 );
 
-fwrite($fHandle,"\n\nPostField inviato a telegram:\n".implode(',',$postField_inline)."\n");
+fwrite($fHandle,"\n\nPostField inviato a telegram:\n".JSON_ENCODE($postField_inline)."\n");
 
 
 $handle=curl_init();
@@ -78,6 +77,7 @@ curl_close($handle);
 fwrite($fHandle,"\n\nRisposta ricevuta da telegram:\n$dati");
 
 fclose($fHandle);
+
 
 
 
