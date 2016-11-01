@@ -1,17 +1,21 @@
 <?php 
 
+//Questa definizione di costante poi non viene usata, piuttosto lo ripeti come variabile $botToken
 define("BOT_TOKEN", "240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs");
 $content = file_get_contents("php://input");
+
+//Questo L'ho spostato quì, l'ho salito di qualche riga.
+//Se $content è falso (cioè vuoto), tanto vale uscire subito, è inutile fargli fare le altre cose
+if(!$content)
+{
+  exit;
+}
 
 $fHandle=fopen('mioLog.txt','w');
 fwrite($fHandle,$content);
 
 $update = json_decode($content, true);
 
-if(!$content)
-{
-  exit;
-}
 
 $message = isset($update['message']) ? $update['message'] : "";
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
@@ -44,14 +48,19 @@ $postField_inline = array(
 	'cache_time' => 1,
 	'results' => array(
 		 'type' => 'article'
-		,'id' => '0'
+		,'id' => 'random_no_cache'.rand(0,65535)		
 		,'title' => 'inline'
+		,'message_text' => 'msg'		
+		,'description' => 'Prova description'		
 		,'reply_markup'=>['inline_keyboard'=>[
 			[	 ['text'=>'testo pulsante','url'=>"http://robylandia.net" ] ]
 		]]
 
 		),
 );
+
+fwrite($fHandle,"\n\nPostField inviato a telegram:\n".implode(',',$postField_inline)."\n");
+
 
 $handle=curl_init();
 curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
@@ -61,13 +70,15 @@ curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField_inline));
 curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
 curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
 curl_setopt($handle,CURLOPT_ENCODING,1);
-$dati=json_decode( curl_exec($handle) ,true);	
+//$dati=json_decode( curl_exec($handle) ,true);	
+$dati=curl_exec($handle);	
 
 curl_close($handle);
 
 fwrite($fHandle,"\n\nRisposta ricevuta da telegram:\n$dati");
 
 fclose($fHandle);
+
 
 
 
