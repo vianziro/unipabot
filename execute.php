@@ -466,7 +466,7 @@ elseif(strpos($text, "/info") === 0 || $text == "ℹ️ INFO BOT" || $text == "�
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "✍ In Unipa Bot potrai trovare tutte le info necessarie per l'Università di Palermo\n\n👤 Credits: Questo bot è stato ideato e creato da Gabriele Dell'Aria (@gabrieledellaria)\n\nℹ Fonte Dati Principale: unipa.it\n\n🚌 Fonte Dati Autobus: @openamatbot\n\n🚅 Fonte Dati Treni: @OrarioTreniBot\n\n⚠ Se hai suggerimenti contattami pure e sarò felice di accogliere i tuoi spunti", 
+		 	'text' => "✍ In Unipa Bot potrai trovare tutte le info necessarie per l'Università di Palermo\n\n👤 Credits: Questo bot è stato ideato e creato da Gabriele Dell'Aria (@gabrieledellaria)\n\nℹ Fonte Dati Principale: Portale Unipa - unipa.it\n\n🚌 Fonte Dati Autobus: OpenAmatBot - @openamatbot\n\n🚅 Fonte Dati Treni: Orario treni - @OrarioTreniBot\n\n⛈ Fonte Meteo: MeteOvunque - @meteovunque_bot\n\n⚠ Se hai suggerimenti contattami pure e sarò felice di accogliere i tuoi spunti", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 				,'resize_keyboard' => true
