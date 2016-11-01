@@ -50,7 +50,7 @@ $postField_inline = array(
 		 'type' => 'article'
 		,'id' => 'random_no_cache'.rand(0,65535)		
 		,'title' => 'NEWS'
-		,'message_text' => 'NEWS'		
+		,'message_text' => 'Ecco le NEWS riguardanti Unipa'		
 		,'description' => 'Scopri le News di Unipa'		
 		,'reply_markup'=>['inline_keyboard'=>[
 			[	 ['text'=>'NEWS BY UNIPABOT','url'=> "http://telegram.me/UnipaBotCh" ] ]
