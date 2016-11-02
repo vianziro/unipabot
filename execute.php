@@ -62,7 +62,7 @@ $postField_inline = array(
 		,'message_text' => 'Ecco le NEWS riguardanti Unipa2'		
 		,'description' => 'Scopri le News di Unipa'		
 		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'CACCA','callback_data'=> "/cacca" ] ]
+			[	 ['text'=>'CACCA','callback_data'=> "CACCA" ] ]
 		]]
 	))
 );
@@ -150,7 +150,7 @@ if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $t
 	
 }
 
-else if( $text == "/cacca")
+else if( $text == "CACCA")
 {
 
 		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
@@ -159,7 +159,7 @@ else if( $text == "/cacca")
 		$postField = array(
 		 	'callback_query_id'=> $messageId,
 		 	'text' => "Digita sotto @meteovunque_bot Palermo per conoscere il meteo ad Unipa",
-		 	'show_alert' => 'true'
+		 	'show_alert' => true
 		);
 
 		fwrite($fHandle,"\n\nCacca rilasciata!\n".JSON_ENCODE($postField_inline)."\n");
