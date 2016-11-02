@@ -58,16 +58,17 @@ $postField_inline = array(
 		,'reply_markup'=>['inline_keyboard'=>[
 			[	 ['text'=>'NEWS BY UNIPABOT','url'=> "http://telegram.me/UnipaBotCh" ] ]
 		]]
-	), array(
-		 'type' => 'article'
-		,'id' => 'random_no_cache'.rand(0,65535)		
-		,'title' => 'ACTION2'
-		,'message_text' => 'Ecco le NEWS riguardanti Unipa2'		
-		,'description' => 'Scopri le News di Unipa'		
-		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'CACCA','callback_data'=> "CACCA" ] ]
-		]]
-	))
+	)//, array(
+		// 'type' => 'article'
+		//,'id' => 'random_no_cache'.rand(0,65535)		
+		//,'title' => 'ACTION2'
+		//,'message_text' => 'Ecco le NEWS riguardanti Unipa2'		
+		//,'description' => 'Scopri le News di Unipa'		
+		//,'reply_markup'=>['inline_keyboard'=>[
+		//	[	 ['text'=>'CACCA','callback_data'=> "CACCA" ] ]
+		//]]
+	//))
+	)
 );
 
 fwrite($fHandle,"\n\nPostField inviato a telegram:\n".JSON_ENCODE($postField_inline)."\n");
