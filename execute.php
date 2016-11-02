@@ -53,7 +53,15 @@ $postField_inline = array(
 		,'message_text' => 'Ecco le NEWS riguardanti Unipa'		
 		,'description' => 'Scopri le News di Unipa'		
 		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'NEWS BY UNIPABOT','url'=> "http://telegram.me/UnipaBotCh" ] ],
+			[	 ['text'=>'NEWS BY UNIPABOT','url'=> "http://telegram.me/UnipaBotCh" ] ]
+		]]
+	), array(
+		 'type' => 'article'
+		,'id' => 'random_no_cache'.rand(0,65535)		
+		,'title' => 'NEWS2'
+		,'message_text' => 'Ecco le NEWS riguardanti Unipa2'		
+		,'description' => 'Scopri le News di Unipa'		
+		,'reply_markup'=>['inline_keyboard'=>[
 			[	 ['text'=>'CACCA','url'=> "http://telegram.me/UnipaBotCh" ] ]
 		]]
 	))
