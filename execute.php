@@ -50,10 +50,10 @@ $postField_inline = array(
 	 'inline_query_id' => $message_inline_Id
 	,'cache_time' => 1
 	,'results' => array(array(
-		 'type' => 'article'
-		,'id' => 'random_no_cache'.rand(0,65535)		
-		,'title' => 'NEWS'
-		,'message_text' => 'Ecco le NEWS riguardanti Unipa'		
+		 'type' => 'photo'
+		,'id' => 'random_no_cache'.rand(0,65535)
+		, 'photo_url' => "http://obrag.org/wp-content/uploads/2009/04/breaking-news.jpg"		
+		,'title' => 'NEWS'	
 		,'description' => 'Scopri le News di Unipa'
 		,'thumb_url' => "http://obrag.org/wp-content/uploads/2009/04/breaking-news.jpg"		
 		,'reply_markup'=>['inline_keyboard'=>[
