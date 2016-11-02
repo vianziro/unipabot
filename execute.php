@@ -38,6 +38,9 @@ header("Content-Type: application/json");
 
 $message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
 
+$message_inline_callbackdata = isset($message_inline['callback_data']) ? $message_inline['callback_data'] : "";
+
+
 $message_inline_Id = isset($message_inline['id']) ? $message_inline['id'] : "";
 
 $method='answerInlineQuery';
@@ -150,7 +153,7 @@ if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $t
 	
 }
 
-else if( $text == "CACCA")
+else if( strpos($message_inline_callbackdata, "CACCA") === 0 || $message_inline_callbackdata == "CACCA" || $message_inline_callbackdata == "cacca")
 {
 
 		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
@@ -158,7 +161,7 @@ else if( $text == "CACCA")
 	
 		$postField = array(
 		 	'callback_query_id'=> $messageId,
-		 	'text' => "Digita sotto @meteovunque_bot Palermo per conoscere il meteo ad Unipa",
+		 	'text' => "Digita sotto ...",
 		 	'show_alert' => true
 		);
 
