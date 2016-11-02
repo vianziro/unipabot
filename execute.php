@@ -55,7 +55,7 @@ $postField_inline = array(
 		,'title' => 'NEWS'
 		,'message_text' => 'Ecco le NEWS riguardanti Unipa'		
 		,'description' => 'Scopri le News di Unipa'
-		,'thumb_url' => "http://downloadicons.net/sites/default/files/information-icon-74740.png"		
+		,'thumb_url' => "http://obrag.org/wp-content/uploads/2009/04/breaking-news.jpg"		
 		,'reply_markup'=>['inline_keyboard'=>[
 			[	 ['text'=>'NEWS BY UNIPABOT','url'=> "http://telegram.me/UnipaBotCh" ] ]
 		]]
