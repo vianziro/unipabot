@@ -58,11 +58,11 @@ $postField_inline = array(
 	), array(
 		 'type' => 'article'
 		,'id' => 'random_no_cache'.rand(0,65535)		
-		,'title' => 'NEWS2'
+		,'title' => 'ACTION2'
 		,'message_text' => 'Ecco le NEWS riguardanti Unipa2'		
 		,'description' => 'Scopri le News di Unipa'		
 		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'CACCA','url'=> "http://telegram.me/UnipaBotCh" ] ]
+			[	 ['text'=>'CACCA','callback_data'=> "/cacca" ] ]
 		]]
 	))
 );
@@ -150,46 +150,32 @@ if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $t
 	
 }
 
-else if(strpos($text, "/cacca") === 0 || $text == "CACCA" || $text == "cacca")
+else if( $text == "/cacca")
 {
 
-		$message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
-
-		$message_inline_Id = isset($message_inline['id']) ? $message_inline['id'] : "";
-
-		$method='answerInlineQuery';
 		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='answerCallbackQuery';
+	
+		$postField = array(
+		 	'callback_query_id'=> $messageId,
+		 	'text' => "Digita sotto @meteovunque_bot Palermo per conoscere il meteo ad Unipa",
+		 	'show_alert' => 'true'
+		);
 
-		$postField_inline = array(
-		 'inline_query_id' => $message_inline_Id
-		,'cache_time' => 1
-		,'results' => array(array(
-			 'type' => 'article'
-			,'id' => 'random_no_cache'.rand(0,65535)		
-			,'title' => 'NEWS'
-			,'message_text' => 'Ecco le NEWS riguardanti Unipa'		
-			,'description' => 'Scopri le News di Unipa'		
-			,'reply_markup'=>['inline_keyboard'=>[
-				[	 ['text'=>'NEWS BY UNIPABOT','url'=> "http://telegram.me/UnipaBotCh" ] ]
-			]]
-		))
-	);
-
-fwrite($fHandle,"\n\nPostField inviato a telegram:\n".JSON_ENCODE($postField_inline)."\n");
-
-
-$handle=curl_init();
-curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
-curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
-curl_setopt($handle,CURLOPT_POST,1);
-curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField_inline));
-curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
-curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
-curl_setopt($handle,CURLOPT_ENCODING,1);
-//$dati=json_decode( curl_exec($handle) ,true);	
-$dati=curl_exec($handle);	
-
-curl_close($handle);
+		fwrite($fHandle,"\n\nCacca rilasciata!\n".JSON_ENCODE($postField_inline)."\n");
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
 	
 }
 
