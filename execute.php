@@ -54,7 +54,8 @@ $postField_inline = array(
 		,'id' => 'random_no_cache'.rand(0,65535)		
 		,'title' => 'NEWS'
 		,'message_text' => 'Ecco le NEWS riguardanti Unipa'		
-		,'description' => 'Scopri le News di Unipa'		
+		,'description' => 'Scopri le News di Unipa'
+		, 'thumb_url' => "http://www.howtorecordpodcasts.com/wp-content/uploads/2012/10/YouTube-Background-Pop-4.jpg"		
 		,'reply_markup'=>['inline_keyboard'=>[
 			[	 ['text'=>'NEWS BY UNIPABOT','url'=> "http://telegram.me/UnipaBotCh" ] ]
 		]]
