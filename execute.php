@@ -69,7 +69,7 @@ $postField_inline = array(
 			[	 ['text'=>'CACCA','callback_data'=> "CACCA" ] ]
 		]]
 	))
-	)
+	
 );
 
 fwrite($fHandle,"\n\nPostField inviato a telegram:\n".JSON_ENCODE($postField_inline)."\n");
