@@ -38,7 +38,7 @@ header("Content-Type: application/json");
 
 $message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
 
-$message_inline_callbackdata = isset($message_inline['callback_data']) ? $message_inline['callback_data'] : "";
+//$message_inline_callbackdata = isset($message_inline['callback_data']) ? $message_inline['callback_data'] : "";
 
 
 $message_inline_Id = isset($message_inline['id']) ? $message_inline['id'] : "";
@@ -59,16 +59,16 @@ $postField_inline = array(
 		,'reply_markup'=>['inline_keyboard'=>[
 			[	 ['text'=>'UNIPABOT CH','url'=> "http://telegram.me/UnipaBotCh" ] ]
 		]]
-	)//, array(
-		// 'type' => 'article'
-		//,'id' => 'random_no_cache'.rand(0,65535)		
-		//,'title' => 'ACTION2'
-		//,'message_text' => 'Ecco le NEWS riguardanti Unipa2'		
-		//,'description' => 'Scopri le News di Unipa'		
-		//,'reply_markup'=>['inline_keyboard'=>[
-		//	[	 ['text'=>'CACCA','callback_data'=> "CACCA" ] ]
-		//]]
-	//))
+	), array(
+		'type' => 'article'
+		,'id' => 'random_no_cache'.rand(0,65535)		
+		,'title' => 'ACTION2'
+		,'message_text' => 'Ecco le NEWS riguardanti Unipa2'		
+		,'description' => 'Scopri le News di Unipa'		
+		,'reply_markup'=>['inline_keyboard'=>[
+			[	 ['text'=>'CACCA','callback_data'=> "CACCA" ] ]
+		]]
+	))
 	)
 );
 
@@ -155,7 +155,7 @@ if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $t
 	
 }
 
-else if( strpos($message_inline_callbackdata, "CACCA") === 0 || $message_inline_callbackdata == "CACCA" || $message_inline_callbackdata == "cacca")
+else if( strpos($text, "CACCA") === 0 || $text=="CACCA" || $text == "cacca")
 {
 
 		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
