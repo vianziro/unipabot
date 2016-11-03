@@ -207,7 +207,7 @@ else if(strpos($text, "/meteo") === 0 || $text == "🌥 METEO" || $text == "🌥
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "Digita sotto @meteovunque_bot Palermo per conoscere il meteo ad Unipa", 
+		 	'text' => "http://api.openweathermap.org/data/2.5/forecast/city?id=2523920&APPID=4202cf40c6d2c97a03ae52f757754ac2", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 				,'resize_keyboard' => true
