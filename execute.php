@@ -38,9 +38,9 @@ header("Content-Type: application/json");
 
 $message_inline = isset($update['inline_query']) ? $update['inline_query'] : "";
 
-$message_inline_keyboard = isset($message_inline['reply_markup']) ? $message_inline['reply_markup'] : "";
+$message_inline_keyboard = isset($message_inline['callback_query']) ? $message_inline['callback_query'] : "";
 
-$message_inline_callbackdata = isset($message_inline_keyboard['inline_keyboard']['text']) ? $message_inline_keyboard['inline_keyboard']['text'] : "";
+$message_inline_callbackdata = isset($message_inline_keyboard['text']) ? $message_inline_keyboard['text'] : "";
 
 
 $message_inline_Id = isset($message_inline['id']) ? $message_inline['id'] : "";
