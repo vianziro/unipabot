@@ -12079,8 +12079,30 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
-		
-		//$response = "Se il prof che cerchi non è stato trovato contatta @gabrieledellaria riportando Nome,Cognome e Facoltà del Prof da inserire";
+
+		$method='sendMessage';
+
+		$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "Se il prof che cerchi non è stato trovato contatta @gabrieledellaria riportando Nome,Cognome e Facoltà del Prof da inserire", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			 ,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
 	}	
 
 // Sottosezione Professori //
@@ -12101,6 +12123,8 @@ elseif(strpos($text, "/profburlon") === 0 || $text == "Burlon" || $text == "burl
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		$method='sendMessage';
 
 		$postField = array(
 		 'chat_id' => $chatId, 
@@ -12124,7 +12148,6 @@ elseif(strpos($text, "/profburlon") === 0 || $text == "Burlon" || $text == "burl
 	
 		var_dump($dati);
 		
-		//$response = "";
 	}
 	
 elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == "la cascia" || $text == "Prof La Cascia" || $text == "prof la cascia")
@@ -12143,6 +12166,8 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		$method='sendMessage';
 
 		$postField = array(
 		 'chat_id' => $chatId, 
@@ -12166,7 +12191,6 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 	
 		var_dump($dati);
 		
-		//$response = "\xF0\x9F\x91\xA4 Nome: Marco \n\xF0\x9F\x91\xA4 Cognome: La Cascia \n\xF0\x9F\x8F\xA6 Ufficio: Ed.8 ";
 	}
 	
 	elseif(strpos($text, "/profdaverio") === 0 || $text == "daverio" || $text == "Daverio" || $text == "Prof Daverio" || $text == "prof daverio")
@@ -12185,6 +12209,8 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		$method='sendMessage';
 
 		$postField = array(
 		 'chat_id' => $chatId, 
@@ -12207,8 +12233,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		curl_close($handle);
 	
 		var_dump($dati);
-		
-		//$response = "";
+
 	}
 
 	elseif(strpos($text, "/profdigiovanni") === 0 || $text == "Di Giovanni" || $text == "di giovanni" || $text == "Prof Di Giovanni" || $text == "prof di giovanni")
@@ -12227,6 +12252,8 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		$method='sendMessage';
 
 		$postField = array(
 		 'chat_id' => $chatId, 
@@ -12250,7 +12277,6 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 	
 		var_dump($dati);
 		
-		//$response = "";
 	}
 
 	elseif(strpos($text, "/profgiarre") === 0 || $text == "Giarre" || $text == "giarre" || $text == "Giarré" || $text == "giarré"|| $text == "Prof Giarre" || $text == "prof giarre" || $text == "Prof Giarré" || $text == "prof giarré")
@@ -12269,6 +12295,8 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		$method='sendMessage';
 
 		$postField = array(
 		 'chat_id' => $chatId, 
@@ -12292,7 +12320,6 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 	
 		var_dump($dati);
 		
-		//$response = "";
 	}
 
 	elseif( $text == "Fagiolini" || $text == "fagiolini" || $text == "Prof Fagiolini" || $text == "prof fagiolini" )
@@ -12311,6 +12338,8 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		$method='sendMessage';
 
 		$postField = array(
 		 'chat_id' => $chatId, 
@@ -12334,7 +12363,6 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 	
 		var_dump($dati);
 		
-		//$response = "";
 	}
 
 		elseif( $text == "Vassallo" || $text == "vassallo" || $text == "Prof Vassallo" || $text == "prof vassallo" )
