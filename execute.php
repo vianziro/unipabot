@@ -12146,7 +12146,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x91\xA4 Nome: Marco \n\xF0\x9F\x91\xA4 Cognome: La Cascia \n\xF0\x9F\x8F\xA6 Ufficio: Ed.8\n📝 Ricevimento: Lunedì dalle 15:00 alle 16:30 presso Ed. 6, III piano\n✉️ Contatti: marco.lacascia@unipa.it\nNote:\n\nSi consiglia di inviare una mail a marco.lacascia@unipa.it il giorno prima per avere conferma che il ricevimento si svolgerà regolarmente.", 
+		 'text' => "\xF0\x9F\x91\xA4 Nome: Marco \n\xF0\x9F\x91\xA4 Cognome: La Cascia \n\xF0\x9F\x8F\xA6 Ufficio: Ed.8\n📝 Ricevimento: Lunedì dalle 15:00 alle 16:30 presso Ed. 6, III piano\n✉️ Contatti: marco.lacascia@unipa.it\nNote:\n\nSi consiglia di inviare una mail a marco.lacascia@unipa.it il giorno prima per avere conferma che il ricevimento si svolgerà regolarmente", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 			 ,'resize_keyboard' => true
@@ -12185,7 +12185,6 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
-
 
 		$postField = array(
 		 'chat_id' => $chatId, 
