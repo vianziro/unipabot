@@ -12261,8 +12261,32 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		// read curl response
 		$output = curl_exec($ch);
+
+		$method='sendMessage';
+	
+		$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "\xF0\x9F\x91\xA4 Nome: Rosario \n\n\xF0\x9F\x91\xA4 Cognome: Sorbello \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Lunedì dalle 11:00 alle 13:00 presso Stanza del Professore, Edificio 6, terzo piano\n\n✉️ Contatti: rosario.sorbello@unipa.it - +3909123862635\n\nE' consigliabile contattarlo via WhatsApp", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
 		
-		//$response = "\xF0\x9F\x91\xA4 Nome: Rosario \n\n\xF0\x9F\x91\xA4 Cognome: Sorbello \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Lunedì dalle 11:00 alle 13:00 presso Stanza del Professore, Edificio 6, terzo piano\n\n✉️ Contatti: rosario.sorbello@unipa.it - +3909123862635\n\nE' consigliabile contattarlo via WhatsApp";
+		//$response = "";
 	}
 	
 // ERSU 	
