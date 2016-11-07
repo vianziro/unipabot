@@ -12087,7 +12087,7 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 		 'chat_id' => $chatId, 
 		 'text' => "Se il prof che cerchi non è stato trovato contatta @gabrieledellaria riportando Nome,Cognome e Facoltà del Prof da inserire", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE")
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -12133,7 +12133,7 @@ elseif(strpos($text, "/profburlon") === 0 || $text == "Burlon" || $text == "burl
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Riccardo \n\xF0\x9F\x91\xA4 Cognome: Burlon \n\xF0\x9F\x8F\xA6 Ufficio: Ed.6 ", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE")
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -12177,7 +12177,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Marco \n\xF0\x9F\x91\xA4 Cognome: La Cascia \n\xF0\x9F\x8F\xA6 Ufficio: Ed.8 ", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE")
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -12221,7 +12221,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Philippe \n\xF0\x9F\x91\xA4 Cognome: Daverio \n\xF0\x9F\x8F\xA6 Ufficio: Ed.14\n📝 Ricevimento: Lunedì dalle 12:00 alle 17:00 presso aula 4.4 (Edificio 14)\n✉️ Contatti: philippe.daverio@unipa.it", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE")
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -12265,7 +12265,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Elisabetta \n\xF0\x9F\x91\xA4 Cognome: Di Giovanni \n\xF0\x9F\x8F\xA6 Ufficio: Ed.15\n📝 Ricevimento: Martedì dalle 09:00 alle 11:00 presso Edificio 15, 7° piano\n✉️ Contatti: elisabetta.digiovanni@unipa.it", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE")
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -12309,7 +12309,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Laura \n\n\xF0\x9F\x91\xA4 Cognome: Giarrè \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.9\n\n📝 Ricevimento: Martedì dalle 18:00 alle 19:00 presso DEIM - Edificio 9\n\nMercoledì dalle 8:30 alle 10:30 presso DEIM - Edificio 9\n\n✉️ Contatti: laura.giarre@unipa.it", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE")
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -12353,7 +12353,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Adriano \n\n\xF0\x9F\x91\xA4 Cognome: Fagiolini \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.10\n\n📝 Ricevimento: Giovedì dalle 9:30 alle 12:30 presso Viale delle Scienze, Edificio 10\n\n✉️ Contatti: adriano.fagiolini@unipa.it - +3909123863613", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE")
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -12397,7 +12397,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Giorgio \n\n\xF0\x9F\x91\xA4 Cognome: Vassallo \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Martedì dalle 11:00 alle 13:00 presso Viale delle Scienze, Ed. 6 terzo piano\n\n✉️ Contatti: giorgio.vassallo@unipa.it - +3909123862637", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE")
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -12441,7 +12441,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Liliana \n\n\xF0\x9F\x91\xA4 Cognome: Lo Presti \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Martedì dalle 15:00 alle 18:00 presso Ufficio del docente (DIID, V.le delle Scienze Ed.6 III piano, stanza n. 7)\n\n✉️ Contatti: liliana.lopresti@unipa.it - +3909123899526", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE")
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -12485,7 +12485,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Rosario \n\n\xF0\x9F\x91\xA4 Cognome: Sorbello \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Lunedì dalle 11:00 alle 13:00 presso Stanza del Professore, Edificio 6, terzo piano\n\n✉️ Contatti: rosario.sorbello@unipa.it - +3909123862635\n\nE' consigliabile contattarlo via WhatsApp", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE")
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
 			,'resize_keyboard' => true
 		)
 	);
