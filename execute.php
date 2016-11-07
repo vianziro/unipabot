@@ -12355,6 +12355,8 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		// read curl response
 		$output = curl_exec($ch);
 
+		$method='sendMessage';
+	
 		$postField = array(
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Giorgio \n\n\xF0\x9F\x91\xA4 Cognome: Vassallo \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Martedì dalle 11:00 alle 13:00 presso Viale delle Scienze, Ed. 6 terzo piano\n\n✉️ Contatti: giorgio.vassallo@unipa.it - +3909123862637", 
@@ -12376,8 +12378,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		curl_close($handle);
 	
 		var_dump($dati);
-		
-		//$response = "";
+
 	}
 
 	elseif( $text == "Lo Presti" || $text == "lo presti" || $text == "Prof Lo Presti" || $text == "prof lo presti" )
