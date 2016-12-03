@@ -59,7 +59,7 @@ $postField_inline = array(
 		,'description' => 'Scopri le News di Unipa'
 		,'thumb_url' => "http://www.freeiconspng.com/uploads/info-icon-23.png"		
 		,'reply_markup'=>['inline_keyboard'=>[
-			[	 ['text'=>'UNIPABOT CH','url'=> "http://telegram.me/UnipaBotCh" ] ]
+			[	 ['text'=>'UNIPABOT NEWS','url'=> "http://telegram.me/UnipaBotCh" ] ]
 		]]
 	)//, array(
 	//	'type' => 'article'
@@ -7661,9 +7661,9 @@ elseif(strpos($text, "/biblioing") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Ven dalle 8.30 alle 22\n\nDa Settembre a Luglio\n\nℹ️ Info Utili\n\nPotete richiedere il rinnovo dei libri in scadenza mandando una e-mail a bibling@unipa.it oppure chiamando il numero 091/23862001\n\nPer prenotare un posto in sala rossa ved il link sotto\n\nhttp://biblioing.unipa.it:8080/engine/BookingEngine", 
+		 	'text' => "\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Ven dalle 8.30 alle 22\n\nDa Settembre a Luglio\n\nℹ️ Info Utili\n\nPotete richiedere il rinnovo dei libri in scadenza mandando una e-mail a bibling@unipa.it oppure chiamando il numero 091/23862001\n\nPer visualizzare i posti attualmente disponibili nella Sala clicca sul link sotto ⤵\n\nhttp://polib.unipa.it/enus_distroweb/politecnico/BINGE/enus_new/mappa.php", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("📘 POSTI DISPONIBILI SALA LETTURA BIB ING"),array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("📘 POSTI DISPONIBILI SALA ROSSA BIB ING"),array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -7703,7 +7703,7 @@ elseif(strpos($text, "/biblioing") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 
 // 📘 POSTI DISPONIBILI SALA LETTURA BIB ING
 
-elseif(strpos($text, "/postidisp") === 0 || $text == "📘 POSTI DISPONIBILI SALA LETTURA BIB ING" || $text == "📘 posti disponibili sala lettura bib ing" )
+elseif(strpos($text, "/postidisp") === 0 || $text == "📘 POSTI DISPONIBILI SALA ROSSA BIB ING" || $text == "📘 posti disponibili sala rossa bib ing" )
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -7725,7 +7725,7 @@ elseif(strpos($text, "/postidisp") === 0 || $text == "📘 POSTI DISPONIBILI SAL
 	
 		$postField = array(
 		 	'chat_id' => $chatId, 
-		 	'text' => "Per visualizzare i posti disponibili nella Sala Lettura clicca sul link sotto ⤵\n\nhttp://polib.unipa.it/enus_distroweb/politecnico/BINGE/enus_new/mappa.php", 
+		 	'text' => "Per prenotare un posto in sala rossa o per vedere quelli disponibili vedi il link sotto\n\nhttp://biblioing.unipa.it:8080/engine/BookingEngine", 
 		 	'reply_markup' => array(
 				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("📖 BIBLIO"))
 				,'resize_keyboard' => true
