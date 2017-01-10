@@ -14092,7 +14092,7 @@ elseif(strpos($text, "/player") === 0 )
 		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendVoice";
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
-						'voice' => "http://players.fluidstream.it/EOK/frame.html");
+						'voice' => "http://players.fluidstream.it/EOK");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
