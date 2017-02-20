@@ -2309,9 +2309,9 @@ elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU S
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xF0\x9F\x8F\xA6 Menu Studenti \xF0\x9F\x8F\xA6\n\n".$firstname.", scegli fra le opzioni sotto\n\n", 
+		 'text' => "\xF0\x9F\x8F\xA6 Menu Studenti\n\n".$firstname.", scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📈 CALCOLO MEDIA"),array("\xF0\x9F\x95\x92 ORARIO LEZIONI TRI","\xF0\x9F\x95\x92 ORARIO LEZIONI MAG"),array("\xF0\x9F\x93\x9A MATERIE A SCELTA","\xF0\x9F\x93\x91 TIROCINIO"),array("AULE ESAMI"),array("📄 CALENDARI DIDATTICI","🏪 AULETTE ASSOCIAZIONI"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📈 CALCOLO MEDIA"),array("\xF0\x9F\x95\x92 ORARIO LEZIONI TRI","\xF0\x9F\x95\x92 ORARIO LEZIONI MAG"),array("\xF0\x9F\x93\x9A MATERIE A SCELTA","\xF0\x9F\x93\x91 TIROCINIO"),array("🏬 AULE ESAMI"),array("📄 CALENDARI DIDATTICI","🏪 AULETTE ASSOCIAZIONI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2333,7 +2333,7 @@ elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU S
 
 // AULE PRENOTATE 
 
-elseif(strpos($text, "/auleprenotate") === 0 || $text == "AULE ESAMI" || $text == "aule esami")
+elseif(strpos($text, "/auleprenotate") === 0 || $text == "🏬 AULE ESAMI" || $text == "🏬 aule esami")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
