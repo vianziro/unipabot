@@ -3404,8 +3404,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING I
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		  'text' => "*Scegli fra le opzioni sotto*\n\n", 
-		 'parse_mode' => 'Markdown',
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING INF","📄 MODULO II ING INF"),array("📄 MODULO III ING INF"))
 			,'resize_keyboard' => true
@@ -3557,8 +3556,7 @@ elseif(strpos($text, "/inggest") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING 
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		  'text' => "*Scegli fra le opzioni sotto*\n\n", 
-		 'parse_mode' => 'Markdown',
+		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST","📄 MODULO II ING GEST"),array("📄 MODULO III ING GEST"))
 			,'resize_keyboard' => true
@@ -3674,7 +3672,7 @@ elseif(strpos($text, "/mod3inggest") === 0 || $text == "📄 MODULO III ING GEST
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'document' => "http://offweb.unipa.it/offweb/calendari?cc=2094&tc=l"), 
+						'document' => "http://offweb.unipa.it/offweb/calendari?cc=2094&tc=l",), 
 						'caption' => $text);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
