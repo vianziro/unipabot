@@ -4630,9 +4630,10 @@ elseif(strpos($text, "/ingcib") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
+		 'text' => "*Scegli fra le opzioni sotto*", 
+		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CIB","📄 MODULO II ING CIB"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CIB","📄 MODULO II ING CIB"),array("📄 MODULO III ING CIB"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4723,6 +4724,41 @@ elseif(strpos($text, "/mod2ingcib") === 0 || $text == "📄 MODULO II ING CIB" |
 	
 }
 
+elseif(strpos($text, "/mod3ingcib") === 0 || $text == "📄 MODULO III ING CIB" || $text == "📄 modulo iii ing cib")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
+	$message = isset($update['message']) ? $update['message'] : "";
+	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+	$text = isset($message['text']) ? $message['text'] : "";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
+	// change image name and path
+	$postFields = array('chat_id' => $chatId, 
+						'document' => "http://offweb.unipa.it/offweb/calendari?cc=2188&tc=l", 
+						'caption' => $text);
+	$ch = curl_init(); 
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+	curl_setopt($ch, CURLOPT_URL, $botUrl); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+	// read curl response
+	$output = curl_exec($ch);
+	
+}
+
 // ORARIO LEZIONI INGEGNERIA GESTIONALE E INFORMATICA
 
 elseif(strpos($text, "/inggestinf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING GEST INF" || $text == "\xF0\x9F\x95\x92 orario ing gest inf")
@@ -4747,9 +4783,10 @@ elseif(strpos($text, "/inggestinf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO I
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
+		 'text' => "*Scegli fra le opzioni sotto*", 
+		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST INF","📄 MODULO II ING GEST INF"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST INF","📄 MODULO II ING GEST INF"),array("📄 MODULO III ING GEST INF"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4829,6 +4866,41 @@ elseif(strpos($text, "/mod2inggestinf") === 0 || $text == "📄 MODULO II ING GE
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
 						'document' => new CURLFile(realpath("./orariolezioni/inggestinf/noLGSTINF2.pdf")), 
+						'caption' => $text);
+	$ch = curl_init(); 
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+	curl_setopt($ch, CURLOPT_URL, $botUrl); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+	// read curl response
+	$output = curl_exec($ch);
+	
+}
+
+elseif(strpos($text, "/mod3inggestinf") === 0 || $text == "📄 MODULO III ING GEST INF" || $text == "📄 modulo iii ing gest inf")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
+	$message = isset($update['message']) ? $update['message'] : "";
+	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+	$text = isset($message['text']) ? $message['text'] : "";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
+	// change image name and path
+	$postFields = array('chat_id' => $chatId, 
+						'document' => "http://offweb.unipa.it/offweb/calendari?cc=2017&tc=l", 
 						'caption' => $text);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
