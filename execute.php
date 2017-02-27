@@ -3359,7 +3359,8 @@ elseif(strpos($text, "/orariolezing") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea\n\n⭕️ Scegli fra le opzioni sotto\n\n", 
+		 'text' => "⭕️ Scegli Corso di Laurea\n\n*Scegli fra le opzioni sotto*\n\n", 
+		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA","\xF0\x9F\x95\x92 ORARIO ING GESTIONALE"),array("\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA","\xF0\x9F\x95\x92 ORARIO ING MECCANICA"),array("\xF0\x9F\x95\x92 ORARIO ING ENERGIA","\xF0\x9F\x95\x92 ORARIO ING CHIMICA"),array("\xF0\x9F\x95\x92 ORARIO ING AMBIENTALE","\xF0\x9F\x95\x92 ORARIO ING CIV-EDI"),array("\xF0\x9F\x95\x92 ORARIO ING GEST INF","\xF0\x9F\x95\x92 ORARIO ING CIBERN"),array("\xF0\x9F\x95\x92 ORARIO ING BIOMEDICA"))
 			,'resize_keyboard' => true
