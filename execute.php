@@ -128,7 +128,7 @@ if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == 
 }
 
 // TORNA SUBITO AL MENU PRINCIPALE
-if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $text == "🏠 menu principale")
+if(strpos($text, "/menuprincipale") === 0 || $text=="MENU PRINCIPALE" || $text == "menu principale")
 {
 	$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
 	$method='sendMessage';
@@ -212,7 +212,7 @@ else if(strpos($text, "/meteo") === 0 || $text == "🌥 METEO" || $text == "🌥
 		 	'chat_id' => $chatId, 
 		 	'text' => "Digita sotto @meteovunque_bot Palermo per conoscere il meteo ad Unipa", //http://api.openweathermap.org/data/2.5/forecast/city?id=2523920&APPID=4202cf40c6d2c97a03ae52f757754ac2
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+				 "keyboard"=> array(array("MENU PRINCIPALE"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -257,7 +257,7 @@ else if(strpos($text, "/bachecaunipadigitale") === 0 || $text == "📱 #Unipa" |
 		 	'chat_id' => $chatId, 
 		 	'text' => "Curioso di scoprire i contenuti di #Unipa?\nVisita https://tagboard.com/unipa/search", //http://api.openweathermap.org/data/2.5/forecast/city?id=2523920&APPID=4202cf40c6d2c97a03ae52f757754ac2
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+				 "keyboard"=> array(array("MENU PRINCIPALE"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -302,7 +302,7 @@ else if(strpos($text, "/catonl") === 0 || $text == "📘 CATALOGO ONLINE 💻" |
 		 	'chat_id' => $chatId, 
 		 	'text' => "Per cercare un libro nel Catalogo di Ateneo visita il sito\n\nhttp://aleph22.unipa.it:8991/F\n\nHai tre modalità di ricerca all'interno di esso:\nRicerca semplice: Permette di scegliere dal menù a tendina il campo su cui si vuole effettuare la ricerca (autore, titolo, soggetto..)\n\nRicerca multicampo: Consente la ricerca contemporanea su diversi indici. Più campi compili, più sarà puntuale la tua ricerca\n\nRicerca avanzata: Permette di formulare richieste complesse attraverso la compilazione di diversi campi di ricerca e l'uso di filtri per affinare il risultato", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","ℹ GUIDA ALL'USO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","ℹ GUIDA ALL'USO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -583,7 +583,7 @@ elseif(strpos($text, "/msg") === 0 || $text == "🔵 MSG BROADCAST" || $text == 
 		 	'chat_id' => $chatId, 
 		 	'text' => "⛔ Inserisci la password di accesso", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+				 "keyboard"=> array(array("MENU PRINCIPALE"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -629,7 +629,7 @@ elseif(strpos($text, "otbapinu") === 0 || $text == "otbapinu")
 		 	'chat_id' => $chatId, 
 		 	'text' => $text_msg_broadcast, 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG GLOBALE"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🔵 MSG GLOBALE"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -676,7 +676,7 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 		 	'chat_id' => $chatId, 
 		 	'text' => $text_ok, 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🔵 MSG BROADCAST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -718,7 +718,7 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 		 	'chat_id' => $chatId_Adri, 
 		 	'text' => $text_msg_broadcast, 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🔵 MSG BROADCAST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -758,7 +758,7 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 		 	'chat_id' => $chatId_Mario, 
 		 	'text' => $text_msg_broadcast, 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🔵 MSG BROADCAST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -798,7 +798,7 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 		 	'chat_id' => $chatId_Roby, 
 		 	'text' => $text_msg_broadcast, 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🔵 MSG BROADCAST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -838,7 +838,7 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 		 	'chat_id' => $chatId_Simy, 
 		 	'text' => $text_msg_broadcast, 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🔵 MSG BROADCAST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -878,7 +878,7 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 		 	'chat_id' => $chatId_Allie, 
 		 	'text' => $text_msg_broadcast, 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🔵 MSG BROADCAST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -918,7 +918,7 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 		 	'chat_id' => $chatId_Adriana, 
 		 	'text' => $text_msg_broadcast, 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🔵 MSG BROADCAST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -958,7 +958,7 @@ elseif(strpos($text, "/sendglobal") === 0 || $text == "🔵 MSG GLOBALE" || $tex
 		 	'chat_id' => $chatId_Io, 
 		 	'text' => $text_msg_broadcast, 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🔵 MSG BROADCAST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🔵 MSG BROADCAST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -1004,7 +1004,7 @@ elseif(strpos($text, "/trasp") === 0 || $text == "🚈 TRASP" || $text == "🚈 
 		 'chat_id' => $chatId, 
 		 'text' => "🚈 TRASPORTI\n\n".$firstname.", scegli il tuo mezzo di trasporto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"),array("🚈 METRO","🚎 PULLMAN"),array("🚈 TRENO"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚌 AUTOBUS"),array("🚈 METRO","🚎 PULLMAN"),array("🚈 TRENO"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1049,7 +1049,7 @@ elseif(strpos($text, "/bus") === 0 || $text == "🚌 AUTOBUS" || $text == "🚌 
 		 'chat_id' => $chatId, 
 		 'text' => "⭕️ Scegli la linea di cui vuoi le info sugli orari", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚌 LINEA 104","🚌 LINEA 109"),array("🚌 LINEA 118","🚌 LINEA 307"),array("🚌 LINEA 309","🚌 LINEA 364"),array("🚌 LINEA 380","🚌 LINEA EXPR"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚈 TRASP"),array("🚌 LINEA 104","🚌 LINEA 109"),array("🚌 LINEA 118","🚌 LINEA 307"),array("🚌 LINEA 309","🚌 LINEA 364"),array("🚌 LINEA 380","🚌 LINEA EXPR"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1096,7 +1096,7 @@ elseif(strpos($text, "@openamatbot 104") === 0 || $text == "@openamatbot 104")
 		 'chat_id' => $chatId, 
 		 'text' => $firstname.", ecco gli orari della linea da te richiesta!", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1121,7 +1121,7 @@ elseif(strpos($text, "@openamatbot 104") === 0 || $text == "@openamatbot 104")
 		 'chat_id' => $chatId, 
 		 'text' => "Digita @openamatbot 104 per avere le info sull'arrivo della ".$text." presso la tua fermata", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1167,7 +1167,7 @@ elseif(strpos($text, "/linea104") === 0 || $text == "🚌 LINEA 104" || $text ==
 		 'chat_id' => $chatId, 
 		 'text' => "Digita @openamatbot 104 per avere le info sull'arrivo della ".$text." presso la tua fermata", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1213,7 +1213,7 @@ elseif(strpos($text, "/linea109") === 0 || $text == "🚌 LINEA 109" || $text ==
 		 'chat_id' => $chatId, 
 		 'text' => "Digita @openamatbot 109 per avere le info sull'arrivo della ".$text." presso la tua fermata", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1259,7 +1259,7 @@ elseif(strpos($text, "/linea118") === 0 || $text == "🚌 LINEA 118" || $text ==
 		 'chat_id' => $chatId, 
 		 'text' => "Digita @openamatbot 118 per avere le info sull'arrivo della ".$text." presso la tua fermata", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1304,7 +1304,7 @@ elseif(strpos($text, "/linea307") === 0 || $text == "🚌 LINEA 307" || $text ==
 		 'chat_id' => $chatId, 
 		 'text' => "Digita @openamatbot 307 per avere le info sull'arrivo della ".$text." presso la tua fermata", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1350,7 +1350,7 @@ elseif(strpos($text, "/linea309") === 0 || $text == "🚌 LINEA 309" || $text ==
 		 'chat_id' => $chatId, 
 		 'text' => "Digita @openamatbot 309 per avere le info sull'arrivo della ".$text." presso la tua fermata", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1396,7 +1396,7 @@ elseif(strpos($text, "/linea364") === 0 || $text == "🚌 LINEA 364" || $text ==
 		 'chat_id' => $chatId, 
 		 'text' => "Digita @openamatbot 364 per avere le info sull'arrivo della ".$text." presso la tua fermata", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1442,7 +1442,7 @@ elseif(strpos($text, "/linea380") === 0 || $text == "🚌 LINEA 380" || $text ==
 		 'chat_id' => $chatId, 
 		 'text' => "Digita @openamatbot 380 per avere le info sull'arrivo della ".$text." presso la tua fermata", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1488,7 +1488,7 @@ elseif(strpos($text, "/lineaexpr") === 0 || $text == "🚌 LINEA EXPR" || $text 
 		 'chat_id' => $chatId, 
 		 'text' => "Digita @openamatbot EXPR per avere le info sull'arrivo della ".$text." presso la tua fermata", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚌 AUTOBUS"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚌 AUTOBUS"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1533,7 +1533,7 @@ elseif(strpos($text, "/metro") === 0 || $text == "🚈 METRO" || $text == "🚈 
 		 'chat_id' => $chatId, 
 		 'text' => "🚈 METRO da e verso Unipa \n\n⭕️ Scegli la linea di cui vuoi le info sugli orari", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚈 LINEA A","🚈 LINEA B"),array("🚈 LINEA C"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚈 TRASP"),array("🚈 LINEA A","🚈 LINEA B"),array("🚈 LINEA C"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -1577,7 +1577,7 @@ elseif(strpos($text, "/lineaa") === 0 || $text == "🚈 LINEA A" || $text == "�
 		 'chat_id' => $chatId, 
 		 'text' => "🚈 LINEA A da e verso Unipa\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚈 METRO"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚈 TRASP"),array("🚈 METRO"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -1637,7 +1637,7 @@ elseif(strpos($text, "/lineab") === 0 || $text == "🚈 LINEA B" || $text == "�
 		 'chat_id' => $chatId, 
 		 'text' => "🚈 LINEA B da e verso Unipa\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚈 METRO"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚈 TRASP"),array("🚈 METRO"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -1697,7 +1697,7 @@ elseif(strpos($text, "/lineac") === 0 || $text == "🚈 LINEA C" || $text == "�
 		 'chat_id' => $chatId, 
 		 'text' => "🚈 LINEA C da e verso Unipa\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"),array("🚈 METRO"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚈 TRASP"),array("🚈 METRO"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -1773,7 +1773,7 @@ elseif(strpos($text, "/treno") === 0 || $text == "🚈 TRENO" || $text == "🚈 
 		 'chat_id' => $chatId, 
 		 'text' => "Digita @OrarioTreniBot NomeStazionePartenza - NomeStazioneArrivo per avere le info sui treni che effettuano il percorso delle stazioni scelte\n\nIn alternativa digita @OrarioTreniBot NomeStazionePartenza per scoprire i treni che partono e arrivano nella stazione scelta\n\nLe stazioni inserite per Palermo sono:\n\nPALERMO CENTRALE\n\nPALERMO BRANCACCIO\n\nPALERMO NOTARBARTOLO\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚈 TRASP"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -1817,7 +1817,7 @@ elseif(strpos($text, "/pullman") === 0 || $text == "🚎 PULLMAN" || $text == "�
 		 'chat_id' => $chatId, 
 		 'text' => "🚎 PULLMAN da e verso Unipa \n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚈 TRASP"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🚈 TRASP"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -1878,7 +1878,7 @@ elseif(strpos($text, "/ristoro") === 0 || $text == "\xF0\x9F\x8D\x94 RISTORO" ||
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8D\x94 Punti Ristoro\n\n".$firstname.", scegli dove andare a mangiare\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 PANINERIA JHONNY"),array("🍝 PANIFICIO DELLO STUDENTE","🍴 CASA MASSARO"),array("\xF0\x9F\x8D\x94 BAR INGEGNERIA","\xF0\x9F\x8D\x94 BAR ARCHITETTURA"),array("\xF0\x9F\x8D\x94 BAR LETTERE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x8D\x94 PANINERIA JHONNY"),array("🍝 PANIFICIO DELLO STUDENTE","🍴 CASA MASSARO"),array("\xF0\x9F\x8D\x94 BAR INGEGNERIA","\xF0\x9F\x8D\x94 BAR ARCHITETTURA"),array("\xF0\x9F\x8D\x94 BAR LETTERE"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -1925,7 +1925,7 @@ elseif(strpos($text, "/jhonny") === 0 || $text == "\xF0\x9F\x8D\x94 PANINERIA JH
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x8D\x94 PANINERIA DA JHONNY \n\n🕒 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -1989,7 +1989,7 @@ elseif(strpos($text, "/panstud") === 0 || $text == "🍝 PANIFICIO DELLO STUDENT
 		 	'chat_id' => $chatId, 
 		 	'text' => "🍝 PANIFICIO DELLO STUDENTE \xF0\x9F\x8D\x94\n\nSi effettua anche domicilio\n\n☎️ Contatti: 0916572790\n\nPagina fb: https://www.facebook.com/Panificio-salumeria-dello-studente-123206791362330/", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -2053,7 +2053,7 @@ elseif(strpos($text, "/casamassaro") === 0 || $text == "🍴 CASA MASSARO" || $t
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x8D\x94 CASA MASSARO \n\n🕒 Orari Esercizio\n\nLun-Ven dalle 11.30 alle 23.30\n\nDa Settembre a Luglio\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -2117,7 +2117,7 @@ elseif(strpos($text, "/baring") === 0 || $text == "\xF0\x9F\x8D\x94 BAR INGEGNER
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x8D\x94 BAR INGEGNERIA\n\nSi trova sotto il portico dell'Ed.8\n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08:00 alle 18:30\n\nDa Settembre a Luglio\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -2183,7 +2183,7 @@ elseif(strpos($text, "/bararch") === 0 || $text == "\xF0\x9F\x8D\x94 BAR ARCHITE
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x8D\x94 BAR ARCHITETTURA\n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08:00 alle 17:30\n\nDa Settembre a Luglio\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -2248,7 +2248,7 @@ elseif(strpos($text, "/barlet") === 0 || $text == "\xF0\x9F\x8D\x94 BAR LETTERE"
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x8D\x94 BAR LETTERE\n\nSi trova di fronte l'Edificio 12\n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08:00 alle 12:30\n\nDa Settembre a Luglio\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x8D\x94 RISTORO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -2313,7 +2313,7 @@ elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU S
 		 'text' => "* MENU STUDENTI *\n\nScegli fra le opzioni sotto", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📈 CALCOLO MEDIA"),array("\xF0\x9F\x95\x92 ORARIO LEZIONI TRI","\xF0\x9F\x95\x92 ORARIO LEZIONI MAG"),array("\xF0\x9F\x93\x9A MATERIE A SCELTA","\xF0\x9F\x93\x91 TIROCINIO"),array("🏬 AULE ESAMI"),array("📄 CALENDARI DIDATTICI","🏪 AULETTE ASSOCIAZIONI"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","📈 CALCOLO MEDIA"),array("\xF0\x9F\x95\x92 ORARIO LEZIONI TRI","\xF0\x9F\x95\x92 ORARIO LEZIONI MAG"),array("\xF0\x9F\x93\x9A MATERIE A SCELTA","\xF0\x9F\x93\x91 TIROCINIO"),array("🏬 AULE ESAMI"),array("📄 CALENDARI DIDATTICI","🏪 AULETTE ASSOCIAZIONI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2359,7 +2359,7 @@ elseif(strpos($text, "/auleprenotate") === 0 || $text == "🏬 AULE ESAMI" || $t
 		 'chat_id' => $chatId, 
 		 'text' => "Le aule prenotate per gli esami o per le riunioni sono visualizzabili al seguente indirizzo:\n\nhttp://servizi.diid.unipa.it/aule/", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -2407,7 +2407,7 @@ elseif(strpos($text, "/calcmedia") === 0 || $text == "📈 CALCOLO MEDIA" || $te
 					Esame 2: voto 25 – 6 Cfu.\n\n
 					Esame 3: voto 20 – 12 Cfu.\n\nSommando i crediti avremo un totale di 24 Cfu. La formula da applicare per ottenere la media ponderata è la seguente:\n\n [(30 x 6) + (25 x 6) + (20 x 12)] / 24 = (180 + 150 + 240) / 24 = 23,75.\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -2494,7 +2494,7 @@ elseif(strpos($text, "/assoc") === 0 || $text == "🏪 AULETTE ASSOCIAZIONI" || 
 		 'chat_id' => $chatId, 
 		 'text' => $firstname.", quale auletta cerchi?\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🏪 VIVERE INGEGNERIA"),array("🏪 AISA","🏪 ONDA UNIVERSITARIA"),array("🏪 RUM","🏪 UDU"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🏪 VIVERE INGEGNERIA"),array("🏪 AISA","🏪 ONDA UNIVERSITARIA"),array("🏪 RUM","🏪 UDU"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -2540,7 +2540,7 @@ elseif(strpos($text, "/aulviving") === 0 || $text == "🏪 VIVERE INGEGNERIA" ||
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova al 2° Piano dell'Edificio 8 (Posizione precisa sotto)\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🏪 AULETTE ASSOCIAZIONI"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🏪 AULETTE ASSOCIAZIONI"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -2605,7 +2605,7 @@ elseif(strpos($text, "/aulaisa") === 0 || $text == "🏪 AISA" || $text == "🏪
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova presso l'Edificio 14, al Piano Terra sotto le scale principali (Posizione precisa sotto)\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🏪 AULETTE ASSOCIAZIONI"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🏪 AULETTE ASSOCIAZIONI"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -2670,7 +2670,7 @@ elseif(strpos($text, "/aulonda") === 0 || $text == "🏪 ONDA UNIVERSITARIA" || 
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova accanto a LA NUOVA COPISTERIA ING. scendendo la discesa sotto la BIBLIOTECA DI INGEGNERIA (Per maggiori info vedi la sottosezione BIBLIO nel MENU PRINCIPALE) presso l'Edificio 7 (Posizione precisa sotto)\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🏪 AULETTE ASSOCIAZIONI"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🏪 AULETTE ASSOCIAZIONI"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -2735,7 +2735,7 @@ elseif(strpos($text, "/aulrum") === 0 || $text == "🏪 RUM" || $text == "🏪 r
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova accanto a LA NUOVA COPISTERIA ING. scendendo la discesa sotto la BIBLIOTECA DI INGEGNERIA (Per maggiori info vedi la sottosezione BIBLIO nel MENU PRINCIPALE) presso l'Edificio 7 (Posizione precisa sotto)\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🏪 AULETTE ASSOCIAZIONI"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🏪 AULETTE ASSOCIAZIONI"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -2800,7 +2800,7 @@ elseif(strpos($text, "/auludu") === 0 || $text == "🏪 UDU" || $text == "🏪 u
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova accanto alla BIBLIOTECA DI INGEGNERIA (Per maggiori info vedi la sottosezione BIBLIO nel MENU PRINCIPALE) presso l'Edificio 7 (Posizione precisa sotto)\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🏪 AULETTE ASSOCIAZIONI"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🏪 AULETTE ASSOCIAZIONI"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -2864,7 +2864,7 @@ elseif(strpos($text, "/caldid") === 0 || $text == "📄 CALENDARI DIDATTICI" || 
 		 'chat_id' => $chatId, 
 		 'text' => "❔ Quale Calendario Didattico vuoi?\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("📄 CAL DID POLITECNICA","📄 CAL DID SC UMANE"),array("📄 CAL DID SC GIURIDICHE","📄 CAL DID SC DI BASE"),array("📄 CAL DID SCUOLA MEDICINA"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("📄 CAL DID POLITECNICA","📄 CAL DID SC UMANE"),array("📄 CAL DID SC GIURIDICHE","📄 CAL DID SC DI BASE"),array("📄 CAL DID SCUOLA MEDICINA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2911,7 +2911,7 @@ elseif(strpos($text, "/caldidpoli") === 0 || $text == "📄 CAL DID POLITECNICA"
 		 'chat_id' => $chatId, 
 		 'text' => "Ecco il Calendario Didattico della tua Scuola!", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -2973,7 +2973,7 @@ elseif(strpos($text, "/caldidscuma") === 0 || $text == "📄 CAL DID SC UMANE" |
 		 'chat_id' => $chatId, 
 		 'text' => "Ecco il Calendario Didattico della tua Scuola!", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3035,7 +3035,7 @@ elseif(strpos($text, "/caldidscbas") === 0 || $text == "📄 CAL DID SC GIURIDIC
 		 'chat_id' => $chatId, 
 		 'text' => "Ecco il Calendario Didattico della tua Scuola!", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3097,7 +3097,7 @@ elseif(strpos($text, "/caldidscbas") === 0 || $text == "📄 CAL DID SCUOLA MEDI
 		 'chat_id' => $chatId, 
 		 'text' => "Ecco il Calendario Didattico della tua Scuola!", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3255,7 +3255,7 @@ elseif(strpos($text, "/caldidscbas") === 0 || $text == "📄 CAL DID SC DI BASE"
 		 'chat_id' => $chatId, 
 		 'text' => "Ecco il Calendario Didattico della tua Scuola!", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","📄 CALENDARI DIDATTICI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3317,7 +3317,7 @@ elseif(strpos($text, "/orariolezionitri") === 0 || $text == "\xF0\x9F\x95\x92 OR
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x95\x92 SEZIONE ORARIO LEZIONI \xF0\x9F\x95\x92\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO","\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC DI BASE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO","\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC DI BASE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3363,7 +3363,7 @@ elseif(strpos($text, "/orariolezing") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 		 'text' => "⭕️ *Scegli Corso di Laurea*\n\nScegli fra le opzioni sotto\n\n", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA","\xF0\x9F\x95\x92 ORARIO ING GESTIONALE"),array("\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA","\xF0\x9F\x95\x92 ORARIO ING MECCANICA"),array("\xF0\x9F\x95\x92 ORARIO ING ENERGIA","\xF0\x9F\x95\x92 ORARIO ING CHIMICA"),array("\xF0\x9F\x95\x92 ORARIO ING AMBIENTALE","\xF0\x9F\x95\x92 ORARIO ING CIV-EDI"),array("\xF0\x9F\x95\x92 ORARIO ING GEST INF","\xF0\x9F\x95\x92 ORARIO ING CIBERN"),array("\xF0\x9F\x95\x92 ORARIO ING BIOMEDICA"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA","\xF0\x9F\x95\x92 ORARIO ING GESTIONALE"),array("\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA","\xF0\x9F\x95\x92 ORARIO ING MECCANICA"),array("\xF0\x9F\x95\x92 ORARIO ING ENERGIA","\xF0\x9F\x95\x92 ORARIO ING CHIMICA"),array("\xF0\x9F\x95\x92 ORARIO ING AMBIENTALE","\xF0\x9F\x95\x92 ORARIO ING CIV-EDI"),array("\xF0\x9F\x95\x92 ORARIO ING GEST INF","\xF0\x9F\x95\x92 ORARIO ING CIBERN"),array("\xF0\x9F\x95\x92 ORARIO ING BIOMEDICA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3410,7 +3410,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING I
 		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING INF","📄 MODULO II ING INF"),array("📄 MODULO III ING INF"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING INF","📄 MODULO II ING INF"),array("📄 MODULO III ING INF"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3563,7 +3563,7 @@ elseif(strpos($text, "/inggest") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING 
 		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST","📄 MODULO II ING GEST"),array("📄 MODULO III ING GEST"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST","📄 MODULO II ING GEST"),array("📄 MODULO III ING GEST"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3716,7 +3716,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING M
 		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING MEC","📄 MODULO II ING MEC"),array("📄 MODULO III ING MEC"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING MEC","📄 MODULO II ING MEC"),array("📄 MODULO III ING MEC"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3869,7 +3869,7 @@ elseif(strpos($text, "/ingele") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING E
 		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ELE","📄 MODULO II ING ELE"),array("📄 MODULO III ING ELE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ELE","📄 MODULO II ING ELE"),array("📄 MODULO III ING ELE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4022,7 +4022,7 @@ elseif(strpos($text, "/ingene") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING E
 		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ENE","📄 MODULO II ING ENE"),array("📄 MODULO III ING ENE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ENE","📄 MODULO II ING ENE"),array("📄 MODULO III ING ENE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4174,7 +4174,7 @@ elseif(strpos($text, "/ingchi") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CHI","📄 MODULO II ING CHI"),array("📄 MODULO III ING CHI"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CHI","📄 MODULO II ING CHI"),array("📄 MODULO III ING CHI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4327,7 +4327,7 @@ elseif(strpos($text, "/ingamb") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING A
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING AMB","📄 MODULO II ING AMB"),array("📄 MODULO III ING AMB"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING AMB","📄 MODULO II ING AMB"),array("📄 MODULO III ING AMB"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4480,7 +4480,7 @@ elseif(strpos($text, "/ingcivedi") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO IN
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown',  
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CIV","📄 MODULO II ING CIV"),array("📄 MODULO III ING CIV"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CIV","📄 MODULO II ING CIV"),array("📄 MODULO III ING CIV"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4633,7 +4633,7 @@ elseif(strpos($text, "/ingcib") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CIB","📄 MODULO II ING CIB"),array("📄 MODULO III ING CIB"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CIB","📄 MODULO II ING CIB"),array("📄 MODULO III ING CIB"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4786,7 +4786,7 @@ elseif(strpos($text, "/inggestinf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO I
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST INF","📄 MODULO II ING GEST INF"),array("📄 MODULO III ING GEST INF"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST INF","📄 MODULO II ING GEST INF"),array("📄 MODULO III ING GEST INF"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4939,7 +4939,7 @@ elseif(strpos($text, "/ingbio") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING B
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING BIO","📄 MODULO II ING BIO"),array("📄 MODULO III ING BIO"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING BIO","📄 MODULO II ING BIO"),array("📄 MODULO III ING BIO"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -5093,7 +5093,7 @@ elseif(strpos($text, "/orariolezarch") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 		 'text' => "⭕️ *Scegli Corso di Laurea*\n\nScegli fra le opzioni sotto\n\n", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO ARCHITETTURA","\xF0\x9F\x95\x92 ORARIO DIS. INDUSTRIALE"),array("\xF0\x9F\x95\x92 ORARIO SPTUPA"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO ARCHITETTURA","\xF0\x9F\x95\x92 ORARIO DIS. INDUSTRIALE"),array("\xF0\x9F\x95\x92 ORARIO SPTUPA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -5140,7 +5140,7 @@ elseif(strpos($text, "/arch") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ARCHITE
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("📄 I SEMESTRE ARCHITETTURA"),array("📄 II SEMESTRE ARCHITETTURA"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("📄 I SEMESTRE ARCHITETTURA"),array("📄 II SEMESTRE ARCHITETTURA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -5257,7 +5257,7 @@ elseif(strpos($text, "/disind") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO DIS. 
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("📄 I SEMESTRE DIS IND","📄 II SEMESTRE DIS IND"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("📄 I SEMESTRE DIS IND","📄 II SEMESTRE DIS IND"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -5374,7 +5374,7 @@ elseif(strpos($text, "/sptupa") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO SPTUP
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("📄 I SEMESTRE SPTUPA"),array("📄 II SEMESTRE SPTUPA"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("📄 I SEMESTRE SPTUPA"),array("📄 II SEMESTRE SPTUPA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -5491,7 +5491,7 @@ elseif(strpos($text, "/orariolezeco") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 		 'text' => "⭕️ *Scegli Corso di Laurea*\n\nScegli fra le opzioni sotto\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO SC TURISMO","\xF0\x9F\x95\x92 ORARIO STATISTICA"),array("\xF0\x9F\x95\x92 ORARIO ECO AZIENDALE","\xF0\x9F\x95\x92 ORARIO ECO FINANZA","\xF0\x9F\x95\x92 ORARIO ECO SV ECONOMICO"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO SC TURISMO","\xF0\x9F\x95\x92 ORARIO STATISTICA"),array("\xF0\x9F\x95\x92 ORARIO ECO AZIENDALE","\xF0\x9F\x95\x92 ORARIO ECO FINANZA","\xF0\x9F\x95\x92 ORARIO ECO SV ECONOMICO"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -5944,7 +5944,7 @@ elseif(strpos($text, "/orariolezscuma") === 0 || $text == "\xF0\x9F\x95\x92 ORAR
 		 'text' => "⭕️ *Scegli Corso di Laurea*\n\nScegli fra le opzioni sotto\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO PSICOLOGIA","\xF0\x9F\x95\x92 ORARIO SC COM MEDIA"),array("\xF0\x9F\x95\x92 ORARIO SC COM CULT","\xF0\x9F\x95\x92 ORARIO SC EDU"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO PSICOLOGIA","\xF0\x9F\x95\x92 ORARIO SC COM MEDIA"),array("\xF0\x9F\x95\x92 ORARIO SC COM CULT","\xF0\x9F\x95\x92 ORARIO SC EDU"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -6318,7 +6318,7 @@ elseif(strpos($text, "/orariolezscbase") === 0 || $text == "\xF0\x9F\x95\x92 ORA
 		 'text' => "⭕️ *Scegli Corso di Laurea*\n\nScegli fra le opzioni sotto\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO FARMACIA"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO FARMACIA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -6447,7 +6447,7 @@ elseif(strpos($text, "/orariolezionitri") === 0 || $text == "\xF0\x9F\x95\x92 OR
 		 'chat_id' => $chatId, 
 		 'text' => "⭕️ Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -6493,7 +6493,7 @@ elseif(strpos($text, "/orariolezingmag") === 0 || $text == "\xF0\x9F\x95\x92 ORA
 		 'chat_id' => $chatId, 
 		 'text' => "⭕️ Scegli Corso di Laurea\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI MAG"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA MAG","\xF0\x9F\x95\x92 ORARIO ING GESTIONALE MAG"),array("\xF0\x9F\x95\x92 ORARIO ING AMBIENTALE MAG","\xF0\x9F\x95\x92 ORARIO ING CHIMICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING MATERIALI MAG","\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING CIVILE MAG","\xF0\x9F\x95\x92 ORARIO ING ENERGETICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING AEROSPAZIALE MAG","\xF0\x9F\x95\x92 ORARIO ING ELETTRICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING SIS EDILIZI MAG","\xF0\x9F\x95\x92 ORARIO ING TELECOMUNICAZIONI MAG"),array("\xF0\x9F\x95\x92 ORARIO ING MECCANICA MAG","\xF0\x9F\x95\x92 ORARIO ING EDI ARCH MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI MAG"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA MAG","\xF0\x9F\x95\x92 ORARIO ING GESTIONALE MAG"),array("\xF0\x9F\x95\x92 ORARIO ING AMBIENTALE MAG","\xF0\x9F\x95\x92 ORARIO ING CHIMICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING MATERIALI MAG","\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING CIVILE MAG","\xF0\x9F\x95\x92 ORARIO ING ENERGETICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING AEROSPAZIALE MAG","\xF0\x9F\x95\x92 ORARIO ING ELETTRICA MAG"),array("\xF0\x9F\x95\x92 ORARIO ING SIS EDILIZI MAG","\xF0\x9F\x95\x92 ORARIO ING TELECOMUNICAZIONI MAG"),array("\xF0\x9F\x95\x92 ORARIO ING MECCANICA MAG","\xF0\x9F\x95\x92 ORARIO ING EDI ARCH MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -6537,7 +6537,7 @@ elseif(strpos($text, "/inginfmag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO IN
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING INF MAG","📄 MODULO II ING INF MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING INF MAG","📄 MODULO II ING INF MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -6653,7 +6653,7 @@ elseif(strpos($text, "/inggestmag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO I
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING GEST MAG","📄 MODULO II ING GEST MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING GEST MAG","📄 MODULO II ING GEST MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -6769,7 +6769,7 @@ elseif(strpos($text, "/ingambmag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO IN
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING AMB MAG","📄 MODULO II ING AMB MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING AMB MAG","📄 MODULO II ING AMB MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -6885,7 +6885,7 @@ elseif(strpos($text, "/ingchimag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO IN
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING CHI MAG","📄 MODULO II ING CHI MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING CHI MAG","📄 MODULO II ING CHI MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -7002,7 +7002,7 @@ elseif(strpos($text, "/ingmatmag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO IN
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING MAT MAG","📄 MODULO II ING MAT MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING MAT MAG","📄 MODULO II ING MAT MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -7119,7 +7119,7 @@ elseif(strpos($text, "/ingelemag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO IN
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING MAT MAG","📄 MODULO II ING MAT MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING MAT MAG","📄 MODULO II ING MAT MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -7236,7 +7236,7 @@ elseif(strpos($text, "/ingcivmag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO IN
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING CIV MAG","📄 MODULO II ING CIV MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING CIV MAG","📄 MODULO II ING CIV MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -7353,7 +7353,7 @@ elseif(strpos($text, "/ingcivmag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO IN
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING ENE MAG","📄 MODULO II ING ENE MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING ENE MAG","📄 MODULO II ING ENE MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -7470,7 +7470,7 @@ elseif(strpos($text, "/ingaeromag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO I
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING AERO MAG","📄 MODULO II ING AERO MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING AERO MAG","📄 MODULO II ING AERO MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -7587,7 +7587,7 @@ elseif(strpos($text, "/ingeletmag") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO I
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING ELET MAG","📄 MODULO II ING ELET MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING ELET MAG","📄 MODULO II ING ELET MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -7704,7 +7704,7 @@ elseif(strpos($text, "/ingesisedimag") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING SIS EDI MAG","📄 MODULO II ING SIS EDI MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING SIS EDI MAG","📄 MODULO II ING SIS EDI MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -7821,7 +7821,7 @@ elseif(strpos($text, "/ingesisedimag") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING TEL MAG","📄 MODULO II ING TEL MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING TEL MAG","📄 MODULO II ING TEL MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -7938,7 +7938,7 @@ elseif(strpos($text, "/ingesisedimag") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING MEC MAG","📄 MODULO II ING MEC MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING MEC MAG","📄 MODULO II ING MEC MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -8055,7 +8055,7 @@ elseif(strpos($text, "/ingesisedimag") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 		 'chat_id' => $chatId, 
 		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING EDI ARCH MAG","📄 MODULO II ING EDI ARCH MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"),array("📄 MODULO I ING EDI ARCH MAG","📄 MODULO II ING EDI ARCH MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -8171,7 +8171,7 @@ elseif(strpos($text, "/oraribiblioteca") === 0 || $text == "📖 BIBLIO" || $tex
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 Menu Biblioteche \xF0\x9F\x8F\xA6\n\n".$firstname.", che Biblioteca vuoi visitare?", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","ℹ️ INFO SISTEMA BIBLIOTECARIO"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA","\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE"),array("\xF0\x9F\x8F\xA6 SALA LETTURA WURTH","\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA"),array("\xF0\x9F\x8F\xA6 EMEROTECA ARCH","\xF0\x9F\x8F\xA6 BIBLIOTECA CLA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA FIS CHIM ARCHIRAFI","\xF0\x9F\x8F\xA6 BIBLIOTECA DICAM"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA IDRAULICA","\xF0\x9F\x8F\xA6 BIBLIOTECA GEOTECNICA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CHIMICA ED.6","\xF0\x9F\x8F\xA6 BIBLIOTECA ED.9 2° PIANO"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA (ED.8)")),
+			 "keyboard"=> array(array("MENU PRINCIPALE","ℹ️ INFO SISTEMA BIBLIOTECARIO"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA","\xF0\x9F\x8F\xA6 BIBLIOTECA LETTERE"),array("\xF0\x9F\x8F\xA6 SALA LETTURA WURTH","\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA"),array("\xF0\x9F\x8F\xA6 EMEROTECA ARCH","\xF0\x9F\x8F\xA6 BIBLIOTECA CLA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA FIS CHIM ARCHIRAFI","\xF0\x9F\x8F\xA6 BIBLIOTECA DICAM"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA IDRAULICA","\xF0\x9F\x8F\xA6 BIBLIOTECA GEOTECNICA"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA CHIMICA ED.6","\xF0\x9F\x8F\xA6 BIBLIOTECA ED.9 2° PIANO"),array("\xF0\x9F\x8F\xA6 BIBLIOTECA ARCHITETTURA (ED.8)")),
 			 'resize_keyboard' => true
 		)
 	);
@@ -8218,7 +8218,7 @@ elseif(strpos($text, "/infosisbiblio") === 0 || $text == "ℹ️ INFO SISTEMA BI
 		 	'chat_id' => $chatId, 
 		 	'text' => "Per le info sui servizi bibliotecari visita http://www.unipa.it/biblioteche/Formazione-degli-utenti-corsi-guide-e-tutorial/\n\nPer accedere al catalogo bibliografico online visita http://aleph22.unipa.it:8991/F", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -8263,7 +8263,7 @@ elseif(strpos($text, "/biblioing") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Ven dalle 8.30 alle 22\n\nDa Settembre a Luglio\n\nℹ️ Info Utili\n\nPotete richiedere il rinnovo dei libri in scadenza mandando una e-mail a bibling@unipa.it oppure chiamando il numero 091/23862001\n\nPer visualizzare i posti attualmente disponibili nella Sala clicca sul link sotto ⤵\n\nhttp://enusweb.unipa.it/enus_distroweb/politecnico/BINGE/enus_new/mappa.php", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("📘 POSTI DISPONIBILI SALA ROSSA BIB ING"),array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("📘 POSTI DISPONIBILI SALA ROSSA BIB ING"),array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -8327,7 +8327,7 @@ elseif(strpos($text, "/postidisp") === 0 || $text == "📘 POSTI DISPONIBILI SAL
 		 	'chat_id' => $chatId, 
 		 	'text' => "Per prenotare un posto in sala rossa o per vedere quelli disponibili vedi il link sotto\n\nhttp://biblioing.unipa.it:8080/engine/BookingEngine", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x8F\xA6 BIBLIOTECA CENTR. INGEGNERIA"),array("📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -8390,7 +8390,7 @@ elseif(strpos($text, "/biblioing") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova accanto la Biblioteca di Geotecnica sotto il primo portico dell'Ed.8\n\n\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Gio dalle 8.30 alle 17\n\nVen dalle 8.30 alle 13:30\n\nDa Settembre a Luglio", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -8453,7 +8453,7 @@ elseif(strpos($text, "/bibliodidra") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOT
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Gio dalle 8.30 alle 17\n\nVen dalle 8.30 alle 13:30\n\nDa Settembre a Luglio\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -8517,7 +8517,7 @@ elseif(strpos($text, "/bibliogeo") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova presso l'Edificio 8 sotto il primo portico (posizione precisa sotto)\n\n\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Ven dalle 8:30 alle 17:00\n\nDa Settembre a Luglio\n\nℹ️ Info Utili\n\n\xF0\x9F\x95\x92 Orario Esercizio mesi di Luglio e Agosto: dal Lunedì al Venerdì 8:30 - 14:30\n\n📌 Chiusura: dal 8 al 26 agosto 2016 e dal 23 dicembre 2016 al 1° gennaio 2017", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -8580,7 +8580,7 @@ elseif(strpos($text, "/biblioched6") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOT
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova presso l'Edificio 6 ingresso Dip.Chimica e Imp.Nucleari (posizione precisa sotto)\n\n\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Gio dalle 8:30 alle 13:30\n\nDa Settembre a Luglio\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -8643,7 +8643,7 @@ elseif(strpos($text, "/biblioed9") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova al secondo piano dell'Edificio 9 salendo dalle scale di SX (posizione precisa sotto)\n\n\xF0\x9F\x95\x92 Orari Esercizio:\n\nLun-Ven dalle 8:30 alle 13:30\n\nDa Settembre a Luglio\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -8706,7 +8706,7 @@ elseif(strpos($text, "/bibliolettere") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLI
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova dentro l'Edificio 12 (Sotto la posizione precisa)\n\n🕒 Orari Esercizio\n\nLun-Gio dalle 8.30 alle 17\nVen dalle 8:30 alle 13:30\n\nℹ️ Info Utili\n\nChiusura dall' 8 al 21 agosto 2016 e dal 23 dicembre 2016 al 1° gennaio 2017", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -8769,7 +8769,7 @@ elseif(strpos($text, "/salletwurth") === 0 || $text == "\xF0\x9F\x8F\xA6 SALA LE
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova dietro l'Edificio 12 (Sotto la posizione precisa)\n\n🕒 Orari Esercizio\n\nLun-Ven dalle 09:00 alle 22:00\n\nℹ️ Info Utili\n\nChiusura dall' 8 al 21 agosto 2016 e dal 23 dicembre 2016 al 1° gennaio 2017\n\n\xF0\x9F\x93\x9E Contatti:\n\nTel +39.09123899239 / 95418 (front-office)\n\nTel2. +39.09123899241 / 99243 (servizio dd)\n\nbiblioteca.scienzeumanistiche@unipa.it", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -8831,7 +8831,7 @@ elseif(strpos($text, "/biblioarc") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova dentro l'Edificio 14 al 2° Piano (Sotto la posizione)\n\n🕒 Orari Esercizio\n\nLun-Gio dalle 08:30 alle 17:00\nVen dalle 08:30 alle 15:00\n\nℹ️ Info Utili\n\nChiusura dal 12 al 21 agosto 2016; dal 23 dicembre 2016 al 1° gennaio 2017\nOrario mesi di Luglio e Agosto: dal lunedì al venerdì 8.30 - 14.30\n\n\xF0\x9F\x93\x9E Tel 091590454\n\n✉️ Email: biblioteca.architettura@unipa.it", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -8894,7 +8894,7 @@ elseif(strpos($text, "/emerotecaarc") === 0 || $text == "\xF0\x9F\x8F\xA6 EMEROT
 		 	'chat_id' => $chatId, 
 		 	'text' => "L’emeroteca si trova dentro l'Edificio 14 al 3° Piano (Sotto la posizione) e offre ampi e luminosi spazi per lo studio oltre a mettere a disposizione dell’utenza 16 postazioni PC per la ricerca bibliografica\n\n🕒 Orari Esercizio:\n\nLun-Gio dalle 08:30 alle 17:00\nVen dalle 08:30 alle 14:30\n\nℹ️ Info Utili\n\nChiusura dal 12 al 21 agosto 2016; dal 23 dicembre 2016 al 1° gennaio 2017\nOrario mesi di Luglio e Agosto: dal lunedì al venerdì 8.30 - 14.30\n\n\xF0\x9F\x93\x9E Tel 091590454\n\n✉️ Email: biblioteca.architettura@unipa.it", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -8957,7 +8957,7 @@ elseif(strpos($text, "/bibliocla") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIOTEC
 		 	'chat_id' => $chatId, 
 		 	'text' => "La Biblioteca del CLA si trova a Piazza S.Antonino,1 (Sotto la posizione precisa) e offre ampi e luminosi spazi per lo studio\n\n\xF0\x9F\x93\x9E Tel 0916169615 - 09123899263\n\n✉️ Email: cla@unipa.it", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -9020,7 +9020,7 @@ elseif(strpos($text, "/biblioarchirafi") === 0 || $text == "\xF0\x9F\x8F\xA6 BIB
 		 	'chat_id' => $chatId, 
 		 	'text' => "La Biblioteca di Fisica e Chimica si trova a Via Archirafi,36 al 1° Piano (Sotto la posizione precisa) e offre ampi e luminosi spazi per lo studio\n\n🕒 Orari Esercizio:\n\nLun-Gio MATTINA dalle 08:30 alle 13:30 - POMERIGGIO dalle 14:30 alle 17:00\nVen dalle 08:30 alle 13:30\n\nℹ️ Info Utili\n\nChiusura dal 3 giugno 2016; dall' 8 al 21 agosto 2016; dal 23 dicembre 2016 al 3 gennaio 2017\nOrario mesi di Luglio e Agosto: dal lunedì al giovedì 8:30 - 14:30  venerdì 8:30- 14:00\n\n\xF0\x9F\x93\x9E Tel 09123862101 / 62108\n\n✉️ Email: biblioteca.fisicachimica@unipa.it ", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -9083,7 +9083,7 @@ elseif(strpos($text, "/biblioexarch") === 0 || $text == "\xF0\x9F\x8F\xA6 BIBLIO
 		 	'chat_id' => $chatId, 
 		 	'text' => "La ".$text." si trova presso l'Edificio 8 al Piano Terra sotto il porticato (Sotto la posizione precisa) e offre ampi e luminosi spazi per lo studio\n\n🕒 Orari Esercizio:\n\nLun-Gio dalle 08:30 alle 17:00\nVen dalle 08:30 alle 13:30\n\nℹ️ Info Utili\n\nChiusura dal 12 al 26 agosto 2016; dal 23 dicembre 2016 al 5 gennaio 2017\nOrario mesi di Luglio e Agosto: dal lunedì al venerdì 8.30-14.30\n\n\xF0\x9F\x93\x9E Tel 09123896204 / 62108\n\n✉️ Email: biblioteca.architettura@unipa.it", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","📖 BIBLIO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","📖 BIBLIO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -9163,7 +9163,7 @@ elseif(strpos($text, "/mappa") === 0 || $text == "\xF0\x9F\x8C\x8E MAPPA" || $te
 		 'chat_id' => $chatId, 
 		 'text' => "⚠️ Sotto trovi anche le mappe di Ingegneria e Architettura", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🌍 MAPPA POLIDIDATTICO"),array("🌍 MAPPA ARCHITETTURA","🌍 MAPPA INGEGNERIA"),array("🌍 MAPPA VIA ARCHIRAFI","🌍 MAPPA VIA GIUFFRE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🌍 MAPPA POLIDIDATTICO"),array("🌍 MAPPA ARCHITETTURA","🌍 MAPPA INGEGNERIA"),array("🌍 MAPPA VIA ARCHIRAFI","🌍 MAPPA VIA GIUFFRE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -9495,7 +9495,7 @@ elseif(strpos($text, "/cercaaula") === 0 || $text == "🔍 CERCA AULA" || $text 
 		 'chat_id' => $chatId, 
 		 'text' => "🏪 Menu Aule 🏪\n\n".$firstname.", come si chiama l'aula che cerchi?\n\n\xE2\x9A\xA0 ES. F170", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -12639,7 +12639,7 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Menu Professori \xF0\x9F\x91\xA5\n\n".$firstname.", qual'è il Cognome del Prof che cerchi?\n\n\xE2\x9A\xA0 ES. Prof NomeProf", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xE2\x9A\xA0 SEGNALA PROF"),array())
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xE2\x9A\xA0 SEGNALA PROF"),array())
 			,'resize_keyboard' => true
 		)
 	);
@@ -12686,7 +12686,7 @@ elseif(strpos($text, "/professori") === 0 || $text == "\xF0\x9F\x91\xA4 INFO PRO
 		 'chat_id' => $chatId, 
 		 'text' => "Se il prof che cerchi non è stato trovato contatta @gabrieledellaria riportando Nome,Cognome e Facoltà del Prof da inserire", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x91\xA4 INFO PROF"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x91\xA4 INFO PROF"))
 			 ,'resize_keyboard' => true
 			)
 		);
@@ -12730,7 +12730,7 @@ elseif(strpos($text, "/profburlon") === 0 || $text == "Burlon" || $text == "burl
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Riccardo \n\xF0\x9F\x91\xA4 Cognome: Burlon \n\xF0\x9F\x8F\xA6 Ufficio: Ed.6 ", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
 			 ,'resize_keyboard' => true
 			)
 		);
@@ -12773,7 +12773,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Marco \n\xF0\x9F\x91\xA4 Cognome: La Cascia \n\xF0\x9F\x8F\xA6 Ufficio: Ed.8\n📝 Ricevimento: Lunedì dalle 15:00 alle 16:30 presso Ed. 6, III piano\n✉️ Contatti: marco.lacascia@unipa.it\nNote:\n\nSi consiglia di inviare una mail a marco.lacascia@unipa.it il giorno prima per avere conferma che il ricevimento si svolgerà regolarmente", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
 			 ,'resize_keyboard' => true
 			)
 		);
@@ -12816,7 +12816,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Philippe \n\xF0\x9F\x91\xA4 Cognome: Daverio \n\xF0\x9F\x8F\xA6 Ufficio: Ed.14\n📝 Ricevimento: Lunedì dalle 12:00 alle 17:00 presso aula 4.4 (Edificio 14)\n✉️ Contatti: philippe.daverio@unipa.it", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
 			 ,'resize_keyboard' => true
 			)
 		);
@@ -12859,7 +12859,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Elisabetta \n\xF0\x9F\x91\xA4 Cognome: Di Giovanni \n\xF0\x9F\x8F\xA6 Ufficio: Ed.15\n📝 Ricevimento: Martedì dalle 09:00 alle 11:00 presso Edificio 15, 7° piano\n✉️ Contatti: elisabetta.digiovanni@unipa.it", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
 			 ,'resize_keyboard' => true
 			)
 		);
@@ -12902,7 +12902,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Laura \n\n\xF0\x9F\x91\xA4 Cognome: Giarrè \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.9\n\n📝 Ricevimento: Martedì dalle 18:00 alle 19:00 presso DEIM - Edificio 9\n\nMercoledì dalle 8:30 alle 10:30 presso DEIM - Edificio 9\n\n✉️ Contatti: laura.giarre@unipa.it", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
 			 ,'resize_keyboard' => true
 			)
 		);
@@ -12945,7 +12945,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Adriano \n\n\xF0\x9F\x91\xA4 Cognome: Fagiolini \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.10\n\n📝 Ricevimento: Giovedì dalle 9:30 alle 12:30 presso Viale delle Scienze, Edificio 10\n\n✉️ Contatti: adriano.fagiolini@unipa.it - +3909123863613", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
 			 ,'resize_keyboard' => true
 			)
 		);
@@ -12988,7 +12988,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Giorgio \n\n\xF0\x9F\x91\xA4 Cognome: Vassallo \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Martedì dalle 11:00 alle 13:00 presso Viale delle Scienze, Ed. 6 terzo piano\n\n✉️ Contatti: giorgio.vassallo@unipa.it - +3909123862637", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
 			 ,'resize_keyboard' => true
 			)
 		);
@@ -13031,7 +13031,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Liliana \n\n\xF0\x9F\x91\xA4 Cognome: Lo Presti \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Martedì dalle 15:00 alle 18:00 presso Ufficio del docente (DIID, V.le delle Scienze Ed.6 III piano, stanza n. 7)\n\n✉️ Contatti: liliana.lopresti@unipa.it - +3909123899526", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
 			 ,'resize_keyboard' => true
 			)
 		);
@@ -13075,7 +13075,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Rosario \n\n\xF0\x9F\x91\xA4 Cognome: Sorbello \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.6\n\n📝 Ricevimento: Lunedì dalle 11:00 alle 13:00 presso Stanza del Professore, Edificio 6, terzo piano\n\n✉️ Contatti: rosario.sorbello@unipa.it - +3909123862635\n\nE' consigliabile contattarlo via WhatsApp", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
 			 ,'resize_keyboard' => true
 			)
 		);
@@ -13119,7 +13119,7 @@ elseif(strpos($text, "/proflacascia") === 0 || $text == "La Cascia" || $text == 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x91\xA4 Nome: Isodiana \n\n\xF0\x9F\x91\xA4 Cognome: Crupi \n\n\xF0\x9F\x8F\xA6 Ufficio: Ed.9\n\n📝 Ricevimento: Martedì dalle 17:00 alle 19:00 presso Viale delle Scienze, Ed. 9, 2° Piano, Stanza U218\n\n✉️ Contatti: isodiana.crupi@unipa.it", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
 			 ,'resize_keyboard' => true
 			)
 		);
@@ -13167,7 +13167,7 @@ elseif(strpos($text, "/ersu") === 0 || $text == "\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\
 					Mercoledì dalle ore 15:30 alle ore 17:30\n\n\xE2\x9A\xA0 INFO\n\nPer informazioni sugli uffici, sullo stato degli atti e dei procedimenti amministrativi, nonché su ogni attività che riguardi l’Ente, inviare email a info@ersupalermo.gov.it.
 					Per informazioni riguardanti le borse e i servizi erogati dall’Ente (borse di studio, servizio abitativo, servizio ristorazione, ecc…), inviare email a borse@ersupalermo.gov.it oppure compilare il modulo online disponibile nella pagina personale dei “Servizi ERSU” del portale studenti dell’UNIPA.", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🌍 MAPPA ERSU"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","🌍 MAPPA ERSU"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -13295,7 +13295,7 @@ elseif(strpos($text, "/dipartimenti") === 0 || $text == "\xF0\x9F\x8F\xA2 DIPART
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 MENU DIPARTIMENTI \xF0\x9F\x91\xA5\n\n".$firstname.", quale Dipartimento cerchi?", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA6 DIID (EX DICGIM)"),array("\xF0\x9F\x8F\xA6 DICAM","\xF0\x9F\x8F\xA6 DIP ARCHITETTURA"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x8F\xA6 DIID (EX DICGIM)"),array("\xF0\x9F\x8F\xA6 DICAM","\xF0\x9F\x8F\xA6 DIP ARCHITETTURA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -13344,7 +13344,7 @@ elseif(strpos($text, "/dicgim") === 0 || $text == "\xF0\x9F\x8F\xA6 DIID (EX DIC
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova dietro l'Edificio 6 (Sotto la posizione precisa)\n\n☎️ Tel. 09123867503\n\n✉️ Email: dipartimento.dicgim@unipa.it", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA2 DIPART"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x8F\xA2 DIPART"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -13407,7 +13407,7 @@ elseif(strpos($text, "/dicam") === 0 || $text == "\xF0\x9F\x8F\xA6 DICAM" || $te
 		 	'chat_id' => $chatId, 
 		 	'text' => "Si trova dietro l'Edificio 8 (Sotto la posizione precisa)\n\n☎️ Tel. 09123867503\n\n✉️ Email: dipartimento.dicam@unipa.it", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA2 DIPART"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x8F\xA2 DIPART"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -13470,7 +13470,7 @@ elseif(strpos($text, "/diparch") === 0 || $text == "\xF0\x9F\x8F\xA6 DIP ARCHITE
 		 	'chat_id' => $chatId, 
 		 	'text' => "La Sede Amministrativa si trova presso l'Edificio 8, scala F4 - 1° Piano (Sotto la posizione precisa)\n\nLa Sede Centrale si trova presso l'Edificio 14\n\n☎️ Tel. 091.23895320\n\n✉️ Email: dipartimento.architettura@unipa.it", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x8F\xA2 DIPART"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x8F\xA2 DIPART"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -13535,7 +13535,7 @@ elseif(strpos($text, "/cla") === 0 || $text == "\xF0\x9F\x93\x96 CLA \xF0\x9F\x8
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7 \n\nSi trova in Piazza S. Antonino, 1 90134 PALERMO (PA)\n\n\xF0\x9F\x93\x9E CONTATTI \n\n+39 0916169615 - +39 09123899263 cla@unipa.it", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE"))
+				 "keyboard"=> array(array("MENU PRINCIPALE"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -13599,7 +13599,7 @@ elseif(strpos($text, "/macchcaffe") === 0 || $text == "\xE2\x98\x95 CAFFE" || $t
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8F\xA6 MENU MACCHINETTE CAFFE' \xF0\x9F\x91\xA5\n\n".$firstname.", seleziona fra le opzioni sotto", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xE2\x98\x95 MACCH. ED.8"),array("\xE2\x98\x95 MACCH. ED.9","\xE2\x98\x95 MACCH. ED.6"),array("\xE2\x98\x95 MACCH. ED.12","\xE2\x98\x95 MACCH. ED.13"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xE2\x98\x95 MACCH. ED.8"),array("\xE2\x98\x95 MACCH. ED.9","\xE2\x98\x95 MACCH. ED.6"),array("\xE2\x98\x95 MACCH. ED.12","\xE2\x98\x95 MACCH. ED.13"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -13753,7 +13753,7 @@ elseif(strpos($text, "/mensa") === 0 || $text == "\xF0\x9F\x8D\x9D MENSA" || $te
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x8D\x9D MENU MENSA\n\n".$firstname.", dove vuoi andare a mangiare?\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","ℹ️ INFO RISTORAZIONE"),array("\xF0\x9F\x8D\x9D MENSA SANTI ROMANO","\xF0\x9F\x8D\x9D MENSA CIVICO"),array("\xF0\x9F\x8D\x9D MENSA S.SAVERIO"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","ℹ️ INFO RISTORAZIONE"),array("\xF0\x9F\x8D\x9D MENSA SANTI ROMANO","\xF0\x9F\x8D\x9D MENSA CIVICO"),array("\xF0\x9F\x8D\x9D MENSA S.SAVERIO"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -13904,7 +13904,7 @@ elseif(strpos($text, "/copisterie") === 0 || $text == "\xF0\x9F\x93\x84 COPIST" 
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x93\x84 COPISTERIE\n\n".$firstname.", ecco le copisterie che fanno per te\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA AGORA"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO","\xF0\x9F\x93\x84 COPISTERIA ARCH"),array("\xF0\x9F\x93\x84 COPISTERIA DA.MI.RA"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING."),array("\xF0\x9F\x93\x84 COPISTERIA LETTERE","\xF0\x9F\x93\x84 COPISTERIA AGORA"),array("\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO","\xF0\x9F\x93\x84 COPISTERIA ARCH"),array("\xF0\x9F\x93\x84 COPISTERIA DA.MI.RA"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -13950,7 +13950,7 @@ elseif(strpos($text, "/coping") === 0 || $text == "\xF0\x9F\x93\x84 LA NUOVA COP
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x93\x84 LA NUOVA COPISTERIA ING.\n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08.30 alle 19.00\n\n📞 Contatti: +39 091.7098720\n\n💻 Sito Web: www.lanuovacopisteria.com", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -14014,7 +14014,7 @@ elseif(strpos($text, "/copbio") === 0 || $text == "\xF0\x9F\x93\x84 LA NUOVA COP
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x93\x84 LA NUOVA COPISTERIA BIO\n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08.30 alle 19.00\n\n📞 Contatti: +39 091.6526000\n\n💻 Sito Web: www.lanuovacopisteria.com", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -14078,7 +14078,7 @@ elseif(strpos($text, "/coplet") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA L
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x93\x84 COPISTERIA LETTERE \n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08.30 alle 19.00\n\nSab dalle 09:00 - 13:00\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -14141,7 +14141,7 @@ elseif(strpos($text, "/copagorà") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERI
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x93\x84 COPISTERIA AGORÀ \n\n🕒 Orari Esercizio\n\nLun-Ven dalle 08.30 alle 19.00\n\nSab dalle 09:00 - 13:00\n\n", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -14205,7 +14205,7 @@ elseif(strpos($text, "/coparch") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERIA 
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x93\x84 COPISTERIA ARCHITETTURA \n\nSi trova di fronte l'ingresso dell'Edificio 14\n\n🕒 Orario Esercizio: 08:00 - 19:00", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -14269,7 +14269,7 @@ elseif(strpos($text, "/copdamira") === 0 || $text == "\xF0\x9F\x93\x84 COPISTERI
 		 	'chat_id' => $chatId, 
 		 	'text' => $text."\n\n🕒 Orari Esercizio\n\nDa Lunedì a Venerdì dalle 8.00 alle 13:30 e dalle 15:00 alle 19:30\n\nSabato dalle 8:00 alle 13:00\n\nNota: nel mese di agosto dalle 8:30 alle 13 tutti i giorni\n\n📞 Contatti:  091421125\n\n💻 Sito Web: http://www.damira.net/", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x93\x84 COPIST"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -14334,7 +14334,7 @@ elseif(strpos($text, "/bagni") === 0 || $text == "🚽 BAGNI" || $text == "🚽 
 		 	'chat_id' => $chatId, 
 		 	'text' => "⚠️ Scegli fra le opzioni sotto", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚽 BAGNI ED.8"),array("🚽 BAGNI ED.9","🚽 BAGNI ED.6 CHIMICA","🚽 BAGNI ED.6 DINFO"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🚽 BAGNI ED.8"),array("🚽 BAGNI ED.9","🚽 BAGNI ED.6 CHIMICA","🚽 BAGNI ED.6 DINFO"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -14378,7 +14378,7 @@ elseif(strpos($text, "/bagnied8") === 0 || $text == "🚽 BAGNI ED.8" || $text =
 		 	'chat_id' => $chatId, 
 		 	'text' => "I ".$text." sono al 2° Piano accanto al corridoio aperto che porta alla F120 e al 3° Piano vicino ai tavolini studio", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚽 BAGNI"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🚽 BAGNI"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -14422,7 +14422,7 @@ elseif(strpos($text, "/bagnied9") === 0 || $text == "🚽 BAGNI ED.9" || $text =
 		 	'chat_id' => $chatId, 
 		 	'text' => "I ".$text." sono a Piano Terra vicino alle scale", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚽 BAGNI"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🚽 BAGNI"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -14466,7 +14466,7 @@ elseif(strpos($text, "/bagnied6ch") === 0 || $text == "🚽 BAGNI ED.6 CHIMICA" 
 		 	'chat_id' => $chatId, 
 		 	'text' => "I ".$text." sono al Piano Terra vicino all'Aula B010", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚽 BAGNI"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🚽 BAGNI"))
 				,'resize_keyboard' => true
 			)
 		);
@@ -14510,7 +14510,7 @@ elseif(strpos($text, "/bagnied6dinfo") === 0 || $text == "🚽 BAGNI ED.6 DINFO"
 		 	'chat_id' => $chatId, 
 		 	'text' => "I ".$text." al 2° Piano vicino alla A220 e al 3° Piano vicino alla A320", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("🏠 MENU PRINCIPALE","🚽 BAGNI"))
+				 "keyboard"=> array(array("MENU PRINCIPALE","🚽 BAGNI"))
 				,'resize_keyboard' => true
 			)
 		);
