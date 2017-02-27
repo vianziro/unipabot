@@ -2449,7 +2449,7 @@ elseif(strpos($text, "/matascelta") === 0 || $text == "\xF0\x9F\x93\x9A MATERIE 
 	
 		$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "📖 Le materie a scelta che ti consiglio sono:\n\n📓 Gestione della Produzione Industriale (ING)\n\n📓 Biologia della Riproduzione ed Etologia (SCUOLA SCIENZE DI BASE)\n\n📓 Ecologia degli ambienti marini costieri  (SCUOLA SCIENZE DI BASE)\n\n📓 Storia della Chimica (SCUOLA SCIENZE DI BASE)\n\n📓 Metodologie Biochimiche (SCUOLA SCIENZE DI BASE)\n\n📓 Biologia riproduttiva e dello sviluppo dei vegetali (SCUOLA SCIENZE DI BASE)\n\nPalinologia e Paleobotanica A. Troia (SCUOLA SCIENZE DI BASE)\n\n📓 Metodi di data processing per la vulcanologia e la geochimica (SCUOLA SCIENZE DI BASE)\n\n📓 Cambiamenti climatici e record geologico (SCUOLA SCIENZE DI BASE)\n\n", 
+		 'text' => "📖 Le materie a scelta che ti consiglio sono:\n\n📓 Gestione della Produzione Industriale (ING GESTIONALE)\n\n📓 Formazione e Sviluppo delle Risorse Umane (ING GESTIONALE)\n\n📓 Biologia della Riproduzione ed Etologia (SCUOLA SCIENZE DI BASE)\n\n📓 Ecologia degli ambienti marini costieri  (SCUOLA SCIENZE DI BASE)\n\n📓 Storia della Chimica (SCUOLA SCIENZE DI BASE)\n\n📓 Metodologie Biochimiche (SCUOLA SCIENZE DI BASE)\n\n📓 Biologia riproduttiva e dello sviluppo dei vegetali (SCUOLA SCIENZE DI BASE)\n\nPalinologia e Paleobotanica A. Troia (SCUOLA SCIENZE DI BASE)\n\n📓 Metodi di data processing per la vulcanologia e la geochimica (SCUOLA SCIENZE DI BASE)\n\n📓 Cambiamenti climatici e record geologico (SCUOLA SCIENZE DI BASE)\n\n", 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("MENU PRINCIPALE"))
 			,'resize_keyboard' => true
