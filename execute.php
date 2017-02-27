@@ -135,7 +135,8 @@ if(strpos($text, "/menuprincipale") === 0 || $text=="🏠 MENU PRINCIPALE" || $t
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "▶️ MENU PRINCIPALE ◀️\n\n ".$firstname." cosa vuoi fare?",
+		 'text' => "#⃣ *MENU PRINCIPALE* \n\nCosa che vuoi fare?",
+		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📱 #Unipa","📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT"))
 			,'resize_keyboard' => true
@@ -3672,7 +3673,7 @@ elseif(strpos($text, "/mod3inggest") === 0 || $text == "📄 MODULO III ING GEST
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'document' => new CURLFile(realpath("./orariolezioni/inggest/noLGST2.pdf")), 
+						'document' => "http://offweb.unipa.it/offweb/calendari?cc=2094&tc=l", 
 						'caption' => $text);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
