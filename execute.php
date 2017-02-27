@@ -2444,7 +2444,30 @@ elseif(strpos($text, "/matascelta") === 0 || $text == "\xF0\x9F\x93\x9A MATERIE 
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "📖 Le materie a scelta che ti consiglio sono:\n\n📓 Gestione della Produzione Industriale (ING)\n\n📓 Biologia della Riproduzione ed Etologia (SCUOLA SCIENZE DI BASE)\n\n📓 Ecologia degli ambienti marini costieri  (SCUOLA SCIENZE DI BASE)\n\n📓 Storia della Chimica (SCUOLA SCIENZE DI BASE)\n\n📓 Metodologie Biochimiche (SCUOLA SCIENZE DI BASE)\n\n📓 Biologia riproduttiva e dello sviluppo dei vegetali (SCUOLA SCIENZE DI BASE)\n\nPalinologia e Paleobotanica A. Troia (SCUOLA SCIENZE DI BASE)\n\n📓 Metodi di data processing per la vulcanologia e la geochimica (SCUOLA SCIENZE DI BASE)\n\n📓 Cambiamenti climatici e record geologico (SCUOLA SCIENZE DI BASE)\n\n";
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "📖 Le materie a scelta che ti consiglio sono:\n\n📓 Gestione della Produzione Industriale (ING)\n\n📓 Biologia della Riproduzione ed Etologia (SCUOLA SCIENZE DI BASE)\n\n📓 Ecologia degli ambienti marini costieri  (SCUOLA SCIENZE DI BASE)\n\n📓 Storia della Chimica (SCUOLA SCIENZE DI BASE)\n\n📓 Metodologie Biochimiche (SCUOLA SCIENZE DI BASE)\n\n📓 Biologia riproduttiva e dello sviluppo dei vegetali (SCUOLA SCIENZE DI BASE)\n\nPalinologia e Paleobotanica A. Troia (SCUOLA SCIENZE DI BASE)\n\n📓 Metodi di data processing per la vulcanologia e la geochimica (SCUOLA SCIENZE DI BASE)\n\n📓 Cambiamenti climatici e record geologico (SCUOLA SCIENZE DI BASE)\n\n", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
+			,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
 	}
 
 //TIROCINIO	
@@ -2465,8 +2488,32 @@ elseif(strpos($text, "/tirocinio") === 0 || $text == "\xF0\x9F\x93\x91 TIROCINIO
 		// read curl response
 		$output = curl_exec($ch);
 		
-		$response = "ℹ️ Per le info sul Tirocinio visita http://www.stage.unipa.it/\n\n📜 Per conoscere le offerte delle aziende visita http://aziende.unipa.it/searches\n\nPer richiedere convenzioni per Tirocini presso Enti/Aziende nazionali http://www.unipa.it/amministrazione/area2/set17/Accreditamento-Aziende/procedura_aziende_nazionali.html";
-	}
+		$botToken="240736726:AAHGVsRYjCUw8LZOcs7BD9L9c_vcVY1xBIs";
+		$method='sendMessage';
+	
+		$postField = array(
+		 'chat_id' => $chatId, 
+		 'text' => "ℹ️ Per le info sul Tirocinio visita http://www.stage.unipa.it/\n\n📜 Per conoscere le offerte delle aziende visita http://aziende.unipa.it/searches\n\nPer richiedere convenzioni per Tirocini presso Enti/Aziende nazionali http://www.unipa.it/amministrazione/area2/set17/Accreditamento-Aziende/procedura_aziende_nazionali.html", 
+		 'reply_markup' => array(
+			 "keyboard"=> array(array("MENU PRINCIPALE"))
+			,'resize_keyboard' => true
+			)
+		);
+	
+		$handle=curl_init();
+		curl_setopt($handle,CURLOPT_URL,"https://api.telegram.org/bot$botToken/$method");
+		curl_setopt($handle,CURLOPT_HTTPHEADER,array('Content-type: application/json'));
+		curl_setopt($handle,CURLOPT_POST,1);
+		curl_setopt($handle,CURLOPT_POSTFIELDS,JSON_ENCODE($postField));
+		curl_setopt($handle,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($handle,CURLOPT_SSL_VERIFYPEER,false);
+		curl_setopt($handle,CURLOPT_ENCODING,1);
+		$dati=json_decode( curl_exec($handle) ,true);
+		curl_close($handle);
+	
+		var_dump($dati);
+
+}
 
 // AULETTE ASSOCIAZIONI
 
