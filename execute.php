@@ -3360,7 +3360,7 @@ elseif(strpos($text, "/orariolezing") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "⭕️ Scegli Corso di Laurea\n\n*Scegli fra le opzioni sotto*\n\n", 
+		 'text' => "⭕️ *Scegli Corso di Laurea*\n\nScegli fra le opzioni sotto\n\n", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO ING INFORMATICA","\xF0\x9F\x95\x92 ORARIO ING GESTIONALE"),array("\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA","\xF0\x9F\x95\x92 ORARIO ING MECCANICA"),array("\xF0\x9F\x95\x92 ORARIO ING ENERGIA","\xF0\x9F\x95\x92 ORARIO ING CHIMICA"),array("\xF0\x9F\x95\x92 ORARIO ING AMBIENTALE","\xF0\x9F\x95\x92 ORARIO ING CIV-EDI"),array("\xF0\x9F\x95\x92 ORARIO ING GEST INF","\xF0\x9F\x95\x92 ORARIO ING CIBERN"),array("\xF0\x9F\x95\x92 ORARIO ING BIOMEDICA"))
@@ -5090,7 +5090,8 @@ elseif(strpos($text, "/orariolezarch") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
+		 'text' => "⭕️ *Scegli Corso di Laurea*\n\nScegli fra le opzioni sotto\n\n", 
+		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO ARCHITETTURA","\xF0\x9F\x95\x92 ORARIO DIS. INDUSTRIALE","\xF0\x9F\x95\x92 ORARIO SPTUPA"))
 			,'resize_keyboard' => true
@@ -5136,7 +5137,8 @@ elseif(strpos($text, "/arch") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ARCHITE
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
+		 'text' => "*Scegli fra le opzioni sotto*", 
+		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("📄 I SEMESTRE ARCHITETTURA"))
 			,'resize_keyboard' => true
@@ -5415,7 +5417,8 @@ elseif(strpos($text, "/orariolezeco") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "⭕️ *Scegli Corso di Laurea*\n\nScegli fra le opzioni sotto\n\n", 
+		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO SC TURISMO","\xF0\x9F\x95\x92 ORARIO STATISTICA"),array("\xF0\x9F\x95\x92 ORARIO ECO AZIENDALE","\xF0\x9F\x95\x92 ORARIO ECO FINANZA","\xF0\x9F\x95\x92 ORARIO ECO SV ECONOMICO"))
 			,'resize_keyboard' => true
@@ -5867,7 +5870,8 @@ elseif(strpos($text, "/orariolezscuma") === 0 || $text == "\xF0\x9F\x95\x92 ORAR
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "⭕️ *Scegli Corso di Laurea*\n\nScegli fra le opzioni sotto\n\n", 
+		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO PSICOLOGIA","\xF0\x9F\x95\x92 ORARIO SC COM MEDIA"),array("\xF0\x9F\x95\x92 ORARIO SC COM CULT","\xF0\x9F\x95\x92 ORARIO SC EDU"))
 			,'resize_keyboard' => true
@@ -6240,7 +6244,8 @@ elseif(strpos($text, "/orariolezscbase") === 0 || $text == "\xF0\x9F\x95\x92 ORA
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli Corso di Laurea \xE2\x9A\xA0\n\nScegli fra le opzioni sotto\n\n", 
+		 'text' => "⭕️ *Scegli Corso di Laurea*\n\nScegli fra le opzioni sotto\n\n", 
+		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
 			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO FARMACIA"))
 			,'resize_keyboard' => true
