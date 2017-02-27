@@ -106,7 +106,7 @@ if(strpos($text, "/start") === 0 || $text=="\xF0\x9F\x94\xB4 START" || $text == 
 		 'chat_id' => $chatId
 		, 'text' => "\xF0\x9F\x91\x8B Ciao $firstname (@$username), benvenuto in Unipa Bot!\n\nℹ️ Comandi rapidi:\n\nAule - Trova Aula\nProf - Trova le info sul tuo prof\nBiblioteche - Trova le Biblioteche\nOrario Lezioni Tri - Trova l'orario lezioni dei corsi triennali\nOrario Lezioni Mag - Trova l'orario lezioni dei corsi magistrali"
 		, 'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📱 #Unipa","📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
+			 "keyboard"=> array(array("👤 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📱 #Unipa","📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
 			 'resize_keyboard' => true
 		)
 	);
@@ -138,7 +138,7 @@ if(strpos($text, "/menuprincipale") === 0 || $text=="MENU PRINCIPALE" || $text =
 		 'text' => "#⃣ *MENU PRINCIPALE* \n\nCosa che vuoi fare?",
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📱 #Unipa","📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT"))
+			 "keyboard"=> array(array("👤 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📱 #Unipa","📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -382,7 +382,7 @@ else if(strpos($text, "/eventiunipa") === 0 || $text == "↕ EVENTI" || $text ==
 		 	'chat_id' => $chatId, 
 		 	'text' => "Per conoscere tutti gli eventi che si terranno ad Unipa visita\n\nhttps://www.unipa.it/?lista=eventi&id=9e1c1205-d2c4-11e4-a2b8-005056010139", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
+				 "keyboard"=> array(array("👤 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
 			 'resize_keyboard' => true
 			)
 		);
@@ -428,7 +428,7 @@ else if(strpos($text, "/cmdrapidi") === 0 || $text == "🔧 CMD RAPIDI" || $text
 		 	'chat_id' => $chatId, 
 		 	'text' => "ℹ️ Comandi rapidi:\n\nAule - Trova Aula\n\nProf - Trova le info sul tuo prof\n\nBiblioteche - Trova le Biblioteche\n\nOrario Lezioni Tri - Trova l'orario lezioni dei corsi triennali\n\nOrario Lezioni Mag - Trova l'orario lezioni dei corsi magistrali", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
+				 "keyboard"=> array(array("👤 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
 			 'resize_keyboard' => true
 			)
 		);
@@ -494,7 +494,7 @@ elseif(strpos($text, "/news") === 0 || $text == "🖥 NEWS" || $text == "🖥 ne
 		 	'chat_id' => $chatId, 
 		 	'text' => "Digita @UnipaBot NEWS o vai direttamente al canale @UnipaBotCh", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
+				 "keyboard"=> array(array("👤 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
 			 'resize_keyboard' => true
 			)
 		);
@@ -538,7 +538,7 @@ elseif(strpos($text, "/info") === 0 || $text == "ℹ️ INFO BOT" || $text == "�
 		 	'chat_id' => $chatId, 
 		 	'text' => "✍ In Unipa Bot potrai trovare tutte le info necessarie per l'Università di Palermo\n\n👤 Credits: Questo bot è stato ideato e creato da Gabriele Dell'Aria (@gabrieledellaria)\n\nℹ Fonte Dati Principale: Portale Unipa - unipa.it\n\n🚌 Fonte Dati Autobus: OpenAmatBot - @openamatbot\n\n🚅 Fonte Dati Treni: Orario treni - @OrarioTreniBot\n\n⛈ Fonte Meteo: MeteOvunque - @meteovunque_bot\n\n⚠ Se hai suggerimenti contattami pure e sarò felice di accogliere i tuoi spunti", 
 		 	'reply_markup' => array(
-				"keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
+				"keyboard"=> array(array("👤 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
 			 'resize_keyboard' => true
 			)
 		);
@@ -2288,7 +2288,7 @@ elseif(strpos($text, "/barlet") === 0 || $text == "\xF0\x9F\x8D\x94 BAR LETTERE"
 
 
 // MENU STUDENTI
-elseif(strpos($text, "/menustudenti") === 0 || $text == "\xF0\x9F\x91\xA5 MENU STUDENTI" || $text == "\xF0\x9F\x91\xA5 menu studenti" )
+elseif(strpos($text, "/menustudenti") === 0 || $text == "👤 MENU STUDENTI" || $text == "👤 menu studenti" )
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -2359,7 +2359,7 @@ elseif(strpos($text, "/auleprenotate") === 0 || $text == "🏬 AULE ESAMI" || $t
 		 'chat_id' => $chatId, 
 		 'text' => "Le aule prenotate per gli esami o per le riunioni sono visualizzabili al seguente indirizzo:\n\nhttp://servizi.diid.unipa.it/aule/", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","👤 MENU STUDENTI"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -2407,7 +2407,7 @@ elseif(strpos($text, "/calcmedia") === 0 || $text == "📈 CALCOLO MEDIA" || $te
 					Esame 2: voto 25 – 6 Cfu.\n\n
 					Esame 3: voto 20 – 12 Cfu.\n\nSommando i crediti avremo un totale di 24 Cfu. La formula da applicare per ottenere la media ponderata è la seguente:\n\n [(30 x 6) + (25 x 6) + (20 x 12)] / 24 = (180 + 150 + 240) / 24 = 23,75.\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","👤 MENU STUDENTI"))
 			,'resize_keyboard' => true
 			)
 		);
@@ -2864,7 +2864,7 @@ elseif(strpos($text, "/caldid") === 0 || $text == "📄 CALENDARI DIDATTICI" || 
 		 'chat_id' => $chatId, 
 		 'text' => "❔ Quale Calendario Didattico vuoi?\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("📄 CAL DID POLITECNICA","📄 CAL DID SC UMANE"),array("📄 CAL DID SC GIURIDICHE","📄 CAL DID SC DI BASE"),array("📄 CAL DID SCUOLA MEDICINA"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","👤 MENU STUDENTI"),array("📄 CAL DID POLITECNICA","📄 CAL DID SC UMANE"),array("📄 CAL DID SC GIURIDICHE","📄 CAL DID SC DI BASE"),array("📄 CAL DID SCUOLA MEDICINA"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3317,7 +3317,7 @@ elseif(strpos($text, "/orariolezionitri") === 0 || $text == "\xF0\x9F\x95\x92 OR
 		 'chat_id' => $chatId, 
 		 'text' => "\xF0\x9F\x95\x92 SEZIONE ORARIO LEZIONI \xF0\x9F\x95\x92\n\nScegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO","\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC DI BASE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","👤 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING","\xF0\x9F\x95\x92 ORARIO CORSI ARCH"),array("\xF0\x9F\x95\x92 ORARIO CORSI ECO","\xF0\x9F\x95\x92 ORARIO CORSI SC UMANE"),array("\xF0\x9F\x95\x92 ORARIO CORSI SC DI BASE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -6447,7 +6447,7 @@ elseif(strpos($text, "/orariolezionitri") === 0 || $text == "\xF0\x9F\x95\x92 OR
 		 'chat_id' => $chatId, 
 		 'text' => "⭕️ Scegli fra le opzioni sotto\n\n", 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x91\xA5 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","👤 MENU STUDENTI"),array("\xF0\x9F\x95\x92 ORARIO CORSI ING MAG"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -13235,7 +13235,7 @@ elseif(strpos($text, "/segreteria") === 0 || $text == "\xF0\x9F\x8F\xAC SEGRET" 
 		 	'chat_id' => $chatId, 
 		 	'text' => "\xF0\x9F\x8F\xAC SEGRETERIA STUDENTI \xF0\x9F\x92\xAC\n\nSi trova in Viale delle Scienze, Ed. 3\n\n\xF0\x9F\x95\x92 Orari Esercizio\n\nLunedì, Mercoledì, Venerdì dalle ore 09.00 alle ore 13.00\nMartedì e Giovedì dalle ore 15.00 alle ore 17.00 (escluso Luglio e Agosto)\n\n\xF0\x9F\x93\x9E CONTATTI \n\nEmail: segreterie.studenti@unipa.it\nTel. +3909123867526\nTel.2 +3909123886472\nFax. +3909123860506", 
 		 	'reply_markup' => array(
-				 "keyboard"=> array(array("\xF0\x9F\x91\xA5 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
+				 "keyboard"=> array(array("👤 MENU STUDENTI","🔍 CERCA AULA","\xF0\x9F\x91\xA4 INFO PROF"),array("\xF0\x9F\x8F\xAC SEGRET","📖 BIBLIO","\xF0\x9F\x8F\xA2 DIPART"),array("\xF0\x9F\x8F\xA8 ERSU \xF0\x9F\x92\xB6","\xF0\x9F\x93\x84 COPIST","\xF0\x9F\x93\x96 CLA \xF0\x9F\x87\xAC\xF0\x9F\x87\xA7"),array("\xF0\x9F\x8D\x9D MENSA","\xF0\x9F\x8D\x94 RISTORO","\xE2\x98\x95 CAFFE"),array("\xF0\x9F\x8C\x8E MAPPA","🚈 TRASP","🚽 BAGNI"),array("↕ EVENTI","🖥 NEWS","🌥 METEO"),array("📘 CATALOGO ONLINE 💻"),array("🔧 CMD RAPIDI","ℹ️ INFO BOT")),
 			 'resize_keyboard' => true
 			)
 		);
