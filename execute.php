@@ -5093,7 +5093,7 @@ elseif(strpos($text, "/orariolezarch") === 0 || $text == "\xF0\x9F\x95\x92 ORARI
 		 'text' => "⭕️ *Scegli Corso di Laurea*\n\nScegli fra le opzioni sotto\n\n", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array(💡 PROGETTI,"\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO ARCHITETTURA","\xF0\x9F\x95\x92 ORARIO DIS. INDUSTRIALE"),array("\xF0\x9F\x95\x92 ORARIO SPTUPA"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO LEZIONI TRI"),array("\xF0\x9F\x95\x92 ORARIO ARCHITETTURA","\xF0\x9F\x95\x92 ORARIO DIS. INDUSTRIALE"),array("\xF0\x9F\x95\x92 ORARIO SPTUPA"))
 			,'resize_keyboard' => true
 		)
 	);
