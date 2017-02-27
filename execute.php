@@ -5336,7 +5336,7 @@ elseif(strpos($text, "/mod34disind") === 0 || $text == "📄 II SEMESTRE DIS IND
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'document' => "https://www.unipa.it/dipartimenti/diarchitettura/cds/disegnoindustriale2079/.content/documenti/allegati/20160107-Orario-II-SEM-2015-16-DIS-IND-.pdf", 
+						'document' => "http://www.viverearchitettura.it/wp-content/uploads/2016/12/Calendario-Lezioni-II-Semestre-16.11.2016-1.pdf", 
 						'caption' => $text);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
