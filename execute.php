@@ -3868,7 +3868,7 @@ elseif(strpos($text, "/ingele") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING E
 		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ELE","📄 MODULO II ING ELE"),array("📄 MODULO II ING ELE"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ELE","📄 MODULO II ING ELE"),array("📄 MODULO III ING ELE"))
 			,'resize_keyboard' => true
 		)
 	);
