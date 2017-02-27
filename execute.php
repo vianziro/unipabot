@@ -3843,7 +3843,7 @@ elseif(strpos($text, "/mod3ingmec") === 0 || $text == "📄 MODULO III ING MEC" 
 
 // ORARIO LEZIONI INGEGNERIA ELETTRONICA
 
-elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA" || $text == "\xF0\x9F\x95\x92 orario ing elettronica")
+elseif(strpos($text, "/ingele") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING ELETTRONICA" || $text == "\xF0\x9F\x95\x92 orario ing elettronica")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -3865,9 +3865,10 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING E
 	
 	$postField = array(
 		 'chat_id' => $chatId, 
-		 'text' => "\xE2\x9A\xA0 Scegli fra le opzioni sotto\n\n", 
+		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
+		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ELE","📄 MODULO II ING ELE"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ELE","📄 MODULO II ING ELE"),array("📄 MODULO II ING ELE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3958,9 +3959,44 @@ elseif(strpos($text, "/mod2ingele") === 0 || $text == "📄 MODULO II ING ELE" |
 	
 }
 
+elseif(strpos($text, "/mod3ingele") === 0 || $text == "📄 MODULO III ING ELE" || $text == "📄 modulo iii ing ele")
+{
+	$message = isset($update['message']) ? $update['message'] : "";
+		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+		$text = isset($message['text']) ? $message['text'] : "";
+		$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendChatAction";
+		// change file name and path
+		$postFields = array('chat_id' => $chatId, 
+						'action' => 'typing');
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+		curl_setopt($ch, CURLOPT_URL, $botUrl); 
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+		// read curl response
+		$output = curl_exec($ch);
+	
+	$message = isset($update['message']) ? $update['message'] : "";
+	$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+	$text = isset($message['text']) ? $message['text'] : "";
+	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
+	// change image name and path
+	$postFields = array('chat_id' => $chatId, 
+						'document' => "http://offweb.unipa.it/offweb/calendari?cc=2189&tc=l", 
+						'caption' => $text);
+	$ch = curl_init(); 
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
+	curl_setopt($ch, CURLOPT_URL, $botUrl); 
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
+	// read curl response
+	$output = curl_exec($ch);
+	
+}
+
 // ORARIO LEZIONI INGEGNERIA DELL'ENERGIA
 
-elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING ENERGIA" || $text == "\xF0\x9F\x95\x92 orario ing energia")
+elseif(strpos($text, "/ingene") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING ENERGIA" || $text == "\xF0\x9F\x95\x92 orario ing energia")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
