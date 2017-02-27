@@ -3562,7 +3562,7 @@ elseif(strpos($text, "/inggest") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING 
 		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST","📄 MODULO II ING GEST"))
+			 "keyboard"=> array(array("🏠 MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST","📄 MODULO II ING GEST"),array("📄 MODULO III ING GEST"))
 			,'resize_keyboard' => true
 		)
 	);
