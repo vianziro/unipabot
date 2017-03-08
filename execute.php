@@ -3548,7 +3548,7 @@ elseif(strpos($text, "/mod2inginf") === 0 || $text == "📄 MODULO II ING INF" |
 	
 }
 
-elseif(strpos($text, "/mod3inginf") === 0 || $text == "📄 MODULO III ING INF" || $text == "📄 modulo iii ing inf")
+elseif(strpos($text, "/mod4inginf") === 0 || $text == "📄 MODULO III ING INF" || $text == "📄 modulo iii ing inf")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
