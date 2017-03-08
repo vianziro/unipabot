@@ -3548,7 +3548,7 @@ elseif(strpos($text, "/mod2inginf") === 0 || $text == "📄 MODULO II ING INF" |
 	
 }
 
-elseif(strpos($text, "/mod4inginf") === 0 || $text == "📄 MODULO III ING INF" || $text == "📄 modulo iii ing inf")
+elseif(strpos($text, "/mod3inginf") === 0 || $text == "📄 MODULO III ING INF" || $text == "📄 modulo iii ing inf")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -3571,7 +3571,7 @@ elseif(strpos($text, "/mod4inginf") === 0 || $text == "📄 MODULO III ING INF" 
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'document' => "http://offweb.unipa.it/offweb/calendari?cc=2096&tc=l", 
+						'document' => "http://offweb.unipa.it/offweb/calendari;jsessionid=BE004792B1968C33C22D80AEA557E83B?cc=2096&tc=l", 
 						'caption' => $text);
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
