@@ -2982,7 +2982,7 @@ elseif(strpos($text, "/caldidpoli") === 0 || $text == "📄 CAL DID POLITECNICA"
 	$botUrl = "https://api.telegram.org/bot" . BOT_TOKEN . "/sendDocument";
 	// change image name and path
 	$postFields = array('chat_id' => $chatId, 
-						'document' => new CURLFile(realpath("./doc/calendariodidatticopolitecnica.pdf")), 
+						'document' => "http://www.unipa.it/scuole/politecnica/.content/documenti_avvisi/Calendario-Didattico-Scuola-Politecnica-A.A.-16-17_rev2.pdf", 
 						'caption' => "Calendario Didattico della Scuola Politecnica");
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
