@@ -11487,7 +11487,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali)"/*$text*/);
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali) entrando dal lato destro delle scale"/*$text*/);
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -11539,7 +11539,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali)"/*$text*/);
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali) entrando dal lato destro delle scale"/*$text*/);
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -11591,7 +11591,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali)"/*$text*/);
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali) entrando dal lato destro delle scale"/*$text*/);
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -11643,7 +11643,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 2° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali)"/*$text*/);
+						'caption' => "L'aula ".$text." si trova al 2° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali) entrando dal lato destro delle scale"/*$text*/);
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -11695,7 +11695,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 2° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali)"/*$text*/);
+						'caption' => "L'aula ".$text." si trova al 2° Piano dell'Ed.9 (Dip. di Ricerche Energetiche ed Ambientali) entrando dal lato destro delle scale"/*$text*/);
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -11747,7 +11747,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni)");
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni) entrando dal lato sinistro delle scale");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -11799,7 +11799,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni)");
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni) entrando dal lato sinistro delle scale");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -11851,7 +11851,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni)");
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni) entrando dal lato sinistro delle scale");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -11903,7 +11903,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni)");
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni) entrando dal lato sinistro delle scale");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -11955,7 +11955,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni)");
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni) entrando dal lato sinistro delle scale");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -12007,7 +12007,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni)");
+						'caption' => "L'aula ".$text." si trova al 1° Piano dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni) entrando dal lato sinistro delle scale");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
@@ -12059,7 +12059,7 @@ elseif(strpos($text, "L110") === 0 || $text == "l110" || $text == "L110")
 		// change file name and path
 		$postFields = array('chat_id' => $chatId, 
 						'photo' => new CURLFile(realpath("./img/mappaauleing.jpg")), 
-						'caption' => "L'aula ".$text." si trova al Piano Terra dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni)");
+						'caption' => "L'aula ".$text." si trova al Piano Terra dell'Ed.9 (DIEET - Dip. di Ingegneria Elettrica, Elettronica e delle Telecomunicazioni) entrando dal lato sinistro delle scale");
 		$ch = curl_init(); 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type:multipart/form-data"));
 		curl_setopt($ch, CURLOPT_URL, $botUrl); 
