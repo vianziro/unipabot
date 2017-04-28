@@ -3457,7 +3457,7 @@ elseif(strpos($text, "/inginf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING I
 		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING INF","📄 MODULO II ING INF"),array("📄 MODULO III ING INF"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING INF","📄 MODULO II ING INF"),array("📄 MODULO III-IV ING INF"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3548,7 +3548,7 @@ elseif(strpos($text, "/mod2inginf") === 0 || $text == "📄 MODULO II ING INF" |
 	
 }
 
-elseif(strpos($text, "/mod3inginf") === 0 || $text == "📄 MODULO III ING INF" || $text == "📄 modulo iii ing inf")
+elseif(strpos($text, "/mod3inginf") === 0 || $text == "📄 MODULO III-IV ING INF" || $text == "📄 modulo iii-iv ing inf")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -3610,7 +3610,7 @@ elseif(strpos($text, "/inggest") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING 
 		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST","📄 MODULO II ING GEST"),array("📄 MODULO III ING GEST"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST","📄 MODULO II ING GEST"),array("📄 MODULO III-IV ING GEST"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3701,7 +3701,7 @@ elseif(strpos($text, "/mod2inggest") === 0 || $text == "📄 MODULO II ING GEST"
 	
 }
 
-elseif(strpos($text, "/mod3inggest") === 0 || $text == "📄 MODULO III ING GEST" || $text == "📄 modulo iii ing gest")
+elseif(strpos($text, "/mod3inggest") === 0 || $text == "📄 MODULO III-IV ING GEST" || $text == "📄 modulo iii-iv ing gest")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -3763,7 +3763,7 @@ elseif(strpos($text, "/ingmec") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING M
 		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING MEC","📄 MODULO II ING MEC"),array("📄 MODULO III ING MEC"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING MEC","📄 MODULO II ING MEC"),array("📄 MODULO III-IV ING MEC"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -3854,7 +3854,7 @@ elseif(strpos($text, "/mod2ingmec") === 0 || $text == "📄 MODULO II ING MEC" |
 	
 }
 
-elseif(strpos($text, "/mod3ingmec") === 0 || $text == "📄 MODULO III ING MEC" || $text == "📄 modulo iii ing mec")
+elseif(strpos($text, "/mod3ingmec") === 0 || $text == "📄 MODULO III-IV ING MEC" || $text == "📄 modulo iii-iv ing mec")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -3916,7 +3916,7 @@ elseif(strpos($text, "/ingele") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING E
 		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ELE","📄 MODULO II ING ELE"),array("📄 MODULO III ING ELE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ELE","📄 MODULO II ING ELE"),array("📄 MODULO III-IV ING ELE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4007,7 +4007,7 @@ elseif(strpos($text, "/mod2ingele") === 0 || $text == "📄 MODULO II ING ELE" |
 	
 }
 
-elseif(strpos($text, "/mod3ingele") === 0 || $text == "📄 MODULO III ING ELE" || $text == "📄 modulo iii ing ele")
+elseif(strpos($text, "/mod3ingele") === 0 || $text == "📄 MODULO III-IV ING ELE" || $text == "📄 modulo iii-iv ing ele")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -4069,7 +4069,7 @@ elseif(strpos($text, "/ingene") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING E
 		 'text' => "*Scegli fra le opzioni sotto*\n\n", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ENE","📄 MODULO II ING ENE"),array("📄 MODULO III ING ENE"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING ENE","📄 MODULO II ING ENE"),array("📄 MODULO III-IV ING ENE"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4160,7 +4160,7 @@ elseif(strpos($text, "/mod2ingene") === 0 || $text == "📄 MODULO II ING ENE" |
 	
 }
 
-elseif(strpos($text, "/mod3ingene") === 0 || $text == "📄 MODULO III ING ENE" || $text == "📄 modulo iii ing ene")
+elseif(strpos($text, "/mod3ingene") === 0 || $text == "📄 MODULO III-IV ING ENE" || $text == "📄 modulo iii-iv ing ene")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -4221,7 +4221,7 @@ elseif(strpos($text, "/ingchi") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown',
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CHI","📄 MODULO II ING CHI"),array("📄 MODULO III ING CHI"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CHI","📄 MODULO II ING CHI"),array("📄 MODULO III-IV ING CHI"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4312,7 +4312,7 @@ elseif(strpos($text, "/mod2ingchi") === 0 || $text == "📄 MODULO II ING CHI" |
 	
 }
 
-elseif(strpos($text, "/mod3ingchi") === 0 || $text == "📄 MODULO III ING CHI" || $text == "📄 modulo iii ing chi")
+elseif(strpos($text, "/mod3ingchi") === 0 || $text == "📄 MODULO III-IV ING CHI" || $text == "📄 modulo iii-iv ing chi")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -4374,7 +4374,7 @@ elseif(strpos($text, "/ingamb") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING A
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING AMB","📄 MODULO II ING AMB"),array("📄 MODULO III ING AMB"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING AMB","📄 MODULO II ING AMB"),array("📄 MODULO III-IV ING AMB"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4465,7 +4465,7 @@ elseif(strpos($text, "/mod2ingamb") === 0 || $text == "📄 MODULO II ING AMB" |
 	
 }
 
-elseif(strpos($text, "/mod3ingamb") === 0 || $text == "📄 MODULO III ING AMB" || $text == "📄 modulo iii ing amb")
+elseif(strpos($text, "/mod3ingamb") === 0 || $text == "📄 MODULO III-IV ING AMB" || $text == "📄 modulo iii-iv ing amb")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -4527,7 +4527,7 @@ elseif(strpos($text, "/ingcivedi") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO IN
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown',  
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CIV","📄 MODULO II ING CIV"),array("📄 MODULO III ING CIV"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CIV","📄 MODULO II ING CIV"),array("📄 MODULO III-IV ING CIV"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4618,7 +4618,7 @@ elseif(strpos($text, "/mod2ingciv") === 0 || $text == "📄 MODULO II ING CIV" |
 	
 }
 
-elseif(strpos($text, "/mod3ingciv") === 0 || $text == "📄 MODULO III ING CIV" || $text == "📄 modulo iii ing civ")
+elseif(strpos($text, "/mod3ingciv") === 0 || $text == "📄 MODULO III-IV ING CIV" || $text == "📄 modulo iii-iv ing civ")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -4680,7 +4680,7 @@ elseif(strpos($text, "/ingcib") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING C
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CIB","📄 MODULO II ING CIB"),array("📄 MODULO III ING CIB"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING CIB","📄 MODULO II ING CIB"),array("📄 MODULO III-IV ING CIB"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4771,7 +4771,7 @@ elseif(strpos($text, "/mod2ingcib") === 0 || $text == "📄 MODULO II ING CIB" |
 	
 }
 
-elseif(strpos($text, "/mod3ingcib") === 0 || $text == "📄 MODULO III ING CIB" || $text == "📄 modulo iii ing cib")
+elseif(strpos($text, "/mod3ingcib") === 0 || $text == "📄 MODULO III-IV ING CIB" || $text == "📄 modulo iii-iv ing cib")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -4833,7 +4833,7 @@ elseif(strpos($text, "/inggestinf") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO I
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST INF","📄 MODULO II ING GEST INF"),array("📄 MODULO III ING GEST INF"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING GEST INF","📄 MODULO II ING GEST INF"),array("📄 MODULO III-IV ING GEST INF"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -4924,7 +4924,7 @@ elseif(strpos($text, "/mod2inggestinf") === 0 || $text == "📄 MODULO II ING GE
 	
 }
 
-elseif(strpos($text, "/mod3inggestinf") === 0 || $text == "📄 MODULO III ING GEST INF" || $text == "📄 modulo iii ing gest inf")
+elseif(strpos($text, "/mod3inggestinf") === 0 || $text == "📄 MODULO III-IV ING GEST INF" || $text == "📄 modulo iii-iv ing gest inf")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
@@ -4986,7 +4986,7 @@ elseif(strpos($text, "/ingbio") === 0 || $text == "\xF0\x9F\x95\x92 ORARIO ING B
 		 'text' => "*Scegli fra le opzioni sotto*", 
 		 'parse_mode' => 'Markdown', 
 		 'reply_markup' => array(
-			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING BIO","📄 MODULO II ING BIO"),array("📄 MODULO III ING BIO"))
+			 "keyboard"=> array(array("MENU PRINCIPALE","\xF0\x9F\x95\x92 ORARIO CORSI ING"),array("📄 MODULO I ING BIO","📄 MODULO II ING BIO"),array("📄 MODULO III-IV ING BIO"))
 			,'resize_keyboard' => true
 		)
 	);
@@ -5077,7 +5077,7 @@ elseif(strpos($text, "/mod2ingbio") === 0 || $text == "📄 MODULO II ING BIO" |
 	
 }
 
-elseif(strpos($text, "/mod3ingbio") === 0 || $text == "📄 MODULO III ING BIO" || $text == "📄 modulo iii ing bio")
+elseif(strpos($text, "/mod3ingbio") === 0 || $text == "📄 MODULO III-IV ING BIO" || $text == "📄 modulo iii-iv ing bio")
 {
 	$message = isset($update['message']) ? $update['message'] : "";
 		$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
